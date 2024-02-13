@@ -31,7 +31,7 @@
 
               <form action="/backoffice/menu-manager/<?= $menu['id'] ?>" class="d-inline" method="post">
                 <input type="hidden" name="_method" value="DELETE">
-                <button type="submit" class="btn btn-danger" onclick="confirm('Apakah anda yakin?')">Delete</button>
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?')">Delete</button>
               </form>
             </td>
           </tr>

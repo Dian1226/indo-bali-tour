@@ -103,7 +103,7 @@ class Menu extends BaseController
         ];
         $this->menuModel->update($id, $data);
 
-        session()->setFlashdata('pesan', 'Menu baru berhasil ditambahkan');
+        session()->setFlashdata('pesan', 'Menu berhasil diubah');
 
         return redirect()->to('/backoffice/menu-manager');
     }

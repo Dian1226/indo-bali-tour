@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class CatBlogModel extends Model
+class CatblogModel extends Model
 {
     protected $table = 'category_blogsevents';
     protected $allowedFields = ['title', 'slug'];

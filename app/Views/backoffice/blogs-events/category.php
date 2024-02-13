@@ -4,7 +4,7 @@
 
 <div class="row">
   <div class="col">
-    <a href="/backoffice/menu-manager/add" class="btn btn-primary">Add Data</a>
+    <a href="/backoffice/category-blogsevents/add" class="btn btn-primary">Add Data</a>
     <?php if (session()->getFlashdata('pesan')) : ?>
       <div class="alert alert-success my-3" role="alert">
         <?= session()->getFlashdata('pesan'); ?>
@@ -25,11 +25,11 @@
             <th scope="row"><?= $i; ?></th>
             <td><?= $category['title']; ?></td>
             <td>
-              <a href="#" class="btn btn-warning">Edit</a>
+              <a href="/backoffice/category-blogsevents/edit/<?= $category['slug']; ?>" class="btn btn-warning">Edit</a>
 
-              <form action="#" class="d-inline" method="post">
+              <form action="/backoffice/category-blogsevents/<?= $category['id']; ?>" class="d-inline" method="post">
                 <input type="hidden" name="_method" value="DELETE">
-                <button type="submit" class="btn btn-danger" onclick="confirm('Apakah anda yakin?')">Delete</button>
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?')">Delete</button>
               </form>
             </td>
           </tr>

@@ -32,7 +32,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/backoffice/category-blogsevents">Category Blogs & Events</a></li>
-                            <li><a class="dropdown-item" href="#">Blogs & Events</a></li>
+                            <li><a class="dropdown-item" href="/backoffice/blogsevents">Blogs & Events</a></li>
                         </ul>
                     </li>
                 </ul>
