@@ -9,6 +9,7 @@ $routes->get('/', 'Pages::index');
 $routes->get('/tours', 'Pages::tours');
 $routes->get('/about', 'Pages::about');
 $routes->get('/newsevents', 'Pages::blogEvents');
+$routes->get('/contactus', 'Pages::contactus');
 
 // menu
 $routes->get('/backoffice', 'manage_menu\Controllers\Menu');

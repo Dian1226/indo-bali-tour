@@ -23,4 +23,9 @@ class Pages extends BaseController
     {
         return view('pages/blogEvents');
     }
+
+    public function contactus(): string
+    {
+        return view('contactus/contactus');
+    }
 }
