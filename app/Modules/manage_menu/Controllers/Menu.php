@@ -28,7 +28,7 @@ class Menu extends BaseController
             'title' => 'Add Data'
         ];
 
-        return view('\App\Modules\manage_menu\Views\/add', $data);
+        return view('\App\Modules\manage_menu\Views\add', $data);
     }
 
     public function save()
