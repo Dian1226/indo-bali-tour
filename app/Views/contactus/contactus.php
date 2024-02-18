@@ -19,7 +19,7 @@
     <nav>
         <div class="logo">contact us</div>
         <ul>
-            <li><a href="#">FaQ</a></li>
+            <li><a href="#FAQ">FaQ</a></li>
         </ul>
     </nav>
 
@@ -70,6 +70,7 @@
                     </p>
                 </div>
             </div>
+<!-- -------------------------------------------------------------------------------------------------------------------- -->
             <div class="form-container">
                 <form action="https://api.web3forms.com/submit" method="POST" class="contact-right">
                     <div class="contact-right-tittle">
@@ -88,23 +89,91 @@
             </div>
         </div>
     </section>
-    <div>
-        <h2 class="tittle-faq">faq</h2>
-    </div>
+
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------- -->
     
     <section>
-        <div class="ques-container">
-            <div class="ques">
-                <button>
-                    <span>what's your name ?</span>
-                    <span><i class='bx bx-chevron-down n-arrow'></i></span>
-                </button>
-                <p>ni made dwiari mutia arthanti</p>
+        <div id="FAQ">
+            <h2 class="tittle-faq">faq</h2>
+        </div>
+        
+        <section>
+            <div class="ques-container">
+                <div class="ques">
+                    <button>
+                        <span>what's your name ?</span>
+                        <span><i class='bx bx-chevron-down n-arrow'></i></span>
+                    </button>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure ab quis totam vero officiis repellendus molestiae pariatur facilis sunt omnis dolorum quisquam, perspiciatis magnam asperiores porro maiores incidunt maxime praesentium.
+                    </p>
+                </div>
+
+                <div class="ques">
+                    <button>
+                        <span>what's your name ?</span>
+                        <span><i class='bx bx-chevron-down n-arrow'></i></span>
+                    </button>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia animi dolorum expedita! Corrupti incidunt atque eum aperiam optio hic consectetur soluta aspernatur, fugiat, asperiores enim velit a temporibus perspiciatis nam.
+                    </p>
+                </div>
+
+                <div class="ques">
+                    <button>
+                        <span>
+                            what's your name ?
+                        </span>
+                        <span><i class='bx bx-chevron-down n-arrow'></i></span>
+                    </button>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam ad, error voluptatibus odit at obcaecati eum eos accusamus cum nihil minima incidunt natus fuga repellat nulla fugiat quis molestiae necessitatibus.
+                    </p>
+                </div>
+
+                <div class="ques">
+                    <button>
+                        <span>
+                            what's your name ?
+                        </span>
+                        <span><i class='bx bx-chevron-down n-arrow'></i></span>
+                    </button>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquid architecto praesentium, alias dolor aspernatur fugit beatae minima incidunt iusto similique, atque possimus commodi nulla, eveniet consequuntur. Obcaecati, impedit maxime.
+                    </p>
+                </div>
+
+                <div class="ques">
+                    <button>
+                        <span>
+                            what's your name ?
+                        </span>
+                        <span><i class='bx bx-chevron-down n-arrow'></i></span>
+                    </button>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vitae quibusdam architecto officia rem sint distinctio officiis, fuga dolores hic aliquam repudiandae fugit dicta dolore facilis, veritatis accusamus, dolorem commodi.
+                    </p>
+                </div>
             </div>
-            
+        </section>
+    </section>
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <section>
+        <div class="container-map">
+            <h1 class="tittle-map">lokasi kami</h1>
+            <hr>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3944.554839375712!2d115.23252!3d-8.638662!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23f79d0b9c291%3A0x28fcef04fc4ddfb!2sJl.%20Ganetri%20IV%20No.4%2C%20Tonja%2C%20Kec.%20Denpasar%20Utara%2C%20Kota%20Denpasar%2C%20Bali%2080235!5e0!3m2!1sid!2sid!4v1708241534869!5m2!1sid!2sid" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </section>
 
-<script src="contactus.js"></script>
+
+<script src="contact/js/contactus.js"></script>
 </body>
 </html>

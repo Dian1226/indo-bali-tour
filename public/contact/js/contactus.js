@@ -8,4 +8,4 @@ buttons.forEach( button =>{
         faq.classList.toggle('show');
         icon.classList.toggle2('rotate');
     })
-} )
+})
