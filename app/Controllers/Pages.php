@@ -6,7 +6,7 @@ class Pages extends BaseController
 {
     public function index(): string
     {
-        return view('home');
+        return view('home/index');
     }
 
     public function tours() : string
