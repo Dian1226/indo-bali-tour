@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Modules\manage_blogsevents\Controllers;
 
-use App\Models\BlogModel;
-use App\Models\CatBlogModel;
+use App\Controllers\BaseController;
+use App\Modules\manage_blogsevents\Models\BlogModel;
+use App\Modules\manage_blogsevents\Models\CatBlogModel;
 
 class Blog extends BaseController
 {
@@ -23,10 +24,10 @@ class Blog extends BaseController
             'blogs' => $blogs
         ];
 
-        return view('/backoffice/blogs-events/index', $data);
+        return view('\App\Modules\manage_blogsevents\Views\index', $data);
     }
 
-    public function add() : string 
+    public function add(): string
     {
         $categories = $this->catBlogModel->getCatBlog();
         $data = [
@@ -34,10 +35,10 @@ class Blog extends BaseController
             'categories' => $categories
         ];
 
-        return view('backoffice/blogs-events/add', $data);
+        return view('\App\Modules\manage_blogsevents\Views\add', $data);
     }
 
-    public function save() 
+    public function save()
     {
         if (!$this->validate([
             'created_at' => [
@@ -49,22 +50,24 @@ class Blog extends BaseController
             'title' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Title wajib diisi'
+                    'required' => 'Title wajib diisi',
                 ]
             ]
         ])) {
-            $validation = \Config\Services::validation();
-            return redirect()->to('backoffice/blogsevents/add')->withInput()->with('validation', $validation);
+            return redirect()->to('backoffice/blogsevents/add')->withInput();
         }
 
         $slug = url_title($this->request->getVar('title'), '-', true);
+        $image = $this->request->getFile('image');
+        $image->move('img/blog');
+        $fileImage = $image->getName();
 
         $this->blogModel->save([
             'category' => $this->request->getVar('category'),
             'created_at' => $this->request->getVar('created_at'),
             'title' => $this->request->getVar('title'),
             'content' => $this->request->getVar('content'),
-            'image' => $this->request->getVar('image'),
+            'image' => $fileImage,
             'caption_image' => $this->request->getVar('caption'),
             'tags' => $this->request->getVar('tags'),
             'meta_keywords' => $this->request->getVar('meta'),
@@ -87,6 +90,64 @@ class Blog extends BaseController
         return redirect()->to('/backoffice/blogsevents');
     }
 
+    public function edit($slug): string
+    {
+        $blog = $this->blogModel->getBlog($slug);
+        $categories = $this->catBlogModel->getCatBlog();
+
+        $data = [
+            'title' => 'Edit Blogs & Events',
+            'blog' => $blog,
+            'categories' => $categories
+        ];
+
+        return view('\App\Modules\manage_blogsevents\Views\edit', $data);
+    }
+
+    public function update($id)
+    {
+        if (!$this->validate([
+            'created_at' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Tanggal wajib diisi'
+                ]
+            ],
+            'title' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Judul wajib diisi',
+                ]
+            ]
+        ])) {
+            return redirect()->to('/backoffice/blogsevents/edit/' . $this->request->getVar('slug'))->withInput();
+        }
+
+        $slug = url_title($this->request->getVar('title'), '-', true);
+        $image = $this->request->getFile('image');
+        $image->move('img/blog');
+        $fileImage = $image->getName();
+
+        $data = [
+            'category' => $this->request->getVar('category'),
+            'created_at' => $this->request->getVar('created_at'),
+            'title' => $this->request->getVar('title'),
+            'content' => $this->request->getVar('content'),
+            'image' => $fileImage,
+            'caption_image' => $this->request->getVar('caption'),
+            'tags' => $this->request->getVar('tags'),
+            'meta_keywords' => $this->request->getVar('meta'),
+            'hit' => $this->request->getVar('hit'),
+            'status' => $this->request->getVar('status'),
+            'slug' => $slug
+        ];
+        $this->blogModel->update($id, $data);
+
+        session()->setFlashdata('pesan', 'Blog berhasil diubah');
+
+        return redirect()->to('/backoffice/blogsevents');
+    }
+
     public function category(): string
     {
         $data = [
@@ -94,7 +155,7 @@ class Blog extends BaseController
             'categories' => $this->catBlogModel->getCatBlog()
         ];
 
-        return view('/backoffice/blogs-events/category', $data);
+        return view('\App\Modules\manage_blogsevents\Views\category', $data);
     }
 
     public function addCat()
@@ -103,7 +164,7 @@ class Blog extends BaseController
             'title' => 'Add Category'
         ];
 
-        return view('backoffice/blogs-events/addCat', $data);
+        return view('\App\Modules\manage_blogsevents\Views\addCat', $data);
     }
 
     public function saveCat()
@@ -118,6 +179,7 @@ class Blog extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
+            dd($validation);
             return redirect()->to('/backoffice/category-blogsevents/add')->withInput()->with('validation', $validation);
         }
 
@@ -150,14 +212,14 @@ class Blog extends BaseController
             'category' => $category
         ];
 
-        return view('/backoffice/blogs-events/editCat', $data);
+        return view('\App\Modules\manage_blogsevents\Views\editCat', $data);
     }
 
     public function updateCat($id)
     {
         if (!$this->validate([
             'title' => [
-                'rules' => 'required|is_unique[category_blogsevents.title,id.' . $id . ']',
+                'rules' => 'required|is_unique[category_blogsevents.title,id,' . $id . ']',
                 'errors' => [
                     'required' => 'Bagian title harus diisi',
                     'is_unique' => 'Kategori ini telah terdaftar'

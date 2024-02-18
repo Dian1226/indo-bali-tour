@@ -26,10 +26,10 @@
                     <tr>
                         <th scope="row"><?= $i; ?></th>
                         <td><?= $blog['title']; ?></td>
-                        <td><img src="/img/<?= $blog['image']; ?>" alt="" width="150px"></td>
+                        <td><img src="/img/blog/<?= $blog['image']; ?>" alt="" height="100px"></td>
                         <td><?= $blog['status']; ?></td>
                         <td>
-                            <a href="#" class="btn btn-warning">Edit</a>
+                            <a href="/backoffice/blogsevents/edit/<?= $blog['slug']; ?>" class="btn btn-warning">Edit</a>
 
                             <form action="/backoffice/blogsevents/<?= $blog['id']; ?>" class="d-inline" method="post">
                                 <input type="hidden" name="_method" value="DELETE">

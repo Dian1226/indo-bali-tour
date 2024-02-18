@@ -25,7 +25,7 @@
         <div class="col">
             <div class="mb-3">
                 <label for="slug" class="form-label">Slug</label>
-                <input type="text" name="slug" class="form-control" placeholder="indobalitour.com/<?= $category['slug']; ?>" id="slug" disabled>
+                <input type="text" name="slug" class="form-control" placeholder="indobalitour.com/category/<?= $category['slug']; ?>" id="slug" disabled>
             </div>
         </div>
         <div class="row">

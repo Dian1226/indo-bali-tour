@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Modules\manage_blogsevents\Models;
 
 use CodeIgniter\Model;
 

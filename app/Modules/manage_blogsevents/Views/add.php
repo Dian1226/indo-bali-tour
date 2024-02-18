@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 
-<form action="/backoffice/blogsevents/save" method="post">
+<form action="/backoffice/blogsevents/save" method="post" enctype="multipart/form-data">
     <div class="row mb-3">
         <div class="col">
             <fieldset>
@@ -50,7 +50,7 @@
     <div class="row mb-3">
         <div class="col">
             <label for="content" class="form-label">Content</label>
-            <textarea type="text" name="content" class="form-control" placeholder="Content" id="content" value="<?= old('content'); ?>"></textarea>
+            <textarea type="text" name="content" class="form-control" placeholder="Content" rows="5" id="content" value=""><?= old('content'); ?></textarea>
         </div>
         <div class="col">
             <label for="image" class="form-label d-block">Image</label>

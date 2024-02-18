@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Controllers;
+namespace App\Modules\manage_menu\Controllers;
 
-use App\Models\MenuModel;
+use App\Modules\manage_menu\Models\MenuModel;
+use App\Controllers\BaseController;
 
 class Menu extends BaseController
 {
@@ -18,7 +19,7 @@ class Menu extends BaseController
             'title' => 'Menu Manager',
             'menus' => $this->menuModel->findAll()
         ];
-        return view('backoffice/menu-manager/index', $data);
+        return view('\App\Modules\manage_menu\Views\index', $data);
     }
 
     public function add(): string
@@ -27,7 +28,7 @@ class Menu extends BaseController
             'title' => 'Add Data'
         ];
 
-        return view('backoffice/menu-manager/add', $data);
+        return view('\App\Modules\manage_menu\Views\/add', $data);
     }
 
     public function save()
@@ -75,7 +76,7 @@ class Menu extends BaseController
             'menu' => $this->menuModel->getMenu($slug)
         ];
 
-        return view('backoffice/menu-manager/edit', $data);
+        return view('\App\Modules\manage_menu\Views\edit', $data);
     }
 
     public function update($id)

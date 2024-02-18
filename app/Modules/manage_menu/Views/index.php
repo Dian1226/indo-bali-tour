@@ -1,4 +1,4 @@
-<?= $this->extend('backoffice/template'); ?>
+<?= $this->extend('backoffice\template'); ?>
 
 <?= $this->section('content'); ?>
 
