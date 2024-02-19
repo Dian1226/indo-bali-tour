@@ -2,11 +2,21 @@
 
 namespace App\Controllers;
 
+use App\Modules\manage_faq\Models\FaqModel;
+
 class Pages extends BaseController
 {
+    protected $faqModel;
+    public function __construct()
+    {
+        $this->faqModel = new FaqModel();
+    }
     public function index(): string
     {
-        return view('home/index');
+        $data = [
+            'faqs' => $this->faqModel->getFaq()
+        ];
+        return view('home/index', $data);
     }
 
     public function tours() : string

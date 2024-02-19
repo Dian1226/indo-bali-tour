@@ -63,7 +63,7 @@ class Gallery extends BaseController
         $image = $this->request->getFile('image');
 
         // pindahkan gambar
-        $image->move('img/gallery');
+        $image->move('backoffice/gallery');
 
         // ambil nama file
         $fileImage = $image->getName();

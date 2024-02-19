@@ -674,7 +674,16 @@
         <span>Q</span>
     </h1>
     <div class="questions-container">
+        <?php foreach ($faqs as $faq) : ?>
         <div class="question">
+            <button>
+                <span><?= $faq['question']; ?></span>
+                <span><i class="fas fa-chevron-down"></i></span>
+            </button>
+            <p><?= $faq['answer']; ?></p>
+        </div>
+        <?php endforeach; ?>
+        <!-- <div class="question">
             <button>
                 <span>Lorem ipsum dolor sit amet?</span>
                 <span><i class="fas fa-chevron-down"></i></span>
@@ -687,14 +696,7 @@
                 <span><i class="fas fa-chevron-down"></i></span>
             </button>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, quas.</p>
-        </div>
-        <div class="question">
-            <button>
-                <span>Lorem ipsum dolor sit amet?</span>
-                <span><i class="fas fa-chevron-down"></i></span>
-            </button>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, quas.</p>
-        </div>
+        </div> -->
     </div>
 
 
