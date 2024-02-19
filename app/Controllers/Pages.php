@@ -6,7 +6,7 @@ class Pages extends BaseController
 {
     public function index(): string
     {
-        return view('pages/home');
+        return view('home/index');
     }
 
     public function tours() : string
@@ -22,6 +22,11 @@ class Pages extends BaseController
     public function blogEvents() : string
     {
         return view('pages/blogEvents');
+    }
+
+    public function contactus(): string
+    {
+        return view('contactus/contactus');
     }
 
     public function footer(): string
