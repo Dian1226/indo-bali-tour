@@ -3,18 +3,27 @@
 namespace App\Controllers;
 
 use App\Modules\manage_faq\Models\FaqModel;
+use App\Modules\manage_package\Models\PackageModel;
+use App\Modules\manage_transportation\Models\TransportModel;
 
 class Pages extends BaseController
 {
     protected $faqModel;
+    protected $transportModel;
+    protected $packageModel;
     public function __construct()
     {
         $this->faqModel = new FaqModel();
+        $this->transportModel = new TransportModel();
+        $this->packageModel = new PackageModel();
+
     }
     public function index(): string
     {
         $data = [
-            'faqs' => $this->faqModel->getFaq()
+            'faqs' => $this->faqModel->getFaq(),
+            'transport' => $this->transportModel->getTransport(),
+            'packages' => $this->packageModel->getPackage()
         ];
         return view('home/index', $data);
     }
