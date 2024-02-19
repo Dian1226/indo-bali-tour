@@ -239,9 +239,7 @@
         <div class="Footer-Bottom">
             <p>Copyright &copy; 2024 Indo Bali Tour. Designed by <span class="designer">INDO APPS SOLUSINDO</span></p>
         </div>
-    </div>
-    
-    
+    </div>        
 </footer>
 
 
