@@ -65,7 +65,7 @@
       <section class="home" id="home">
         <div class="content">
             <h3>BALI.</h3>
-            <img src="home/home/img/indobalitour2.png" alt="">
+            <img src="home/img/indobalitour2.png" alt="">
             <p>Dicover new places with us, adventure awaits</p>
              <a href="" class="btn">Discover More</a>
         </div>
