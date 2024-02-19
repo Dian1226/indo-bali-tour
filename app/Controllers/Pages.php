@@ -23,4 +23,10 @@ class Pages extends BaseController
     {
         return view('pages/blogEvents');
     }
+
+    public function footer(): string
+    {
+        return view('footer/footer');
+    }
+
 }
