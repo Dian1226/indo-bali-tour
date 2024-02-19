@@ -28,4 +28,10 @@ class Pages extends BaseController
     {
         return view('contactus/contactus');
     }
+
+    public function footer(): string
+    {
+        return view('footer/footer');
+    }
+
 }
