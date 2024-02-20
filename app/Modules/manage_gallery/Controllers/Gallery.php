@@ -36,6 +36,7 @@ class Gallery extends BaseController
 
     public function save()
     {
+        $image = $this->request->getFile('image');
         if (!$this->validate([
             'title' => [
                 'rules' => 'required|is_unique[gallery.title]',
@@ -43,20 +44,10 @@ class Gallery extends BaseController
                     'required' => 'Title wajib diisi',
                     'is_unique' => 'Title tersebut sudah terdaftar'
                 ]
-            ],
-            // 'image' => [
-            //     'rules' => 'uploaded[image]|max_size[image,2048]|mime_in[image,image/png,image/jpeg,image/jpg]|is_image[image]',
-            //     'errors' => [
-            //         'uploaded' => 'Image wajib diisi',
-            //         'max_size' => 'Ukuran file terlalu besar',
-            //         'mime_in' => 'File tersebut bukan gambar',
-            //         'is_image' => 'File tersebut bukan gambar'
-            //     ]
-            // ]
+            ]
         ])) {
-            // $validation = \Config\Services::validation();
-            // return redirect()->to('/backoffice/gallery/add')->withInput()->with('validation', $validation);
-            return redirect()->to('/backoffice/gallery/add')->withInput();
+            $validation = \Config\Services::validation();
+            return redirect()->to('/backoffice/gallery/add')->withInput()->with('validation', $validation);
         }
 
         // ambil gambar

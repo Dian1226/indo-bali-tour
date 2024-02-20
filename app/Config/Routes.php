@@ -60,7 +60,7 @@ $routes->get('/backoffice/transportation/edit/(:num)', '\App\Modules\manage_tran
 $routes->post('/backoffice/transportation/update/(:num)', '\App\Modules\manage_transportation\Controllers\Transport::update/$1');
 
 // package
-$routes->get('/backoffice/package', '\App\Modules\manage_package\Controllers\Package');
+$routes->get('/backoffice/index.php/package', '\App\Modules\manage_package\Controllers\Package');
 $routes->delete('/backoffice/package/(:num)', '\App\Modules\manage_package\Controllers\Package::delete/$1');
 $routes->get('/backoffice/package/add', '\App\Modules\manage_package\Controllers\Package::add');
 $routes->post('/backoffice/package/save', '\App\Modules\manage_package\Controllers\Package::save');
