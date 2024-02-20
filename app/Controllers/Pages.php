@@ -21,7 +21,11 @@ class Pages extends BaseController
 
     public function tours() : string
     {
-        return view('pages/tours');
+        return view('tours/tours');
+    }
+    public function toursUbud() : string
+    {
+        return view('tours/tourslide');
     }
 
     public function about() : string
