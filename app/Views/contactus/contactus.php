@@ -177,7 +177,7 @@
     <div class="footer">
         <div class="Footer-content">
             <div class="logo-footer">
-                <img src="home/img/Logo_IBT.png">
+                <img src="footer/img/Logo_IBT.png">
             </div>
             
 
@@ -192,7 +192,7 @@
             </div>
                 <div class="Footer-content payment-section">
                     <br><h4>Payment</h4>
-                    <img src="home/img/Logo payment BRI_IBT (1).jpg"
+                    <img src="/home/img/Logo payment BRI_IBT (1).jpg"
                      width="150" 
                      height="100" 
                      alt="Payment Logo">
@@ -215,7 +215,7 @@
 
             <div class="Footer-content-tripad">
                 <br><strong><h4>Excellent Review</h4></strong>
-                <img src="home/img/Tripadvisor.jpg" alt="Tripadvisor Logo"></br>
+                <img src="/home/img/Tripadvisor.jpg" alt="Tripadvisor Logo"></br>
             </div>
         </div>
 
@@ -243,6 +243,6 @@
 </footer>
 
 
-<script src="contact/js/contactus.js"></script>
+<script src="/contact/js/contactus.js"></script>
 </body>
 </html>

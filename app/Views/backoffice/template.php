@@ -37,6 +37,7 @@
                     </li>
                     <li><a class="nav-link" href="/backoffice/gallery">Gallery</a></li>
                     <li><a class="nav-link" href="/backoffice/faq">FAQ</a></li>
+                    <li><a class="nav-link" href="/backoffice/tours">Tours</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Tour Package

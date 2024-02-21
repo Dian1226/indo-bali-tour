@@ -7,7 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Pages::index');
 $routes->get('/tours', 'Pages::tours');
-$routes->get('/tours/ubud', 'Pages::toursUbud');
+$routes->get('/tours/(:any)', 'Pages::toursDetail/$1');
 $routes->get('/about', 'Pages::about');
 $routes->get('/newsevents', 'Pages::blogEvents');
 $routes->get('/Footer', 'Pages::footer');
@@ -69,3 +69,11 @@ $routes->get('/backoffice/package/add', '\App\Modules\manage_package\Controllers
 $routes->post('/backoffice/package/save', '\App\Modules\manage_package\Controllers\Package::save');
 $routes->get('/backoffice/package/edit/(:num)', '\App\Modules\manage_package\Controllers\Package::edit/$1');
 $routes->post('/backoffice/package/update/(:num)', '\App\Modules\manage_package\Controllers\Package::update/$1');
+
+// tours
+$routes->get('/backoffice/tours', '\App\Modules\manage_tours\Controllers\Tours');
+$routes->delete('/backoffice/tours/(:num)', '\App\Modules\manage_tours\Controllers\Tours::delete/$1');
+$routes->get('/backoffice/tours/add', '\App\Modules\manage_tours\Controllers\Tours::add');
+$routes->post('/backoffice/tours/save', '\App\Modules\manage_tours\Controllers\Tours::save');
+$routes->get('/backoffice/tours/edit/(:num)', '\App\Modules\manage_tours\Controllers\Tours::edit/$1');
+$routes->post('/backoffice/tours/update/(:num)', '\App\Modules\manage_tours\Controllers\Tours::update/$1');

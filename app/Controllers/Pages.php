@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\ToursModel;
 use App\Modules\manage_faq\Models\FaqModel;
 use App\Modules\manage_package\Models\PackageModel;
 use App\Modules\manage_transportation\Models\TransportModel;
@@ -11,12 +12,13 @@ class Pages extends BaseController
     protected $faqModel;
     protected $transportModel;
     protected $packageModel;
+    protected $toursModel;
     public function __construct()
     {
         $this->faqModel = new FaqModel();
         $this->transportModel = new TransportModel();
         $this->packageModel = new PackageModel();
-
+        $this->toursModel = new ToursModel();
     }
     public function index(): string
     {
@@ -30,11 +32,20 @@ class Pages extends BaseController
 
     public function tours() : string
     {
-        return view('tours/tours');
+        $data = [
+            'tours' => $this->toursModel->getTours()
+        ];
+
+        return view('tours/tours', $data);
     }
-    public function toursUbud() : string
+    public function toursDetail($slug) : string
     {
-        return view('tours/tourslide');
+        $data = [
+            'tour' => $this->toursModel->getTours($slug),
+            'tours' => $this->toursModel->getTours()
+        ];
+
+        return view('tours/tourDetail', $data);
     }
 
     public function about() : string

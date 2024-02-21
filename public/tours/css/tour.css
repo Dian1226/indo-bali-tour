@@ -283,18 +283,27 @@ nav .navbar .nav-links .links li .arrow{
     margin-top: 3%;
     margin-left: 1.5%;
 }
+
 .container-sar-pack{
     /* background-color: #A8A1FA; */
     display: flex;
     margin-top: 3%;
-    justify-content: center;
+    padding: 0 7%;
+    justify-content: space-between;
 }
+
+.container-sar-pack a {
+    display: block;
+    /* background-color: #FF0505; */
+    width: 350px;
+}
+
 .saran-img{
     width: 350px;
     height: 250px;
     border-radius: 5%;
-    margin-left: 3%;
-    margin: 0 45px;
+    /* margin-left: 3%; */
+    /* margin: 0 45px; */
 }
 .desk-sar-pack{
     font-size: 21px;
@@ -302,7 +311,7 @@ nav .navbar .nav-links .links li .arrow{
     text-decoration: none;
     color: #0f0f0f;
     text-transform: capitalize;
-    margin-left: 11%;
+    /* margin-left: 11%; */
     margin-top: 2px;
 }
 .desk-sar-packet{
@@ -316,8 +325,8 @@ nav .navbar .nav-links .links li .arrow{
     text-decoration: none;
     color: #0f0f0f;
     margin-top: 2px;
-    margin-left: 11%;
-    margin-right: 11%;
+    /* margin-left: 11%;
+    margin-right: 11%; */
 }
 
 /* ======FOOTER====== */
