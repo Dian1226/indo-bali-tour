@@ -1,0 +1,107 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    height: 2000px;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: flex-end;
+}
+
+footer {
+    padding: 30px 0 0;
+}
+
+.Footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    width: 100%;
+    background: black;
+}
+
+.Footer-content h4 {
+    color: whitesmoke;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+}
+
+.Footer-content h4:hover {
+    text-decoration: dotted;
+    color: #ff0505;
+}
+
+.Footer-content li {
+    margin-bottom: 12px;
+}
+
+.Footer-content li a {
+    display: block;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all 0.4s ease;
+}
+
+.Footer-content li a:hover {
+    transform: translateY(-3px) translateX(-5px);
+    text-decoration: underline;
+    color: #ff0505;
+}
+
+.icons a {
+    display: inline-block;
+    font-size: 22px;
+    color: #d6d6d6d6;
+    margin-right: 17px;
+    transition: all 0.4s ease;
+}
+
+.icons a:hover {
+    color: #ff0505;
+    transform: translateY(-5px);
+}
+
+.Footer-content.payment-section {
+    margin-top: 20px;
+}
+
+.Footer-Bottom {
+    box-sizing: border-box;
+    grid-column: span 3;
+    background-color: #ff0505;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    align-self: end;
+}
+
+.Footer-Bottom p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    margin-top: 10px;
+    margin-left: 0;
+    font-size: small;
+    font-stretch: condensed;
+}
+
+/* Media Query untuk Responsif */
+@media only screen and (max-width: 1000px) {
+    .Footer-Bottom {
+        grid-column: span 1;
+    }
+
+    .Footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+

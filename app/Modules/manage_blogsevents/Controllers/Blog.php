@@ -54,12 +54,13 @@ class Blog extends BaseController
                 ]
             ]
         ])) {
-            return redirect()->to('backoffice/blogsevents/add')->withInput();
+            $validation = \Config\Services::validation();
+            return redirect()->to('backoffice/blogsevents/add')->withInput()->with('validation', $validation);
         }
 
         $slug = url_title($this->request->getVar('title'), '-', true);
         $image = $this->request->getFile('image');
-        $image->move('img/blog');
+        $image->move('backoffice/blog');
         $fileImage = $image->getName();
 
         $this->blogModel->save([
@@ -125,7 +126,7 @@ class Blog extends BaseController
 
         $slug = url_title($this->request->getVar('title'), '-', true);
         $image = $this->request->getFile('image');
-        $image->move('img/blog');
+        $image->move('backoffice/blog');
         $fileImage = $image->getName();
 
         $data = [
@@ -179,7 +180,6 @@ class Blog extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            dd($validation);
             return redirect()->to('/backoffice/category-blogsevents/add')->withInput()->with('validation', $validation);
         }
 
