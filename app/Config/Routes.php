@@ -7,6 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Pages::index');
 $routes->get('/tours', 'Pages::tours');
+$routes->get('/tours/ubud', 'Pages::toursUbud');
 $routes->get('/about', 'Pages::about');
 $routes->get('/newsevents', 'Pages::blogEvents');
 $routes->get('/Footer', 'Pages::footer');
