@@ -43,6 +43,8 @@ $routes->get('/backoffice/gallery', '\App\Modules\manage_gallery\Controllers\Gal
 $routes->get('/backoffice/gallery/add', '\App\Modules\manage_gallery\Controllers\Gallery::add');
 $routes->post('/backoffice/gallery/save', '\App\Modules\manage_gallery\Controllers\Gallery::save');
 $routes->delete('/backoffice/gallery/(:num)', '\App\Modules\manage_gallery\Controllers\Gallery::delete/$1');
+$routes->get('/backoffice/gallery/edit/(:num)', '\App\Modules\manage_gallery\Controllers\Gallery::edit/$1');
+$routes->post('/backoffice/gallery/update/(:num)', '\App\Modules\manage_gallery\Controllers\Gallery::update/$1');
 
 // FAQ
 $routes->get('/backoffice/faq', '\App\Modules\manage_faq\Controllers\FAQ');
