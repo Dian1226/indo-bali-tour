@@ -19,7 +19,7 @@
 }
  *::selection {
     background: var(--orange);
-    color: #fff;
+    background-color: grey;
  }
 
  html {
@@ -535,6 +535,8 @@ header .search-bar-container label:hover {
     text-decoration: line-through;
 }
 
+/* FUN ACTIVITIES STARTS*/
+
 .wrapper {
     padding: 10px 10px;
 }
@@ -626,6 +628,8 @@ header .search-bar-container label:hover {
     height: 100%;
 }
 
+/* FUN ACTIVITIES ENDS */
+
 /* DESTINATIONS */
  .swiper {
     margin: 50px auto;
@@ -650,6 +654,11 @@ header .search-bar-container label:hover {
     width: 100%;
   }
 /* DESTINATIONS ENDS */
+
+/* FUN ADVENTURES STARTS */
+
+
+/* FUN ADVENTURES ENDS */
 
 /* TRANSPORTATIONS */
 .transportations .box-container {
@@ -1122,6 +1131,7 @@ header .search-bar-container label:hover {
 
 /* REVIEW STARTS */
 .review .review-slider {
+    height: 75vh;
     padding-bottom: 2rem;
 }
 
@@ -1153,6 +1163,7 @@ header .search-bar-container label:hover {
 }
 
 .review .box .stars i {
+    padding-top: 2rem;
     color: orange;
     font-size: 1.7rem;
 }
@@ -1162,7 +1173,7 @@ header .search-bar-container label:hover {
 /* CONTACT STARTS */
 
 
-.contact .row{
+/* .contact .row{
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -1205,7 +1216,7 @@ header .search-bar-container label:hover {
     height: 15rem;
     resize: none;
     width: 100%;
-}
+} */
 
 /* CONTACT ENDS */
 
@@ -1329,21 +1340,10 @@ footer {
         font-size: 55%;
     }
 
-    
-
 }
 
 
-
-
-
-
-
 /* 1280PX ENDS */
-
-
-
-
 
 
 
@@ -1365,7 +1365,43 @@ footer {
         padding: 2rem;
     }
 }
-/* 991PX STARTS */
+/* 991PX ENDS */
+
+@media (max-width:834px) {
+   
+    html {
+        font-size: 50%;
+    }
+
+    header .logo-img img{
+        width: 100px;
+    }
+
+    .home .content h3 {
+        font-size: 12rem;
+    }
+
+    .home .content p {
+        font-size: 4rem;
+    }
+
+
+    .home .content h3:hover {
+        font-size: 14rem;
+    }
+
+    header .navbar a {
+        color: black;
+        font-size: 1.2rem;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 3px;
+        padding-right: 3px;
+        margin-right: 10px;
+    
+    }
+
+}
 
 /* 768PX STARTS */
 @media (max-width:768px){
@@ -1416,7 +1452,7 @@ footer {
     }
 
     .heading span {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     header .logo-img img{
@@ -1429,7 +1465,7 @@ footer {
     .home .content img {
         display: block;
         top: 0;
-        margin-left: 5rem;
+        margin-left: 20.8%;
         margin-bottom: 3rem;
         justify-content: center;
         text-align: center;
@@ -1447,6 +1483,26 @@ footer {
     }
 
     .promo .box-container {
+        left: 0;
+        right: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .question button {
+        font-size: 15px;
+    }
+
+    .question p{
+        font-size: 15px;
+        max-height: 0;
+        opacity: 0;
+        line-height: 1.5;
+        overflow: hidden;
+        transition: all 0.6s ease;
+    }
+
+    .transportations .box-container {
         left: 0;
         right: 0;
         justify-content: center;
