@@ -125,9 +125,6 @@
         <span>e</span>
         <span>s</span>
     </h1>
-   <div class="btn-m">
-    <button type="button" class="btn btn-primary btn-lg">More</button>
-   </div>
     <div class="box-container">
         <div class="box" data-aos="fade-up" data-aos-duration="1000">
             <img src="home/img/pa-1.jpg" alt="">
@@ -222,9 +219,13 @@
             <span>M</span>
             <span>O</span>
         </h1>
+
+        <div class="promo">
         <div class="btn-m" data-aos="fade-up" data-aos-duration="1000">
-            <button type="button" class="btn btn-primary btn-lg"><a href="promo.html">More</a></button>
+            <button type="button" class="btn btn-primary btn-lg"><a href="">More</a></button>
         </div>
+
+        <div class="promo-1">
         <div class="box-container">
             <div class="box" data-aos="fade-up" data-aos-duration="1000">
                 <img src="home/img/promo-card.avif" alt="">
@@ -251,12 +252,13 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <section class="ibt-fun-activities">
         <h1 class="heading" data-aos="fade-down" data-aos-duration="1000">
             <br><br>
-            <span> a</span>
+            <span>a</span>
             <span>c</span>
             <span>t</span>
             <span>i</span>
@@ -351,7 +353,49 @@
         <span>e</span>
         <span>s</span>
         </h1>
-       
+        <div class="container-v">
+        <div class="card-a"  data-aos="fade-up-right" data-aos-duration="1000">
+                <div class="face front">
+                    <img src="home/img/atv.jpg" alt="">
+                    <h3>ATV</h3>
+                </div>
+                <div class="face back">
+                    <h3>ATV</h3>
+                    <p>Bali's ATV tours offer something for everyone. Professional guides ensure your safety while providing insightful commentary about the surroundings, enhancing your adventure with fascinating insights into Bali's rich heritage and biodiversity.</p>
+                    <div class="link-a">
+                        <a href="#">Detail</a>
+                    </div>
+                </div>
+        </div>
+        <div class="card-a"  data-aos="fade-up-right" data-aos-duration="1000">
+                <div class="face front">
+                    <img src="home/img/ayung.jpg" alt="">
+                    <h3>Ayung River</h3>
+                </div>
+                <div class="face back">
+                    <h3>Ayung River</h3>
+                    <p>This iconic river offers an unforgettable adventure for thrill-seekers and nature enthusiasts alike. Embarking on a journey along its gentle rapids, visitors are treated to a unique perspective of Bali's breathtaking scenery.</p>
+                    <div class="link-a">
+                        <a href="#">Detail</a>
+                    </div>
+                </div>
+        </div>
+        <div class="card-a"  data-aos="fade-up-right" data-aos-duration="1000">
+                <div class="face front">
+                    <img src="home/img/hiking.avif" alt="">
+                    <h3>Hiking</h3>
+                </div>
+                <div class="face back">
+                    <h3>Hiking</h3>
+                    <p>As the sun rises over the horizon, casting its golden glow upon the island, adventurers eagerly lace up their boots, ready to traverse Bali's diverse terrain.
+
+Hiking in Bali offers a multifaceted experience, from serene rice terraces to majestic volcanic peaks. One of the most iconic trails leads adventurers to the summit of Mount Batur</p>
+                    <div class="link-a">
+                        <a href="#">Detail</a>
+                    </div>
+                </div>
+        </div>
+        </div>
 </section>
 <!-- IBT FUN ADVENTURES ENDS -->
 
@@ -371,6 +415,8 @@
 <div class="btn-m" data-aos="fade-up" data-aos-duration="1000">
 <button type="button" class="btn btn-primary btn-lg"><a href="transport.html">More</a></button>
 </div>
+
+<div class="transportations-1">
 <div class="box-container">
     <div class="box" data-aos="fade-up" data-aos-duration="1000">
         <img src="home/img/avanza.png" alt="">
@@ -408,6 +454,7 @@
                <a href="" class="btn">VIEW DETAILS</a>
         </div>
     </div>
+</div>
 </div>
 </section>
 <!-- TRANSPORT ENDS -->
@@ -498,7 +545,7 @@
                     <a href="" class="btn">More</a>
                 </div>
             </div>
-            <!-- <div class="box" data-aos="fade-left" data-aos-duration="1000">
+            <div class="box" data-aos="fade-left" data-aos-duration="1000">
                 <img src="home/img/g-4.jpeg" alt="">
                 <div class="content">
                     <h3>The New Place For New You</h3>
@@ -521,7 +568,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quis earum atque ducimus vitae, tempora iure adipisci modi odio!</p>
                     <a href="" class="btn">More</a>
                 </div>
-            </div> -->
+            </div>
         </div>
     </section>
 <!-- gallery ends -->
