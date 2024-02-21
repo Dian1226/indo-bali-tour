@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>INDO BALI TOUR</title>
     <link rel="stylesheet" href="home/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -13,7 +13,6 @@
 <body>
       <header >
         <div id="menu-bar" class="fas fa-bars"></div>
-        <!-- <a href="#" class="logo"><span>T</span>ravel</a> -->
         <div class="logo-img"><img src="home/img/indobalitour2.png" alt=""></div>
 
         <nav class="navbar">
@@ -23,7 +22,6 @@
             <a href="#blog-events">Blog & Events</a>
             <a href="#member">Member</a>
             <a href="#tour-experience">Tour Experience</a>
-            <!-- <a href="#packages">Packages</a> -->
             <a href="#contact">Contact Us</a>
         </nav>
         <div class="icons">
@@ -50,24 +48,19 @@
             <input type="checkbox" id="remember">
             <label for="remember">remember me</label>
             <p>forget password? <a href="#">Click Here</a></p>
-            <!-- <p>Don't have an account? <a href="#">Register Here</a></p> -->
         </form>
 
       </div>
  <!-- login form ends -->
 
- <!-- select language -->
-      
-
- <!-- select language -->
-
-      <!-- home section -->
+ <!-- home section -->
       <section class="home" id="home">
         <div class="content">
             <h3>BALI.</h3>
             <img src="home/img/indobalitour2.png" alt="">
             <p>Dicover new places with us, adventure awaits</p>
-             <a href="" class="btn">Discover More</a>
+            <!-- SAMBUNGKAN PADA HALAMAN TOURS -->
+             <a href="" class="btn">Discover More</a>   
         </div>
 
             <div class="controls">
@@ -119,6 +112,7 @@
     </div>
 </section>
 <!-- book section ends -->
+
 <!-- packages -->
     <section class="packages" id="packages">
         <h1 class="heading"  data-aos="fade-up" data-aos-duration="1000">
