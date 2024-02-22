@@ -23,13 +23,13 @@
         <div class="logo-img"><img src="home/img/indobalitour2.png" alt=""></div>
 
         <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
+            <a href="/">Home</a>
+            <a href="/index.php/about">About</a>
             <a href="/index.php/tours">Tours</a>
             <a href="#blog-events">Blog & Events</a>
             <a href="#member">Member</a>
             <a href="#tour-experience">Tour Experience</a>
-            <a href="#contact">Contact Us</a>
+            <a href="/index.php/contact">Contact Us</a>
         </nav>
         <div class="icons">
             <i class="fas fa-search" id="search-btn"></i>
@@ -78,7 +78,8 @@
         </div>
 
         <div class="vid-container">
-            <video src="home/img/vid-2.mp4" id="vid-slider" autoplay loop></video>
+            <video src="home/img/vidd-1 - rmv.mp4" id="vid-slider" autoplay loop></video>
+        </div>
     </section>
     <!-- home section ends -->
 
@@ -103,7 +104,7 @@
                     <input type="text" placeholder="place name">
                 </div>
                 <div class="inputBox">
-                    <h3>How Many </h3>
+                    <h3>How Many</h3>
                     <input type="number" placeholder="number of guests">
                 </div>
                 <div class="inputBox">
@@ -132,27 +133,28 @@
             <span>e</span>
             <span>s</span>
         </h1>
-        <div class="btn-m">
-            <button type="button" class="btn btn-primary btn-lg">More</button>
-        </div>
         <div class="box-container">
             <?php foreach ($packages as $package) : ?>
                 <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="backoffice/package/<?= $package['image']; ?>" alt="">
+                    <?php
+                    $price = $package['price'];
+                    $discount = $package['discount'];
+                    $afterDiscount = $price * (100 - $discount) / 100;
+                    ?>
+                    <img src="/backoffice/package/<?= $package['image']; ?>" alt="">
                     <div class="content">
-                        <h3><i class="fas fa-map-marker-alt"></i> <a href=""> <?= $package['title']; ?></a></h3>
+                        <h3><i class="fas fa-map-marker-alt"></i> <a href=""><?= $package['title']; ?></a></h3>
                         <p><?= $package['caption']; ?></p>
-                        <?php $i = 5 - $package['stars'] ?>
+                        <?php $i = 5 - $package['stars']; ?>
                         <div class="stars">
                             <?php for ($j = 0; $j < $package['stars']; $j++) : ?>
                                 <i class="fas fa-star"></i>
                             <?php endfor; ?>
-                            <?php $k = 0; ?>
-                            <?php for ($k; $k < $i; $k++) : ?>
+                            <?php for ($k = 0; $k < $i; $k++) : ?>
                                 <i class="far fa-star"></i>
                             <?php endfor; ?>
                         </div>
-                        <div class="price">USD $<?= $package['fee']; ?>/Person <span>$340.00</span></div>
+                        <div class="price">USD $<?= $afterDiscount; ?>/Person <span>$<?= $package['price']; ?></span></div>
                         <a href="" class="btn">Book Now</a>
                     </div>
                 </div>
@@ -213,14 +215,9 @@
         </div>
         <div class="swiper mySwiper4">
             <div class="swiper-wrapper" data-aos="fade-out" data-aos-duration="1000">
-                <div class="swiper-slide"><a href=""><img src="home/img/des-1.jpeg" alt=""></a></div>
-                <div class="swiper-slide"><a href=""><img src="home/img/des-2.jpeg" alt=""></a></div>
-                <div class="swiper-slide"><a href=""><img src="home/img/des-3.jpeg" alt=""></a></div>
-                <div class="swiper-slide"><a href=""><img src="home/img/des-4.jpeg" alt=""></a></div>
-                <div class="swiper-slide"><a href=""><img src="home/img/des-1.jpeg" alt=""></a></div>
-                <div class="swiper-slide"><a href=""><img src="home/img/des-2.jpeg" alt=""></a></div>
-                <div class="swiper-slide"><a href=""><img src="home/img/des-3.jpeg" alt=""></a></div>
-                <div class="swiper-slide"><a href=""><img src="home/img/des-4.jpeg" alt=""></a></div>
+                <?php foreach ($tours as $tour) : ?>
+                    <div class="swiper-slide"><a href="/tours/<?= $tour['slug']; ?>"><img src="/backoffice/tours/<?= $tour['image']; ?>" alt=""></a></div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -234,41 +231,46 @@
             <span>M</span>
             <span>O</span>
         </h1>
-        <div class="btn-m" data-aos="fade-up" data-aos-duration="1000">
-            <button type="button" class="btn btn-primary btn-lg"><a href="promo.html">More</a></button>
-        </div>
-        <div class="box-container">
-            <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                <img src="home/img/promo-card.avif" alt="">
-                <div class="content">
-                    <h3><a href=""> Promo Up To 50%!</a></h3>
-                    <p>Make ur own trip for 6 days! Tap for more!</p>
-                    <a href="" class="btn">Claim</a>
+
+        <div class="promo">
+            <div class="btn-m" data-aos="fade-up" data-aos-duration="1000">
+                <button type="button" class="btn btn-primary btn-lg"><a href="">More</a></button>
+            </div>
+
+            <div class="promo-1">
+                <div class="box-container">
+                    <div class="box" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="home/img/promo-card.avif" alt="">
+                        <div class="content">
+                            <h3><a href=""> Promo Up To 50%!</a></h3>
+                            <p>Make ur own trip for 6 days! Tap for more!</p>
+                            <a href="" class="btn">Claim</a>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="home/img/promo-card.avif" alt="">
+                        <div class="content">
+                            <h3><a href=""> Promo Up To 50%!</a></h3>
+                            <p>Make ur own trip for 6 days! Tap for more!</p>
+                            <a href="" class="btn">Claim</a>
+                        </div>
+                    </div>
+                    <div class="box" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="home/img/promo-card.avif" alt="">
+                        <div class="content">
+                            <h3><a href=""> Promo Up To 50%!</a></h3>
+                            <p>Make ur own trip for 6 days! Tap for more!</p>
+                            <a href="" class="btn">Claim</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                <img src="home/img/promo-card.avif" alt="">
-                <div class="content">
-                    <h3><a href=""> Promo Up To 50%!</a></h3>
-                    <p>Make ur own trip for 6 days! Tap for more!</p>
-                    <a href="" class="btn">Claim</a>
-                </div>
-            </div>
-            <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                <img src="home/img/promo-card.avif" alt="">
-                <div class="content">
-                    <h3><a href=""> Promo Up To 50%!</a></h3>
-                    <p>Make ur own trip for 6 days! Tap for more!</p>
-                    <a href="" class="btn">Claim</a>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section class="ibt-fun-activities">
         <h1 class="heading" data-aos="fade-down" data-aos-duration="1000">
             <br><br>
-            <span> a</span>
+            <span>a</span>
             <span>c</span>
             <span>t</span>
             <span>i</span>
@@ -363,7 +365,49 @@
             <span>e</span>
             <span>s</span>
         </h1>
+        <div class="container-v">
+            <div class="card-a" data-aos="fade-up-right" data-aos-duration="1000">
+                <div class="face front">
+                    <img src="home/img/atv.jpg" alt="">
+                    <h3>ATV</h3>
+                </div>
+                <div class="face back">
+                    <h3>ATV</h3>
+                    <p>Bali's ATV tours offer something for everyone. Professional guides ensure your safety while providing insightful commentary about the surroundings, enhancing your adventure with fascinating insights into Bali's rich heritage and biodiversity.</p>
+                    <div class="link-a">
+                        <a href="#">Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-a" data-aos="fade-up-right" data-aos-duration="1000">
+                <div class="face front">
+                    <img src="home/img/ayung.jpg" alt="">
+                    <h3>Ayung River</h3>
+                </div>
+                <div class="face back">
+                    <h3>Ayung River</h3>
+                    <p>This iconic river offers an unforgettable adventure for thrill-seekers and nature enthusiasts alike. Embarking on a journey along its gentle rapids, visitors are treated to a unique perspective of Bali's breathtaking scenery.</p>
+                    <div class="link-a">
+                        <a href="#">Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-a" data-aos="fade-up-right" data-aos-duration="1000">
+                <div class="face front">
+                    <img src="home/img/hiking.avif" alt="">
+                    <h3>Hiking</h3>
+                </div>
+                <div class="face back">
+                    <h3>Hiking</h3>
+                    <p>As the sun rises over the horizon, casting its golden glow upon the island, adventurers eagerly lace up their boots, ready to traverse Bali's diverse terrain.
 
+                        Hiking in Bali offers a multifaceted experience, from serene rice terraces to majestic volcanic peaks. One of the most iconic trails leads adventurers to the summit of Mount Batur</p>
+                    <div class="link-a">
+                        <a href="#">Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- IBT FUN ADVENTURES ENDS -->
 
@@ -383,42 +427,46 @@
         <div class="btn-m" data-aos="fade-up" data-aos-duration="1000">
             <button type="button" class="btn btn-primary btn-lg"><a href="transport.html">More</a></button>
         </div>
-        <div class="box-container">
-            <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                <img src="home/img/avanza.png" alt="">
-                <div class="content">
-                    <h3> <a href=""> Toyota Avanza</a></h3>
-                    <p>Accommodates : 6 person</p>
-                    <p>Include</p>
-                    <p>English Speaking Driver</p>
-                    <p>Petrol/Gazoline</p>
-                    <div class="price">USD $40/Day (10 Hours)</div>
-                    <a href="" class="btn">VIEW DETAILS</a>
+
+        <div class="transportations-1">
+            <div class="box-container">
+                <?php foreach ($transport as $transport) : ?>
+                    <div class="box" data-aos="fade-up" data-aos-duration="1000">
+                        <img src="/backoffice/transportation/<?= $transport['image']; ?>" alt="">
+                        <div class="content">
+                            <h3> <a href=""><?= $transport['brand']; ?></a></h3>
+                            <p>Accommodates : <?= $transport['capacity']; ?> person</p>
+                            <p>Include</p>
+                            <p><?= $transport['extra']; ?></p>
+                            <div class="price">USD $<?= $transport['fee']; ?>/Day (10 Hours)</div>
+                            <a href="" class="btn">VIEW DETAILS</a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+                <!-- <div class="box" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="home/img/terrios.png" alt="">
+                    <div class="content">
+                        <h3> <a href=""> Daihatsu Terrios</a></h3>
+                        <p>Accommodates : 6 person</p>
+                        <p>Include</p>
+                        <p>English Speaking Driver</p>
+                        <p>Petrol/Gazoline</p>
+                        <div class="price">USD $47/Day (10 Hours)</div>
+                        <a href="" class="btn">VIEW DETAILS</a>
+                    </div>
                 </div>
-            </div>
-            <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                <img src="home/img/terrios.png" alt="">
-                <div class="content">
-                    <h3> <a href=""> Daihatsu Terrios</a></h3>
-                    <p>Accommodates : 6 person</p>
-                    <p>Include</p>
-                    <p>English Speaking Driver</p>
-                    <p>Petrol/Gazoline</p>
-                    <div class="price">USD $47/Day (10 Hours)</div>
-                    <a href="" class="btn">VIEW DETAILS</a>
-                </div>
-            </div>
-            <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                <img src="home/img/apv.png" alt="">
-                <div class="content">
-                    <h3> <a href=""> Suzuki APV</a></h3>
-                    <p>Accommodates : 7 person</p>
-                    <p>Include</p>
-                    <p>English Speaking Driver</p>
-                    <p>Petrol/Gazoline</p>
-                    <div class="price">USD $43/Day (10 Hours)</div>
-                    <a href="" class="btn">VIEW DETAILS</a>
-                </div>
+                <div class="box" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="home/img/apv.png" alt="">
+                    <div class="content">
+                        <h3> <a href=""> Suzuki APV</a></h3>
+                        <p>Accommodates : 7 person</p>
+                        <p>Include</p>
+                        <p>English Speaking Driver</p>
+                        <p>Petrol/Gazoline</p>
+                        <div class="price">USD $43/Day (10 Hours)</div>
+                        <a href="" class="btn">VIEW DETAILS</a>
+                    </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -486,54 +534,16 @@
             <button type="button" class="btn btn-primary btn-lg">More</button>
         </div>
         <div class="box-container">
-            <div class="box" data-aos="fade-left" data-aos-duration="1000">
-                <img src="home/img/g-1.jpeg" alt="">
-                <div class="content">
-                    <h3>Waterfall</h3>
-                    <p>One of the most iconic waterfalls in Bali is Tegenungan, located near Ubud. Surrounded by dense greenery, Tegenungan waterfall cascades gracefully into a shallow pool, inviting visitors to take a refreshing dip and bask in the tranquility of nature.</p>
-                    <a href="" class="btn">More</a>
+            <!-- maksimal 6 foto -->
+            <?php foreach ($gallery as $g) : ?>
+                <div class="box" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="/backoffice/gallery/<?= $g['image']; ?>" alt="">
+                    <div class="content">
+                        <h3><?= $g['title']; ?></h3>
+                        <p><?= $g['description']; ?></p>
+                    </div>
                 </div>
-            </div>
-            <div class="box" data-aos="fade-left" data-aos-duration="1000">
-                <img src="home/img/gg - 2.jpeg" alt="">
-                <div class="content">
-                    <h3>Sangeh</h3>
-                    <p>The highlight of Sangeh is undoubtedly its towering nutmeg trees, some reaching heights of over 40 meters. These ancient giants provide a stunning backdrop as visitors wander along shaded pathways, surrounded by a symphony of tropical sounds.</p>
-                    <a href="" class="btn">More</a>
-                </div>
-            </div>
-            <div class="box" data-aos="fade-left" data-aos-duration="1000">
-                <img src="home/img/g-3.jpeg" alt="">
-                <div class="content">
-                    <h3>Nusa Penida</h3>
-                    <p>Nusa Penida is also home to picturesque natural wonders like Angel's Billabong, a stunning natural infinity pool, and Broken Beach, a unique coastal formation with a natural archway over crystal-clear waters.</p>
-                    <a href="" class="btn">More</a>
-                </div>
-            </div>
-            <!-- <div class="box" data-aos="fade-left" data-aos-duration="1000">
-                <img src="home/img/g-4.jpeg" alt="">
-                <div class="content">
-                    <h3>The New Place For New You</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quis earum atque ducimus vitae, tempora iure adipisci modi odio!</p>
-                    <a href="" class="btn">More</a>
-                </div>
-            </div>
-            <div class="box" data-aos="fade-left" data-aos-duration="1000">
-                <img src="home/img/g-5.jpeg" alt="">
-                <div class="content">
-                    <h3>The New Place For New You</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quis earum atque ducimus vitae, tempora iure adipisci modi odio!</p>
-                    <a href="" class="btn">More</a>
-                </div>
-            </div>
-            <div class="box" data-aos="fade-left" data-aos-duration="1000">
-                <img src="home/img/g-6.jpeg" alt="">
-                <div class="content">
-                    <h3>The New Place For New You</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quis earum atque ducimus vitae, tempora iure adipisci modi odio!</p>
-                    <a href="" class="btn">More</a>
-                </div>
-            </div> -->
+            <?php endforeach; ?>
         </div>
     </section>
     <!-- gallery ends -->
@@ -557,29 +567,31 @@
         </div>
         <div class="blog-events">
             <div class="blog-box-container">
-                <div class="blog-box" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="blog-box-img">
-                        <img src="home/img/g-1.jpeg" alt="">
-                        <a href="#" class="blog-img-link">
-                            <i class='bx bx-right-top-arrow-circle'></i>
-                        </a>
-                    </div>
-                    <div class="blog-box-text">
-                        <strong>Bali</strong>
-                        <a href="">Bali: A Tapestry of Culture, Adventure, and Natural Beauty</a>
-                        <p>Nestled in the heart of the Indonesian archipelago lies an island paradise like no other – Bali. Renowned for its enchanting landscapes, vibrant culture, and warm hospitality, Bali captivates the hearts of travelers from across the globe. </p>
-                        <div class="blog-author">
-                            <div class="blog-author-img">
-                                <img src="home/img/re-3.jpg" alt="">
-                            </div>
-                            <div class="blog-author-text">
-                                <strong>Alax</strong>
-                                <span>Jan 11, 2024</span>
+                <?php foreach ($blogs as $blog) : ?>
+                    <div class="blog-box" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="blog-box-img">
+                            <img src="/backoffice/blog/<?= $blog['image']; ?>" alt="">
+                            <a href="#" class="blog-img-link">
+                                <i class='bx bx-right-top-arrow-circle'></i>
+                            </a>
+                        </div>
+                        <div class="blog-box-text">
+                            <strong><?= $blog['category']; ?></strong>
+                            <a href=""><?= $blog['title']; ?></a>
+                            <p><?= $blog['content']; ?></p>
+                            <div class="blog-author">
+                                <div class="blog-author-img">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="blog-author-text">
+                                    <strong><?= $blog['caption_image']; ?></strong>
+                                    <span><?= $blog['created_at']; ?></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="blog-box" data-aos="fade-right" data-aos-duration="1000">
+                <?php endforeach; ?>
+                <!-- <div class="blog-box" data-aos="fade-right" data-aos-duration="1000">
                     <div class="blog-box-img">
                         <img src="home/img/g-2.webp" alt="">
                         <a href="#" class="blog-img-link">
@@ -622,7 +634,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

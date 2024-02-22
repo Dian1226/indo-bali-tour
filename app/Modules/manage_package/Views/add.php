@@ -14,27 +14,45 @@
                     }
                     echo '';
                 } ?>" id="title" value="<?= old('title'); ?>" aria-describedby="titlecheck">
-                <div class="invalid-feedback" for="titlecheck">
+                <div class="invalid-discountdback" for="titlecheck">
                     <?php if (session('validation')) {
                         echo session('validation')->getError('title');
                     }; ?>
                 </div>
             </div>
         </div>
-        <div class="col-3">
-            <label for="fee" class="form-label">Fee</label>
+        <div class="col-2">
+            <label for="price" class="form-label">price</label>
             <div class="input-group mb-3">
-                <span class="input-group-text" id="feecheck">USD $</span>
-                <input type="number" name="fee" class="form-control 
+                <span class="input-group-text" id="pricecheck">USD $</span>
+                <input type="number" name="price" class="form-control 
                 <?php if (session('validation')) {
-                    if (session('validation')->getError('fee')) {
+                    if (session('validation')->getError('price')) {
                         echo 'is-invalid';
                     }
                     echo '';
-                } ?>" value="<?= old('fee'); ?>" id="fee" aria-describedby="feecheck">
-                <div class="invalid-feedback" for="feecheck">
+                } ?>" value="<?= old('price'); ?>" id="price" aria-describedby="pricecheck">
+                <div class="invalid-feedback" for="pricecheck">
                     <?php if (session('validation')) {
-                        echo session('validation')->getError('fee');
+                        echo session('validation')->getError('price');
+                    }; ?>
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <label for="discount" class="form-label">Discount</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="discountcheck">USD $</span>
+                <input type="number" name="discount" class="form-control 
+                <?php if (session('validation')) {
+                    if (session('validation')->getError('discount')) {
+                        echo 'is-invalid';
+                    }
+                    echo '';
+                } ?>" value="<?= old('discount'); ?>" id="discount" aria-describedby="discountcheck">
+                <div class="invalid-discountdback" for="discountcheck">
+                    <?php if (session('validation')) {
+                        echo session('validation')->getError('discount');
                     }; ?>
                 </div>
             </div>
@@ -50,7 +68,7 @@
                     echo '';
                 } ?>" value="<?= old('stars'); ?>" name="stars" value="<?= old('stars'); ?>" aria-describedby="starscheck">
                 <span class="input-group-text">/5</span>
-                <div class="invalid-feedback" for="starscheck">
+                <div class="invalid-discountdback" for="starscheck">
                     <?php if (session('validation')) {
                         echo session('validation')->getError('stars');
                     }; ?>
@@ -69,7 +87,7 @@
             <div class="mb-3">
                 <label for="image" class="form-label">Image</label>
                 <input type="file" id="image" name="image" class="form-control">
-                <div class="invalid-feedback" for="imagecheck">
+                <div class="invalid-discountdback" for="imagecheck">
                     <?php if (isset($validation)) : ?>
                         <?php foreach ($errors as $error) : ?>
                             <li><?= esc($error) ?></li>

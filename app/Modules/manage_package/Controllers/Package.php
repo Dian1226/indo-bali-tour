@@ -45,10 +45,10 @@ class Package extends BaseController
                     'is_unique' => 'Package tersebut sudah terdaftar'
                 ]
             ],
-            'fee' => [
+            'price' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Fee wajib diisi',
+                    'required' => 'Harga wajib diisi',
                 ]
             ],
             'stars' => [
@@ -75,7 +75,8 @@ class Package extends BaseController
 
         $this->packageModel->save([
             'title' => $this->request->getVar('title'),
-            'fee' => $this->request->getVar('fee'),
+            'discount' => $this->request->getVar('discount'),
+            'price' => $this->request->getVar('price'),
             'rundown' => $this->request->getVar('rundown'),
             'caption' => $this->request->getVar('caption'),
             'image' => $fileImage,
@@ -117,10 +118,10 @@ class Package extends BaseController
                     'is_unique' => 'Package tersebut sudah terdaftar',
                 ]
             ],
-            'fee' => [
+            'price' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Fee wajib diisi',
+                    'required' => 'Harga wajib diisi',
                 ]
             ],
             'stars' => [
@@ -141,13 +142,14 @@ class Package extends BaseController
         if ($image->getError(4)) {
             $fileImage = '';
         } else {
-            $image->move('backoffice/transportation');
+            $image->move('backoffice/package');
             $fileImage = $image->getName();
         }
 
         $data = [
             'title' => $this->request->getVar('title'),
-            'fee' => $this->request->getVar('fee'),
+            'discount' => $this->request->getVar('discount'),
+            'price' => $this->request->getVar('price'),
             'rundown' => $this->request->getVar('rundown'),
             'caption' => $this->request->getVar('caption'),
             'image' => $fileImage,

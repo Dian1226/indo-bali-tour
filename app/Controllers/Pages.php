@@ -3,7 +3,9 @@
 namespace App\Controllers;
 
 use App\Models\ToursModel;
+use App\Modules\manage_blogsevents\Models\BlogModel;
 use App\Modules\manage_faq\Models\FaqModel;
+use App\Modules\manage_gallery\Models\GalleryModel;
 use App\Modules\manage_package\Models\PackageModel;
 use App\Modules\manage_transportation\Models\TransportModel;
 
@@ -13,24 +15,31 @@ class Pages extends BaseController
     protected $transportModel;
     protected $packageModel;
     protected $toursModel;
+    protected $galleryModel;
+    protected $blogsModel;
     public function __construct()
     {
         $this->faqModel = new FaqModel();
         $this->transportModel = new TransportModel();
         $this->packageModel = new PackageModel();
         $this->toursModel = new ToursModel();
+        $this->galleryModel = new GalleryModel();
+        $this->blogsModel = new BlogModel();
     }
     public function index(): string
     {
         $data = [
             'faqs' => $this->faqModel->getFaq(),
             'transport' => $this->transportModel->getTransport(),
-            'packages' => $this->packageModel->getPackage()
+            'packages' => $this->packageModel->getPackage(),
+            'tours' => $this->toursModel->getTours(),
+            'gallery' => $this->galleryModel->getGallery(),
+            'blogs' => $this->blogsModel->getBlog()
         ];
         return view('home/index', $data);
     }
 
-    public function tours() : string
+    public function tours(): string
     {
         $data = [
             'tours' => $this->toursModel->getTours()
@@ -38,7 +47,7 @@ class Pages extends BaseController
 
         return view('tours/tours', $data);
     }
-    public function toursDetail($slug) : string
+    public function toursDetail($slug): string
     {
         $data = [
             'tour' => $this->toursModel->getTours($slug),
@@ -48,12 +57,12 @@ class Pages extends BaseController
         return view('tours/tourDetail', $data);
     }
 
-    public function about() : string
+    public function about(): string
     {
-        return view('pages/about');
+        return view('About/About');
     }
 
-    public function blogEvents() : string
+    public function blogEvents(): string
     {
         return view('pages/blogEvents');
     }
@@ -67,5 +76,4 @@ class Pages extends BaseController
     {
         return view('footer/footer');
     }
-
 }

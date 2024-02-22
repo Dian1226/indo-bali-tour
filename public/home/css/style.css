@@ -15,7 +15,7 @@
     scroll-behavior: smooth;
  }
  body {
-    height: 350rem;
+    height: 400rem;
 }
  *::selection {
     background: var(--orange);
@@ -39,7 +39,7 @@
  }
 
  .heading span {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 800;
     /* background:#fdd3d3; */
     color: #ff0505;
@@ -70,7 +70,7 @@
 
  .btn-m {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
  }
 
 .btn-m button  {
@@ -390,17 +390,36 @@ header .search-bar-container label:hover {
     color: #666;
 }
 
-.packages .box-container {
+.packages {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+    padding-top: 50px;
+}
+
+.packages .box-container {
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1050px;
+    width: 90%;
+    margin-top: 50px;
+    gap: 4.5rem;
+   
 }
 
 .packages .box-container .box {
-    flex: 0.5 0.5 30rem;
-    border-radius: .2rem;
-    width: 30rem;
-    height: 45rem;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: all ease 0.3s;
     overflow: hidden;
     box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
 }
@@ -410,8 +429,12 @@ header .search-bar-container label:hover {
 }
 
 .packages .box-container .box img {
-    height: 25rem;
     width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    height: 25rem;
     object-fit: cover;
 }
 
@@ -462,74 +485,100 @@ header .search-bar-container label:hover {
     text-decoration: line-through;
 }
 
-.promo .box-container {
+/* PROMO */
+
+.promo .btn-m {
     display: flex;
-    /* margin-top: 3rem; */
-    flex-wrap: wrap;
-    gap: 1.5rem; 
+    justify-content: right;
 }
 
-.promo .box-container .box {
-    flex: 0.5 0.5 30rem;
-    border-radius: .2rem;
-    width: 30rem;
-    height: 45rem;
+.promo-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+
+.promo-1 .box-container {
+    display: grid;
+    justify-content: center;
+    place-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1050px;
+    width: 90%;
+    margin-top: 50px;
+    gap: 4rem;
+   
+}
+
+.promo-1 .box-container .box {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    transition: all ease 0.3s;
     overflow: hidden;
     box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
+    margin-left: 3rem;
 }
 
-.promo .box-container .box:hover {
+.promo-1 .box-container .box:hover {
     background-color: rgba(225, 222, 222, 0.7);
 }
 
-.promo .box-container .box img {
-    height: 25rem;
+.promo-1 .box-container .box img {
+    height: auto;
     width: 100%;
     object-fit: cover;
 }
 
 
 
-.promo .box-container .box .content {
+.promo-1 .box-container .box .content {
     padding: 1.4rem;
 }
-.promo .box-container .box .content h3 a {
+.promo-1 .box-container .box .content h3 a {
    font-size: 2rem;
    color: #333;
    text-decoration: none;
 }
 
-.promo .box-container .box .content h3 a:hover {
+.promo-1 .box-container .box .content h3 a:hover {
     color: orange;
  }
 
- .promo .box-container .box .content h3 i {
+ .promo-1 .box-container .box .content h3 i {
    color: orange;
    font-size: 2rem;
 }
 
-.promo .box-container .box .content h3 i:hover {
+.promo-1 .box-container .box .content h3 i:hover {
     color: white;
 }
 
-.promo .box-container .box .content p {
+.promo-1 .box-container .box .content p {
   font-size: 1.3rem;
   color: #666;
   padding: 0.5rem 0;
 }
 
-.promo .box-container .box .content .stars i {
+.promo-1 .box-container .box .content .stars i {
     font-size: 1.7rem;
     color:orange;
 }
 
-.promo .box-container .box .content .price {
+.promo-1 .box-container .box .content .price {
     font-size: 2rem;
     color: #333;
     padding-top: 1rem;
 }
 
-.promo .box-container .box .content .price span {
+.promo-1 .box-container .box .content .price span {
     color: #666;
     font-size: 1.5rem;
     text-decoration: line-through;
@@ -656,72 +705,193 @@ header .search-bar-container label:hover {
 /* DESTINATIONS ENDS */
 
 /* FUN ADVENTURES STARTS */
+.container-v {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+ .card-a {
+    position: relative;
+    width : 300px;
+    height: 350px;
+    margin-left: 3rem;    
+}
+
+ .card-a .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card-a .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #0000 ;
+}
+
+.card-a .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-a .front h3 {
+    position: absolute;
+    bottom: 0;
+    font-size: 3rem;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.3);
+    text-align: center;
+}
+
+.card-a .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgba(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #0000;
+}
+
+.card-a .back .link-a {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card-a .back .link-a a {
+    font-size: 1.8rem;
+    color: #f3f3f3;
+}
+
+.card-a .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card-a .back p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.card-a:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+.card-a:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
 
 
 /* FUN ADVENTURES ENDS */
 
 /* TRANSPORTATIONS */
-.transportations .box-container {
+
+.transportations .btn-m {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem; 
+    justify-content: right;
 }
 
-.transportations .box-container .box {
-    flex: 0.5 0.5 30rem;
-    border-radius: .2rem;
-    width: 30rem;
-    height: 45rem;
+
+.transportations-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+    padding-top: 50px;
+}
+
+
+.transportations-1 .box-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1050px;
+    width: 90%;
+    margin-top: 50px;
+    gap: 4rem;
+   
+}
+
+.transportations-1  .box-container .box {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: all ease 0.3s;
     overflow: hidden;
     box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
 }
 
-.transportations .box-container .box:hover {
+.transportations-1 .box-container .box:hover {
     background-color: rgba(225, 222, 222, 0.7);
 }
 
-.transportations .box-container .box img {
-    height: 19.6rem;
+.transportations-1 .box-container .box img {
+    height: auto;
     width: 100%;
     object-fit: cover;
 }
 
-.transportations .box-container .box .content {
+.transportations-1 .box-container .box .content {
     padding: 1.4rem;
 }
-.transportations .box-container .box .content h3 a {
+
+.transportations-1 .box-container .box .content h3 a {
    font-size: 2rem;
    color: #333;
    text-decoration: none;
 }
 
-.transportations .box-container .box .content h3 a:hover {
+.transportations-1 .box-container .box .content h3 a:hover {
     color: orange;
  }
 
- .transportations .box-container .box .content h3 i {
+ .transportations-1 .box-container .box .content h3 i {
    color: orange;
    font-size: 2rem;
 }
 
-.transportations .box-container .box .content h3 i:hover {
+.transportations-1 .box-container .box .content h3 i:hover {
     color: white;
 }
 
-.transportations .box-container .box .content p  {
+.transportations-1 .box-container .box .content p  {
   font-size: 1.2rem;
   color: #666;
   padding: 1px 0;
 }
 
 
-.transportations .box-container .box .content .price {
+.transportations-1 .box-container .box .content .price {
     font-size: 1.5rem;
     color: #333;
     padding-top: 1rem;
 }
 
-.transportations .box-container .box .content .btn {
+.transportations-1 .box-container .box .content .btn {
         display: inline-block;
         margin-top: 0.6rem;
         background: #ff0505;
@@ -733,7 +903,7 @@ header .search-bar-container label:hover {
         border-radius: 50px;
 }
 
-.transportations .box-container .box .content .btn:hover {
+.transportations-1 .box-container .box .content .btn:hover {
     background: rgb(246, 181, 181);
     color: #ff0505;
  }
@@ -783,8 +953,7 @@ header .search-bar-container label:hover {
 
 .blog-box-img {
     width: 100%;
-    height: 100%;
-    max-height: 300px;
+    height: 300px;
     overflow: hidden;
     display: flex;
     position: relative;
@@ -974,7 +1143,7 @@ header .search-bar-container label:hover {
 /* MARKET STARTS */
  .market {
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
     display: grid;
     place-items: center;
     margin-bottom: 3rem;
@@ -994,7 +1163,7 @@ header .search-bar-container label:hover {
 
  .row .left img {
     width: 300px;
-    height: 360px ;
+    height: 370px ;
     object-fit: cover;
  }
 
@@ -1309,6 +1478,7 @@ footer {
     }
 }
 
+
 .Footer-Bottom p{
     color: white;
     margin-top: 10px;
@@ -1340,6 +1510,39 @@ footer {
         font-size: 55%;
     }
 
+    .packages .box-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        place-content: center;
+        align-items: center;
+    }
+    .promo-1 .box-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        place-content: center;
+        align-items: center;
+    }
+    .transportations-1 .box-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        place-content: center;
+        align-items: center;
+    }
+
+    .review .review-slider {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        place-items: center;
+        width: 100%;
+        height: auto;
+        padding-bottom: 50px;
+    }
+
 }
 
 
@@ -1366,6 +1569,92 @@ footer {
     }
 }
 /* 991PX ENDS */
+
+@media (max-width:884px) {
+    #menu-bar {
+        display: initial;
+       }
+    
+       header .navbar {
+        position: absolute;
+        top:100%;
+        right: 0;
+        left: 0;
+        background: transparent;
+        border-top: .1rem solid black;
+        padding: 1rem 2rem ;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0) ;
+       }
+    
+       header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+       }
+    
+       header .navbar a {
+        display: block;
+        border-radius: 50px;
+        color: white;
+        font-weight: 100;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        background:black;
+       
+       }
+
+       header .logo-img img {
+        margin-left: 2rem;
+       }
+    
+       header .navbar a:hover {
+        border: .5px solid white;
+        background-color: #ff0505;
+        border-radius: 50px;
+        color: white;
+       }
+
+    .packages .box-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 30px;
+        margin-right: 9rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-v {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        gap: 2rem;
+    }
+
+    .promo-1 .box-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 30px;
+        margin-right: 9rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .transportations-1 .box-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 30px;
+        margin-right: 9rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .review .review-slider {
+        height: 34.5vh;
+        padding-bottom: 2rem;
+    }
+
+}
+
 
 @media (max-width:834px) {
    
@@ -1399,6 +1688,55 @@ footer {
         padding-right: 3px;
         margin-right: 10px;
     
+    }
+
+
+    .packages .box-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 30px;
+        margin-right: 9rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .promo-1 .box-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 30px;
+        margin-right: 9rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .transportations-1 .box-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 30px;
+        margin-right: 9rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .market {
+        width: 100%;
+        max-height: 50vh;
+        display: grid;
+        place-items: center;
+        margin-bottom: 3rem;
+     }
+
+     .row {
+        width: 80%;
+        max-width: 1090px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 60px 28px;
+     }
+
+    .review .review-slider {
+        height: 38vh;
+        padding-bottom: 2rem;
     }
 
 }
@@ -1441,6 +1779,21 @@ footer {
     border-radius: 50px;
     color: white;
    }
+
+   .packages .box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+   .promo-1 .box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+   .transportations-1 .box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+   
 }
 
 /* 768PX ENDS */
@@ -1476,17 +1829,31 @@ footer {
     }
 
     .packages .box-container {
+        display: grid;
+        grid-template-columns: 1fr;
         left: 0;
         right: 0;
         justify-content: center;
         align-items: center;
     }
 
-    .promo .box-container {
+    .container-v {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        gap: 2rem;
+    }
+
+    .promo-1 .box-container {
+        display: grid;
+        grid-template-columns: 1fr;
         left: 0;
         right: 0;
         justify-content: center;
         align-items: center;
+        margin-left: 5rem;
     }
 
     .question button {
@@ -1502,31 +1869,44 @@ footer {
         transition: all 0.6s ease;
     }
 
-    .transportations .box-container {
+    .transportations-1 .box-container {
+        display: grid;
+        grid-template-columns: 1fr;
         left: 0;
         right: 0;
         justify-content: center;
         align-items: center;
+        grid-template-columns: 1fr;
+        margin-left: 8rem;
+    }
+
+    .market {
+        min-height: 120vh;
     }
 
     .market .row .img img {
+        display: block;
         margin: 2rem 4rem;
         width: 300px;
         height: 340px;
     }
     
-    .market .row .img .text-m {
-        width: 100%;
+    .row {
+        grid-template-columns: 1fr;
     }
 
-    .market .row .img .text-m h2 {
-        font-size: 4rem;
-        letter-spacing: 3px;
+    
+    .review .review-slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        place-items: center;
+        width: 50vh;
+        height: 50vh;
+        padding-bottom: 50px;
+        margin-top: 0.8rem;
     }
-
-    .contact .row form .inputBox input {
-        width: 100%;
-    }
+    
 }
 
 /* 450PX ENDS */

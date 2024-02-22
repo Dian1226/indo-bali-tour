@@ -249,24 +249,27 @@ nav .navbar .nav-links .links li .arrow{
     font-style: italic;
     margin-top: 2%;
 }
-.see1{
+.see1 {
     /* background-color: #A8A1FA; */
-    height: auto;
-    width: 100%;
-    margin-top: 3%;
+    height: 300px;
+    /* width: 100%; */
+    margin: 3% 7%;
     display: flex;
-    /* justify-content: space-between; */
+    /* border: #000 1px solid; */
+    justify-content: space-between;
 }
 .see-image{
     width: 400px;
     height: 300px;
-    margin-left: 7%;
+    /* border: #000 1px solid; */
+    /* margin-left: 7%; */
     border-radius: 8%;
 }
 .see-desk{
     font-size: 20px;
-    width: 50%;
-    margin-left: 8%;
+    /* border: #000 1px solid; */
+    width: 700px;
+    /* margin-left: 8%; */
     text-align: justify;
 }
 .desk6{
@@ -287,15 +290,19 @@ nav .navbar .nav-links .links li .arrow{
 .container-sar-pack{
     /* background-color: #A8A1FA; */
     display: flex;
+    width: 100%;
     margin-top: 3%;
     padding: 0 7%;
+    flex-wrap: wrap;
     justify-content: space-between;
+    
 }
 
 .container-sar-pack a {
     display: block;
     /* background-color: #FF0505; */
     width: 350px;
+    margin-bottom: 30px;
 }
 
 .saran-img{

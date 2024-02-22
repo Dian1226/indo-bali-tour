@@ -26,7 +26,7 @@
           <tr>
             <th scope="row"><?= $i; ?></th>
             <td><?= $package['title']; ?></td>
-            <td>USD $<?= $package['fee']; ?></td>
+            <td>USD $<?= $package['price']; ?></td>
             <td><img src="/backoffice/package/<?= $package['image']; ?>" alt="" height="100px"></td>
             <td>
               <a href="/backoffice/package/edit/<?= $package['id']; ?>" class="btn btn-warning">Edit</a>
