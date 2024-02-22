@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 
-<form action="/backoffice/package/update/<?= $package['id']; ?>" method="post" enctype="multipart/form-data">
+<form action="/backoffice/gallery/update/<?= $gallery['id']; ?>" method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="col">
             <div class="mb-3">
@@ -13,64 +13,10 @@
                         echo 'is-invalid';
                     }
                     echo '';
-                } ?>" id="title" value="<?= old('title', $package['title']); ?>" aria-describedby="titlecheck">
-                <div class="invalid-discountdback" for="titlecheck">
+                } ?>" id="title" value="<?= old('title', $gallery['title']); ?>" aria-describedby="titlecheck">
+                <div class="invalid-feedback" for="titlecheck">
                     <?php if (session('validation')) {
                         echo session('validation')->getError('title');
-                    }; ?>
-                </div>
-            </div>
-        </div>
-        <div class="col-2">
-            <label for="price" class="form-label">price</label>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="pricecheck">USD $</span>
-                <input type="number" name="price" class="form-control 
-                <?php if (session('validation')) {
-                    if (session('validation')->getError('price')) {
-                        echo 'is-invalid';
-                    }
-                    echo '';
-                } ?>" value="<?= old('price', $package['price']); ?>" id="price" aria-describedby="pricecheck">
-                <div class="invalid-feedback" for="pricecheck">
-                    <?php if (session('validation')) {
-                        echo session('validation')->getError('price');
-                    }; ?>
-                </div>
-            </div>
-        </div>
-        <div class="col-2">
-            <label for="discount" class="form-label">discount</label>
-            <div class="input-group mb-3">
-                <input type="number" name="discount" class="form-control 
-                <?php if (session('validation')) {
-                    if (session('validation')->getError('discount')) {
-                        echo 'is-invalid';
-                    }
-                    echo '';
-                } ?>" value="<?= old('discount', $package['discount']); ?>" id="discount" aria-describedby="discountcheck">
-                <span class="input-group-text" id="discountcheck">%</span>
-                <div class="invalid-discountdback" for="discountcheck">
-                    <?php if (session('validation')) {
-                        echo session('validation')->getError('discount');
-                    }; ?>
-                </div>
-            </div>
-        </div>
-        <div class="col-2">
-            <label for="stars" class="form-label">Stars</label>
-            <div class="input-group mb-3">
-                <input type="number" class="form-control
-                <?php if (session('validation')) {
-                    if (session('validation')->getError('stars')) {
-                        echo 'is-invalid';
-                    }
-                    echo '';
-                } ?>" value="<?= old('stars', $package['stars']); ?>" name="stars" aria-describedby="starscheck">
-                <span class="input-group-text">/5</span>
-                <div class="invalid-discountdback" for="starscheck">
-                    <?php if (session('validation')) {
-                        echo session('validation')->getError('stars');
                     }; ?>
                 </div>
             </div>
@@ -79,15 +25,9 @@
     <div class="row">
         <div class="col">
             <div class="mb-3">
-                <label for="caption" class="form-label">Caption</label>
-                <input type="text" name="caption" class="form-control" id="title" value="<?= old('caption', $package['caption']); ?>">
-            </div>
-        </div>
-        <div class="col">
-            <div class="mb-3">
                 <label for="image" class="form-label">Image</label>
                 <input type="file" id="image" name="image" class="form-control">
-                <div class="invalid-discountdback" for="imagecheck">
+                <div class="invalid-feedback" for="imagecheck">
                     <?php if (isset($validation)) : ?>
                         <?php foreach ($errors as $error) : ?>
                             <li><?= esc($error) ?></li>
@@ -96,13 +36,11 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col">
             <div class="col">
                 <div class="mb-3">
-                    <label for="rundown" class="form-label">Rundown</label>
-                    <textarea class="form-control" id="rundown" name="rundown" rows="5"><?= old('rundown', $package['rundown']); ?></textarea>
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" id="description" name="description" rows="5"><?= old('description', $gallery['description']); ?></textarea>
                 </div>
             </div>
         </div>
@@ -137,7 +75,7 @@
     <h3>Including</h3>
     <ul>
         <li>Dinner&nbsp;</li>
-        <li>All entrance ticket discounts&nbsp;</li>
+        <li>All entrance ticket fees&nbsp;</li>
         <li>Free Mineral Water&nbsp;</li>
         <li>Including Petrol&nbsp;&nbsp;</li>
     </ul>
@@ -152,19 +90,19 @@
     <h3>Highlights</h3>
     <ul>
         <li>Enjoy the beauty of Tegenungan Waterfall&nbsp;</li>
-        <li>Enjoy the cofdiscount plantation of Temen Village&nbsp;</li>
+        <li>Enjoy the coffee plantation of Temen Village&nbsp;</li>
         <li>Get an amazing view of Mount Batur Kintamani while enjoying your special Indonesian lunch while overlooking the active volcano.&nbsp;</li>
     </ul>
     <h3>Description</h3>
     <p>After morning pick up from your hotel, first place will be Tegenungan Waterfall. You can admire the lush green surroundings and enjoy the splashing of the waterfalls while taking a dip in the pool below the falls.&nbsp;</p>
     <p>The next spot is Friends Village. Friends village where we have seen the Bali&nbsp;</p>
-    <p>Cofdiscount plantation, in this plantation you can see and take photos of the animal Luwak which is very popular in Bali for making the best cofdiscount. Then try a presentation about agricultural products where visitors are free to drink cofdiscount on the plantation.&nbsp;&nbsp;</p>
+    <p>Coffee plantation, in this plantation you can see and take photos of the animal Luwak which is very popular in Bali for making the best coffee. Then try a presentation about agricultural products where visitors are free to drink coffee on the plantation.&nbsp;&nbsp;</p>
     <p>After that to Tegalalang (Rice Fields). The Tegallalang Rice Terraces are located in a valley that offers incredible views of the terraced terraces and the surrounding green landscape. Apart from those in the villages of Pejeng and Campuhan, the Tegallalang Rice Fields form three of the most stunning terraced landscapes in the Ubud area.&nbsp;</p>
     <p>At the end of the day Get a stunning view of Mount Batur Kintamani while enjoying an Indonesian lunch overlooking the active volcano.&nbsp;</p>
     <h3>Including</h3>
     <ul>
         <li>Lunch&nbsp;</li>
-        <li>All entrance ticket discounts&nbsp;</li>
+        <li>All entrance ticket fees&nbsp;</li>
         <li>Free Mineral Water&nbsp;</li>
         <li>Including Petrol&nbsp;&nbsp;</li>
     </ul>
@@ -191,7 +129,7 @@
     <h3>Including</h3>
     <ul>
         <li>Lunch&nbsp;</li>
-        <li>All entrance ticket discounts&nbsp;</li>
+        <li>All entrance ticket fees&nbsp;</li>
         <li>Free Mineral Water&nbsp;</li>
         <li>Including Petrol&nbsp;&nbsp;</li>
     </ul>
@@ -205,21 +143,21 @@
     <h3>Highlights</h3>
     <ul>
         <li>Drive the ATV car on the challenging paths&nbsp;</li>
-        <li>discountl the adrenaline of riding an ATV which through the forests, rice fields also rivers.&nbsp;</li>
+        <li>Feel the adrenaline of riding an ATV which through the forests, rice fields also rivers.&nbsp;</li>
         <li>Enjoy the driving sensation that challenges your adrenaline&nbsp;</li>
         <li>Experience the sensation of rafting in white water&nbsp;</li>
         <li>Admire beautiful stone carvings along the river&nbsp;</li>
         <li>Enjoy an Indonesian buffet lunch at the restaurant&nbsp;</li>
     </ul>
     <h3>Description</h3>
-    <p>This activity provides a different driving experience that doesn't like driving on a highway. Challenging and varied tracks will make you discountl like a racer! Test your abilities so this makes you want more adventure. Before turn to this very challenging track, the instructor will give you a briefing to know how to drive on the track that really challenges your adrenaline because driving activities are not like driving in general. After you receive your helmet, you will choose your vehicle and have a brief warm-up session. After that, you will be driving to the natural trekking, guided by a very experienced guide. The guide will capture your moment in the middle of the road so you can remember this unforgettable trip forever.&nbsp;</p>
+    <p>This activity provides a different driving experience that doesn't like driving on a highway. Challenging and varied tracks will make you feel like a racer! Test your abilities so this makes you want more adventure. Before turn to this very challenging track, the instructor will give you a briefing to know how to drive on the track that really challenges your adrenaline because driving activities are not like driving in general. After you receive your helmet, you will choose your vehicle and have a brief warm-up session. After that, you will be driving to the natural trekking, guided by a very experienced guide. The guide will capture your moment in the middle of the road so you can remember this unforgettable trip forever.&nbsp;</p>
     <p>At the end of the day, you will return to the starting place to bath your body. Then, take your time to relax while enjoying the food in a cozy atmosphere.&nbsp;</p>
     <p>In the Ayung River Rafting, the professional guide will give you an instruction to guide you on how to navigate the Ayung River. After choosing rafting equipment such as a life jacket, helmet, and paddle. You will be going to the river by rubber boat and there you can bring your phone or camera also to capture your moment because the guide will provide you a waterproof pouch. During the river, there are so many spots to take photos or take a break. This adventure takes approximately 2.5 hours through the long river path while admiring the beautiful cliffs of the Ayung river.&nbsp;</p>
-    <p>At the end of the day, you will return to the starting place to enjoy the food, snack or just drink a cup of cofdiscount or tea.&nbsp;</p>
+    <p>At the end of the day, you will return to the starting place to enjoy the food, snack or just drink a cup of coffee or tea.&nbsp;</p>
     <h3>Including</h3>
     <ul>
         <li>Lunch&nbsp;</li>
-        <li>All entrance ticket discounts&nbsp;</li>
+        <li>All entrance ticket fees&nbsp;</li>
         <li>Free Mineral Water&nbsp;</li>
         <li>Including Petrol&nbsp;&nbsp;</li>
     </ul>
@@ -244,7 +182,7 @@
     <h3>Including</h3>
     <ul>
         <li>Lunch&nbsp;</li>
-        <li>All entrance ticket discounts&nbsp;</li>
+        <li>All entrance ticket fees&nbsp;</li>
         <li>Free Mineral Water&nbsp;</li>
         <li>Including Petrol</li>
     </ul>

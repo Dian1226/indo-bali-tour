@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class PackageModel extends Model
 {
     protected $table = 'package';
-    protected $allowedFields = ['title', 'fee', 'rundown', 'image', 'slug', 'stars', 'caption'];
+    protected $allowedFields = ['title', 'discount', 'price', 'rundown', 'image', 'slug', 'stars', 'caption'];
 
     public function getPackage($id = false)
     {

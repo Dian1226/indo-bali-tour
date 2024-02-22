@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 
-<form action="/backoffice/package/save" method="post" enctype="multipart/form-data">
+<form action="/backoffice/tours/save" method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="col">
             <div class="mb-3">
@@ -14,14 +14,14 @@
                     }
                     echo '';
                 } ?>" id="title" value="<?= old('title'); ?>" aria-describedby="titlecheck">
-                <div class="invalid-discountdback" for="titlecheck">
+                <div class="invalid-pricedback" for="titlecheck">
                     <?php if (session('validation')) {
                         echo session('validation')->getError('title');
                     }; ?>
                 </div>
             </div>
         </div>
-        <div class="col-2">
+        <div class="col-3">
             <label for="price" class="form-label">price</label>
             <div class="input-group mb-3">
                 <span class="input-group-text" id="pricecheck">USD $</span>
@@ -32,27 +32,9 @@
                     }
                     echo '';
                 } ?>" value="<?= old('price'); ?>" id="price" aria-describedby="pricecheck">
-                <div class="invalid-feedback" for="pricecheck">
+                <div class="invalid-pricedback" for="pricecheck">
                     <?php if (session('validation')) {
                         echo session('validation')->getError('price');
-                    }; ?>
-                </div>
-            </div>
-        </div>
-        <div class="col-2">
-            <label for="discount" class="form-label">Discount</label>
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="discountcheck">USD $</span>
-                <input type="number" name="discount" class="form-control 
-                <?php if (session('validation')) {
-                    if (session('validation')->getError('discount')) {
-                        echo 'is-invalid';
-                    }
-                    echo '';
-                } ?>" value="<?= old('discount'); ?>" id="discount" aria-describedby="discountcheck">
-                <div class="invalid-discountdback" for="discountcheck">
-                    <?php if (session('validation')) {
-                        echo session('validation')->getError('discount');
                     }; ?>
                 </div>
             </div>
@@ -68,7 +50,7 @@
                     echo '';
                 } ?>" value="<?= old('stars'); ?>" name="stars" value="<?= old('stars'); ?>" aria-describedby="starscheck">
                 <span class="input-group-text">/5</span>
-                <div class="invalid-discountdback" for="starscheck">
+                <div class="invalid-pricedback" for="starscheck">
                     <?php if (session('validation')) {
                         echo session('validation')->getError('stars');
                     }; ?>
@@ -79,15 +61,15 @@
     <div class="row">
         <div class="col">
             <div class="mb-3">
-                <label for="caption" class="form-label">Caption</label>
-                <input type="text" name="caption" class="form-control" id="title" value="<?= old('caption'); ?>">
+                <label for="description" class="form-label">description</label>
+                <input type="text" name="description" class="form-control" id="title" value="<?= old('description'); ?>">
             </div>
         </div>
         <div class="col">
             <div class="mb-3">
                 <label for="image" class="form-label">Image</label>
                 <input type="file" id="image" name="image" class="form-control">
-                <div class="invalid-discountdback" for="imagecheck">
+                <div class="invalid-pricedback" for="imagecheck">
                     <?php if (isset($validation)) : ?>
                         <?php foreach ($errors as $error) : ?>
                             <li><?= esc($error) ?></li>
@@ -101,8 +83,8 @@
         <div class="col">
             <div class="col">
                 <div class="mb-3">
-                    <label for="rundown" class="form-label">Rundown</label>
-                    <textarea class="form-control" id="rundown" name="rundown" rows="5"></textarea>
+                    <label for="content" class="form-label">content</label>
+                    <textarea class="form-control" id="content" name="content" rows="5"></textarea>
                 </div>
             </div>
         </div>

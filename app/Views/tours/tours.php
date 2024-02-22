@@ -59,14 +59,16 @@
     </div>
     
     <div class="carousel" data-aos="fade-up" data-aos-duration="1000">
-        <a class="carousel-item" href="/tours/ubud">
+        <?php foreach ($tours as $tour) : ?>
+        <a class="carousel-item" href="/tours/<?= $tour['slug']; ?>">
             <div class="testi">
                 <div class="img-area">
-                    <img src="/tours/image/nusa penida.jpg">
+                    <img src="/backoffice/tours/<?= $tour['image']; ?>">
                 </div>
             </div>
         </a>
-        <a class="carousel-item" href="#">
+        <?php endforeach; ?>
+        <!-- <a class="carousel-item" href="#">
             <div class="testi">
                 <div class="img-area">
                     <img src="/tours/image/pantai karang sanur.jpg">
@@ -94,7 +96,7 @@
                 </div>
             </div>
         </a>
-
+ -->
         <div class="dots-container">
             <span class="dot"></span>
             <span class="dot"></span>

@@ -1,48 +1,44 @@
 <?php
 
-namespace App\Modules\manage_package\Controllers;
+namespace App\Modules\manage_tours\Controllers;
 
 use App\Controllers\BaseController;
-use App\Modules\manage_package\Models\PackageModel;
-use App\Modules\manage_transportation\Models\TransportModel;
+use App\Modules\manage_tours\Models\ToursModel;
 
-class Package extends BaseController
+class Tours extends BaseController
 {
-    protected $packageModel;
-    protected $transportModel;
+    protected $toursModel;
     public function __construct()
     {
-        $this->packageModel = new PackageModel();
-        $this->transportModel = new TransportModel();
+        $this->toursModel = new ToursModel();
     }
 
     public function index(): string
     {
         $data = [
-            'title' => 'Package',
-            'packages' => $this->packageModel->getPackage()
+            'title' => 'Tours',
+            'tours' => $this->toursModel->getTours()
         ];
-        return view('\App\Modules\manage_package\Views\index', $data);
+        return view('\App\Modules\manage_tours\Views\index', $data);
     }
 
     public function add(): string
     {
         $data = [
             'title' => 'Add Data',
-            'transportation' => $this->transportModel->getTransport()
         ];
 
-        return view('\App\Modules\manage_package\Views\/add', $data);
+        return view('\App\Modules\manage_tours\Views\/add', $data);
     }
 
     public function save()
     {
         if (!$this->validate([
             'title' => [
-                'rules' => 'required|is_unique[package.title]',
+                'rules' => 'required|is_unique[tours.title]',
                 'errors' => [
                     'required' => 'Title wajib diisi',
-                    'is_unique' => 'Package tersebut sudah terdaftar'
+                    'is_unique' => 'tours tersebut sudah terdaftar'
                 ]
             ],
             'price' => [
@@ -61,7 +57,7 @@ class Package extends BaseController
             ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->to('/backoffice/package/add')->withInput()->with('validation', $validation);
+            return redirect()->to('/backoffice/tours/add')->withInput()->with('validation', $validation);
         }
 
         $slug = url_title($this->request->getVar('title'), '-', true);
@@ -69,16 +65,15 @@ class Package extends BaseController
         if ($image->getError(4)) {
             $fileImage = '';
         } else {
-            $image->move('backoffice/package');
+            $image->move('backoffice/tours');
             $fileImage = $image->getName();
         }
 
-        $this->packageModel->save([
+        $this->toursModel->save([
             'title' => $this->request->getVar('title'),
-            'discount' => $this->request->getVar('discount'),
             'price' => $this->request->getVar('price'),
-            'rundown' => $this->request->getVar('rundown'),
-            'caption' => $this->request->getVar('caption'),
+            'description' => $this->request->getVar('description'),
+            'content' => $this->request->getVar('content'),
             'image' => $fileImage,
             'stars' => $this->request->getVar('stars'),
             'slug' => $slug
@@ -86,42 +81,42 @@ class Package extends BaseController
 
         session()->setFlashdata('pesan', 'Data baru berhasil ditambahkan');
 
-        return redirect()->to('/backoffice/package');
+        return redirect()->to('/backoffice/tours');
     }
 
     public function delete($id)
     {
-        $this->packageModel->delete($id);
+        $this->toursModel->delete($id);
 
         session()->setFlashdata('pesan', 'Data berhasil dihapus');
 
-        return redirect()->to('/backoffice/package');
+        return redirect()->to('/backoffice/tours');
     }
 
     public function edit($id): string
     {
         $data = [
             'title' => 'Edit Data',
-            'package' => $this->packageModel->getPackage($id),
+            'tours' => $this->toursModel->getTours($id),
         ];
 
-        return view('\App\Modules\manage_package\Views\edit', $data);
+        return view('\App\Modules\manage_tours\Views\edit', $data);
     }
 
     public function update($id)
     {
         if (!$this->validate([
             'title' => [
-                'rules' => 'required|is_unique[package.title,id,' . $id . ']',
+                'rules' => 'required|is_unique[tours.title,id,' . $id . ']',
                 'errors' => [
                     'required' => 'Title wajib diisi',
-                    'is_unique' => 'Package tersebut sudah terdaftar',
+                    'is_unique' => 'Title tersebut sudah terdaftar',
                 ]
             ],
             'price' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Harga wajib diisi',
+                    'required' => 'price wajib diisi',
                 ]
             ],
             'stars' => [
@@ -142,24 +137,23 @@ class Package extends BaseController
         if ($image->getError(4)) {
             $fileImage = '';
         } else {
-            $image->move('backoffice/package');
+            $image->move('backoffice/transportation');
             $fileImage = $image->getName();
         }
 
         $data = [
             'title' => $this->request->getVar('title'),
-            'discount' => $this->request->getVar('discount'),
             'price' => $this->request->getVar('price'),
-            'rundown' => $this->request->getVar('rundown'),
-            'caption' => $this->request->getVar('caption'),
+            'description' => $this->request->getVar('description'),
+            'content' => $this->request->getVar('content'),
             'image' => $fileImage,
             'stars' => $this->request->getVar('stars'),
             'slug' => $slug
         ];
-        $this->packageModel->update($id, $data);
+        $this->toursModel->update($id, $data);
 
         session()->setFlashdata('pesan', 'Data berhasil diubah');
 
-        return redirect()->to('/backoffice/package');
+        return redirect()->to('/backoffice/tours');
     }
 }

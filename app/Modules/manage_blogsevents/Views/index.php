@@ -26,7 +26,7 @@
                     <tr>
                         <th scope="row"><?= $i; ?></th>
                         <td><?= $blog['title']; ?></td>
-                        <td><img src="/img/blog/<?= $blog['image']; ?>" alt="" height="100px"></td>
+                        <td><img src="/backoffice/blog/<?= $blog['image']; ?>" alt="" height="100px"></td>
                         <td><?= $blog['status']; ?></td>
                         <td>
                             <a href="/backoffice/blogsevents/edit/<?= $blog['slug']; ?>" class="btn btn-warning">Edit</a>
