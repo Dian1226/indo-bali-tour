@@ -7,14 +7,14 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Pages::index');
 $routes->get('/tours', 'Pages::tours');
-$routes->get('/tours/ubud', 'Pages::toursUbud');
+$routes->get('/tours/(:any)', 'Pages::toursDetail/$1');
 $routes->get('/about', 'Pages::about');
 $routes->get('/newsevents', 'Pages::blogEvents');
 $routes->get('/Footer', 'Pages::footer');
-$routes->get('/contactus', 'Pages::contactus');
+$routes->get('/contact', 'Pages::contactus');
 
 // menu
-// $routes->get('/backoffice', '\App\Modules\manage_menu\Controllers\Menu');
+$routes->get('/backoffice', '\App\Modules\manage_menu\Controllers\Menu');
 $routes->get('/backoffice/menu-manager', '\App\Modules\manage_menu\Controllers\Menu');
 $routes->get('/backoffice/menu-manager/add', '\App\Modules\manage_menu\Controllers\Menu::add');
 $routes->post('/backoffice/menu-manager/save', '\App\Modules\manage_menu\Controllers\Menu::save');
@@ -43,11 +43,37 @@ $routes->get('/backoffice/gallery', '\App\Modules\manage_gallery\Controllers\Gal
 $routes->get('/backoffice/gallery/add', '\App\Modules\manage_gallery\Controllers\Gallery::add');
 $routes->post('/backoffice/gallery/save', '\App\Modules\manage_gallery\Controllers\Gallery::save');
 $routes->delete('/backoffice/gallery/(:num)', '\App\Modules\manage_gallery\Controllers\Gallery::delete/$1');
+$routes->get('/backoffice/gallery/edit/(:num)', '\App\Modules\manage_gallery\Controllers\Gallery::edit/$1');
+$routes->post('/backoffice/gallery/update/(:num)', '\App\Modules\manage_gallery\Controllers\Gallery::update/$1');
 
-// backoffice contact
+// FAQ
 $routes->get('/backoffice/faq', '\App\Modules\manage_faq\Controllers\FAQ');
 $routes->get('/backoffice/faq/add', '\App\Modules\manage_faq\Controllers\FAQ::add');
 $routes->post('/backoffice/faq/save', '\App\Modules\manage_faq\Controllers\FAQ::save');
 $routes->delete('/backoffice/faq/(:num)', '\App\Modules\manage_faq\Controllers\FAQ::delete/$1');
 $routes->get('/backoffice/faq/edit/(:num)', '\App\Modules\manage_faq\Controllers\FAQ::edit/$1');
 $routes->post('/backoffice/faq/update/(:num)', '\App\Modules\manage_faq\Controllers\FAQ::update/$1');
+
+// Transportation
+$routes->get('/backoffice/transportation', '\App\Modules\manage_transportation\Controllers\Transport');
+$routes->delete('/backoffice/transportation/(:num)', '\App\Modules\manage_transportation\Controllers\Transport::delete/$1');
+$routes->get('/backoffice/transportation/add', '\App\Modules\manage_transportation\Controllers\Transport::add');
+$routes->post('/backoffice/transportation/save', '\App\Modules\manage_transportation\Controllers\Transport::save');
+$routes->get('/backoffice/transportation/edit/(:num)', '\App\Modules\manage_transportation\Controllers\Transport::edit/$1');
+$routes->post('/backoffice/transportation/update/(:num)', '\App\Modules\manage_transportation\Controllers\Transport::update/$1');
+
+// package
+$routes->get('/backoffice/package', '\App\Modules\manage_package\Controllers\Package');
+$routes->delete('/backoffice/package/(:num)', '\App\Modules\manage_package\Controllers\Package::delete/$1');
+$routes->get('/backoffice/package/add', '\App\Modules\manage_package\Controllers\Package::add');
+$routes->post('/backoffice/package/save', '\App\Modules\manage_package\Controllers\Package::save');
+$routes->get('/backoffice/package/edit/(:num)', '\App\Modules\manage_package\Controllers\Package::edit/$1');
+$routes->post('/backoffice/package/update/(:num)', '\App\Modules\manage_package\Controllers\Package::update/$1');
+
+// tours
+$routes->get('/backoffice/tours', '\App\Modules\manage_tours\Controllers\Tours');
+$routes->delete('/backoffice/tours/(:num)', '\App\Modules\manage_tours\Controllers\Tours::delete/$1');
+$routes->get('/backoffice/tours/add', '\App\Modules\manage_tours\Controllers\Tours::add');
+$routes->post('/backoffice/tours/save', '\App\Modules\manage_tours\Controllers\Tours::save');
+$routes->get('/backoffice/tours/edit/(:num)', '\App\Modules\manage_tours\Controllers\Tours::edit/$1');
+$routes->post('/backoffice/tours/update/(:num)', '\App\Modules\manage_tours\Controllers\Tours::update/$1');

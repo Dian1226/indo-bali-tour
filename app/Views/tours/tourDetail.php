@@ -1,5 +1,9 @@
+<?= $this->extend('layout/footer'); ?>
+
+<?= $this->section('content'); ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Apa Yang Kita Punya!</title>
@@ -9,12 +13,14 @@
 
     <!-- ----------icon---------- -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- -----------AOS------- -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" href="/tours/css/tour.css">
 </head>
+
 <body>
     <nav>
         <div class="navbar">
@@ -52,18 +58,16 @@
     </nav>
 
     <div>
-        <h1 class="desk4" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300">ubud</h1>
+        <h1 class="desk4" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300"><?= $tour['title']; ?></h1>
         <hr class="garis1" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="200">
-        <h3 class="desk5" data-aos="fade-up" data-aos-duration="2000">kota dengan seribu surga</h3>
+        <h3 class="desk5" data-aos="fade-up" data-aos-duration="2000"><?= $tour['description']; ?></h3>
     </div>
 
     <div class="see1">
-        <img class="see-image" data-aos="fade-right" data-aos-duration="2000"
-        src="/tours/image/UBUD.jpeg">
+        <img class="see-image" data-aos="fade-right" data-aos-duration="2000" src="/backoffice/tours/<?= $tour['image']; ?>">
         <h3 class="see-desk" data-aos="fade-left" data-aos-duration="2000">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis natus itaque soluta quibusdam suscipit culpa maiores minus. Illo sint aperiam magni atque est ipsam ipsa harum! Quia facilis quo quos.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis nihil ratione sit natus, asperiores doloremque! Ipsa in, sit excepturi quasi cum atque nobis, voluptatibus rerum aspernatur ipsum consectetur amet. Ex!
-        </h3>        
+            <?= $tour['content']; ?>
+        </h3>
     </div>
 
     <div data-aos="zoom-in-right" data-aos-duration="1000">
@@ -71,15 +75,27 @@
     </div>
 
     <div class="container-sar-pack">
-        <a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150">
-            <img class="saran-img" src="image/image1.jpg">
-            <h6 class="desk-sar-pack">pura ulun danu</h6>
-            <div class="desk-sar-packet">
-                <h6 class="desk-sar-packs">contoh</h6>
-                <h6 class="desk-sar-packs">contoh</h6>
-            </div>
-        </a>
-        <a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="200">
+        <?php foreach ($tours as $tour) : ?>
+            <a href="/tours/<?= $tour['slug']; ?>" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150">
+                <img class="saran-img" src="/backoffice/tours/<?= $tour['image']; ?>">
+                <h6 class="desk-sar-pack"><?= $tour['title']; ?></h6>
+                <div class="desk-sar-packet">
+                    <?php $i = 5 - $tour['stars'] ?>
+                    <div class="stars">
+                        <?php for ($j = 0; $j < $tour['stars']; $j++) : ?>
+                            <i class="fas fa-star"></i>
+                        <?php endfor; ?>
+                        <?php $k = 0; ?>
+                        <?php for ($k; $k < $i; $k++) : ?>
+                            <i class="far fa-star"></i>
+                        <?php endfor; ?>
+                    </div>
+                    <!-- <h6 class="desk-sar-packs"></h6>-->
+                    <h6 class="desk-sar-packs"> USD $<?= $tour['price']; ?></h6>
+                </div>
+            </a>
+        <?php endforeach; ?>
+        <!-- <a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="200">
             <img class="saran-img" src="image/image1.jpg">
             <h6 class="desk-sar-pack">pura ulun danu</h6>
             <div class="desk-sar-packet">
@@ -94,7 +110,7 @@
                 <h6 class="desk-sar-packs">contoh</h6>
                 <h6 class="desk-sar-packs">contoh</h6>
             </div>
-        </a>     
+        </a>
     </div>
     <div class="container-sar-pack">
         <a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150">
@@ -120,14 +136,14 @@
                 <h6 class="desk-sar-packs">contoh</h6>
                 <h6 class="desk-sar-packs">contoh</h6>
             </div>
-        </a>     
+        </a> -->
     </div>
 
 
     <div data-aos="zoom-in-right" data-aos-duration="1000">
         <h1 class="desk6">paket khusus untukmu!</h1>
     </div>
-    
+
     <div class="container-sar-packs">
         <a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150">
             <img class="saran-img" src="image/image1.jpg">
@@ -144,10 +160,10 @@
                 <h6 class="desk-sar-packs">contoh</h6>
                 <h6 class="desk-sar-packs">contoh</h6>
             </div>
-        </a>    
+        </a>
     </div>
 
-    <footer>
+    <!-- <footer>
         <div class="footer">
             <div class="Footer-content">
                 <div class="logo-footer">
@@ -214,7 +230,7 @@
                 <p>Copyright &copy; 2024 Indo Bali Tour. Designed by <span class="designer">INDO APPS SOLUSINDO</span></p>
             </div>
         </div>        
-    </footer>
+    </footer> -->
 
     <!-- -------AOS----- -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -223,4 +239,7 @@
     </script>
     <script src="/tours/css/tour.js"></script>
 </body>
+
 </html>
+
+<?= $this->endSection('content'); ?>

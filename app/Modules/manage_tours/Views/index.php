@@ -4,7 +4,7 @@
 
 <div class="row">
   <div class="col">
-    <a href="/backoffice/gallery/add" class="btn btn-primary">Add Data</a>
+    <a href="/backoffice/tours/add" class="btn btn-primary">Add Data</a>
     <?php if (session()->getFlashdata('pesan')) : ?>
       <div class="alert alert-success my-3" role="alert">
         <?= session()->getFlashdata('pesan'); ?>
@@ -15,21 +15,23 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Title</th>
+          <th scope="col">Price</th>
           <th scope="col">Image</th>
           <th scope="col"></th>
         </tr>
       </thead>
       <tbody>
         <?php $i = 1; ?>
-        <?php foreach ($gallery as $gallery) : ?>
+        <?php foreach ($tours as $tours) : ?>
           <tr>
             <th scope="row"><?= $i; ?></th>
-            <td><?= $gallery['title']; ?></td>
-            <td><img src="/backoffice/gallery/<?= $gallery['image']; ?>" alt="" height="100px"></td>
+            <td><?= $tours['title']; ?></td>
+            <td>USD $<?= $tours['price']; ?></td>
+            <td><img src="/backoffice/tours/<?= $tours['image']; ?>" alt="" height="100px"></td>
             <td>
-              <a href="/backoffice/gallery/edit/<?= $gallery['id']; ?>" class="btn btn-warning">Edit</a>
+              <a href="/backoffice/tours/edit/<?= $tours['id']; ?>" class="btn btn-warning">Edit</a>
 
-              <form action="/backoffice/gallery/<?= $gallery['id'] ?>" class="d-inline" method="post">
+              <form action="/backoffice/tours/<?= $tours['id'] ?>" class="d-inline" method="post">
                 <input type="hidden" name="_method" value="DELETE">
                 <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?')">Delete</button>
               </form>

@@ -21,35 +21,12 @@
                 </div>
             </div>
         </div>
-        <div class="col">
-            <fieldset>
-                <div>
-                    <label for="status" class="form-label">Status</label>
-                    <select id="status" name="status" class="form-select">
-                        <option value="show">Show</option>
-                        <option value="hidden">Hidden</option>
-                    </select>
-                </div>
-            </fieldset>
-        </div>
     </div>
-    <div class="row mb-3">
-        <div class="col">
-            <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
-            </div>
-        </div>
+    <div class="row">
         <div class="col">
             <div class="mb-3">
                 <label for="image" class="form-label">Image</label>
-                <input type="file" id="image" name="image" class="form-control
-                <?php if (session('validation')) {
-                    if (session('validation')->getError('image')) {
-                        echo 'is-invalid';
-                    }
-                    echo '';
-                } ?>" aria-describedby="imagecheck">
+                <input type="file" id="image" name="image" class="form-control">
                 <div class="invalid-feedback" for="imagecheck">
                     <?php if (isset($validation)) : ?>
                         <?php foreach ($errors as $error) : ?>
@@ -59,6 +36,12 @@
                 </div>
             </div>
         </div>
+        <div class="col">
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="5"></textarea>
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="col">
@@ -66,6 +49,5 @@
         </div>
     </div>
 </form>
-
 
 <?= $this->endSection('content'); ?>

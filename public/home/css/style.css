@@ -402,11 +402,13 @@ header .search-bar-container label:hover {
 .packages .box-container {
     display: grid;
     justify-content: center;
+    place-items: center;
+    align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 1050px;
     width: 90%;
     margin-top: 50px;
-    gap: 4rem;
+    gap: 4.5rem;
    
 }
 
@@ -420,7 +422,6 @@ header .search-bar-container label:hover {
     transition: all ease 0.3s;
     overflow: hidden;
     box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
-    margin-left: 5rem;
 }
 
 .packages .box-container .box:hover {
@@ -952,7 +953,7 @@ header .search-bar-container label:hover {
 
 .blog-box-img {
     width: 100%;
-    max-height: 300px;
+    height: 300px;
     overflow: hidden;
     display: flex;
     position: relative;

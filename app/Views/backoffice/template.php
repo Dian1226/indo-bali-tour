@@ -37,6 +37,16 @@
                     </li>
                     <li><a class="nav-link" href="/backoffice/gallery">Gallery</a></li>
                     <li><a class="nav-link" href="/backoffice/faq">FAQ</a></li>
+                    <li><a class="nav-link" href="/index.php/backoffice/tours">Tours</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tour Package
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/backoffice/transportation">Transportation</a></li>
+                            <li><a class="dropdown-item" href="/backoffice/index.php/package">Tour Package</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
