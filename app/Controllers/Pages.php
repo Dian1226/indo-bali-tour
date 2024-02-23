@@ -26,18 +26,6 @@ class Pages extends BaseController
         $this->galleryModel = new GalleryModel();
         $this->blogsModel = new BlogModel();
     }
-    public function index(): string
-    {
-        $data = [
-            'faqs' => $this->faqModel->getFaq(),
-            'transport' => $this->transportModel->getTransport(),
-            'packages' => $this->packageModel->getPackage(),
-            'tours' => $this->toursModel->getTours(),
-            'gallery' => $this->galleryModel->getGallery(),
-            'blogs' => $this->blogsModel->getBlog()
-        ];
-        return view('home/index', $data);
-    }
 
     public function tours(): string
     {
@@ -57,19 +45,9 @@ class Pages extends BaseController
         return view('tours/tourDetail', $data);
     }
 
-    public function about(): string
-    {
-        return view('About/About');
-    }
-
     public function blogEvents(): string
     {
         return view('pages/blogEvents');
-    }
-
-    public function contactus(): string
-    {
-        return view('contactus/contactus');
     }
 
     public function footer(): string

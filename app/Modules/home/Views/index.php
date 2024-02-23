@@ -98,22 +98,22 @@
             <div class="img" data-aos="fade-down-left" data-aos-duration="1000">
                 <img src="home/img/travelling-2.png" alt="">
             </div>
-            <form action="" data-aos="fade-down-left" data-aos-duration="1000">
+            <form action="/booking-form" data-aos="fade-down-left" data-aos-duration="1000" method="post">
                 <div class="inputBox">
                     <h3>Where To</h3>
-                    <input type="text" placeholder="place name">
+                    <input type="text" name="place" placeholder="place name">
                 </div>
                 <div class="inputBox">
                     <h3>How Many</h3>
-                    <input type="number" placeholder="number of guests">
+                    <input type="number" name="guest" placeholder="number of guests">
                 </div>
                 <div class="inputBox">
                     <h3>Arrivals</h3>
-                    <input type="date">
+                    <input type="date" name="dateArrival">
                 </div>
                 <div class="inputBox">
                     <h3>Leaving</h3>
-                    <input type="date">
+                    <input type="date" name="dateLeaving">
                 </div>
                 <input type="submit" class="btn" value="book now">
             </form>
@@ -136,27 +136,29 @@
         <div class="box-container">
             <?php foreach ($packages as $package) : ?>
                 <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                    <?php
-                    $price = $package['price'];
-                    $discount = $package['discount'];
-                    $afterDiscount = $price * (100 - $discount) / 100;
-                    ?>
-                    <img src="/backoffice/package/<?= $package['image']; ?>" alt="">
-                    <div class="content">
-                        <h3><i class="fas fa-map-marker-alt"></i> <a href=""><?= $package['title']; ?></a></h3>
-                        <p><?= $package['caption']; ?></p>
-                        <?php $i = 5 - $package['stars']; ?>
-                        <div class="stars">
-                            <?php for ($j = 0; $j < $package['stars']; $j++) : ?>
-                                <i class="fas fa-star"></i>
-                            <?php endfor; ?>
-                            <?php for ($k = 0; $k < $i; $k++) : ?>
-                                <i class="far fa-star"></i>
-                            <?php endfor; ?>
+                    <form action="/booking-form/<?= $package['slug']; ?>" method="post">
+                        <?php
+                        $price = $package['price'];
+                        $discount = $package['discount'];
+                        $afterDiscount = $price * (100 - $discount) / 100;
+                        ?>
+                        <img src="/backoffice/package/<?= $package['image']; ?>" alt="">
+                        <div class="content">
+                            <h3><i class="fas fa-map-marker-alt"></i> <a href=""><?= $package['title']; ?></a></h3>
+                            <p><?= $package['caption']; ?></p>
+                            <?php $i = 5 - $package['stars']; ?>
+                            <div class="stars">
+                                <?php for ($j = 0; $j < $package['stars']; $j++) : ?>
+                                    <i class="fas fa-star"></i>
+                                <?php endfor; ?>
+                                <?php for ($k = 0; $k < $i; $k++) : ?>
+                                    <i class="far fa-star"></i>
+                                <?php endfor; ?>
+                            </div>
+                            <div class="price">USD $<?= $afterDiscount; ?>/Person <span>$<?= $package['price']; ?></span></div>
+                            <button class="btn" type="submit">Book Now</button>
                         </div>
-                        <div class="price">USD $<?= $afterDiscount; ?>/Person <span>$<?= $package['price']; ?></span></div>
-                        <a href="" class="btn">Book Now</a>
-                    </div>
+                    </form>
                 </div>
             <?php endforeach; ?>
         </div>

@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Modules\manage_package\Models;
+namespace App\Modules\manage_activity\Models;
 
 use CodeIgniter\Model;
 
-class PackageModel extends Model
+class ActivityModel extends Model
 {
-    protected $table = 'package';
-    protected $allowedFields = ['title', 'discount', 'price', 'rundown', 'image', 'slug', 'stars', 'caption'];
+    protected $table = 'activity';
+    protected $allowedFields = ['title', 'caption', 'description', 'image', 'slug', 'category'];
 
-    public function getPackage($id = false)
+    public function getActivity($id = false)
     {
         if ($id == false) {
             return $this->findAll();
@@ -18,7 +18,7 @@ class PackageModel extends Model
         return $this->where(['id' => $id])->first();
     }
 
-    public function getPackageS($slug = false)
+    public function getActivityS($slug = false)
     {
         if ($slug == false) {
             return $this->findAll();

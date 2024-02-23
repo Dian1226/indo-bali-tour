@@ -5,13 +5,21 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Pages::index');
+
+//  Home
+$routes->get('/', '\App\Modules\home\Controllers\Home');
+$routes->get('/about', '\App\Modules\about\Controllers\About');
+$routes->get('/contact', '\App\Modules\contact\Controllers\Contact');
+
 $routes->get('/tours', 'Pages::tours');
 $routes->get('/tours/(:any)', 'Pages::toursDetail/$1');
-$routes->get('/about', 'Pages::about');
 $routes->get('/newsevents', 'Pages::blogEvents');
 $routes->get('/Footer', 'Pages::footer');
-$routes->get('/contact', 'Pages::contactus');
+$routes->get('/success', 'Pages::success');
+
+// booking
+$routes->post('/booking-form', 'Pages::bookingForm');
+$routes->post('/booking-form/(:any)', 'Pages::bookingForm/$1');
 
 // menu
 $routes->get('/backoffice', '\App\Modules\manage_menu\Controllers\Menu');
@@ -78,11 +86,10 @@ $routes->post('/backoffice/tours/save', '\App\Modules\manage_tours\Controllers\T
 $routes->get('/backoffice/tours/edit/(:num)', '\App\Modules\manage_tours\Controllers\Tours::edit/$1');
 $routes->post('/backoffice/tours/update/(:num)', '\App\Modules\manage_tours\Controllers\Tours::update/$1');
 
-// member
-$routes->get('/register', '\App\Modules\member\Controllers\Member');
-$routes->post('/email', '\App\Modules\member\Controllers\Member::register');
-$routes->delete('/backoffice/tours/(:num)', '\App\Modules\manage_tours\Controllers\Tours::delete/$1');
-$routes->get('/backoffice/tours/add', '\App\Modules\manage_tours\Controllers\Tours::add');
-$routes->post('/backoffice/tours/save', '\App\Modules\manage_tours\Controllers\Tours::save');
-$routes->get('/backoffice/tours/edit/(:num)', '\App\Modules\manage_tours\Controllers\Tours::edit/$1');
-$routes->post('/backoffice/tours/update/(:num)', '\App\Modules\manage_tours\Controllers\Tours::update/$1');
+// activity
+$routes->get('/backoffice/activity', '\App\Modules\manage_activity\Controllers\Activity');
+$routes->delete('/backoffice/activity/(:num)', '\App\Modules\manage_activity\Controllers\Activity::delete/$1');
+$routes->get('/backoffice/activity/add', '\App\Modules\manage_activity\Controllers\Activity::add');
+$routes->post('/backoffice/activity/save', '\App\Modules\manage_activity\Controllers\Activity::save');
+$routes->get('/backoffice/activity/edit/(:num)', '\App\Modules\manage_activity\Controllers\Activity::edit/$1');
+$routes->post('/backoffice/activity/update/(:num)', '\App\Modules\manage_activity\Controllers\Activity::update/$1');

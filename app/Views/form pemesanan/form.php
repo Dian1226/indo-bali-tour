@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
     <!-- =======box ion====== -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="form pemesanan/css/form.css">
+    <link rel="stylesheet" href="/form pemesanan/css/form.css">
 </head>
+
 <body>
     <nav>
         <div class="navbar">
@@ -44,7 +46,7 @@
             </div>
         </div>
     </nav>
-<!-- ================================================================================================================ -->
+    <!-- ================================================================================================================ -->
 
     <div class="main-bg">
         <div class="form">
@@ -65,13 +67,11 @@
                     </div>
                     <div>
                         <!-- this is the select option -->
-                        <span>How many people?</span> 
+                        <span>Package</span>
                         <select name="people" id="people" required>
-                            <option value=""><----People---></option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
+                            <?php foreach ($data as $package) : ?>
+                                <option value="<?= $package['place']; ?>"><?= $package['place']; ?></option>
+                            <?php endforeach; ?>
                         </select>
                         <!-- this is the select option -->
                     </div>
@@ -95,7 +95,8 @@
             </div>
         </div>
     </div>
-    
+
     <script src="form pemesanan/js/form.js"></script>
 </body>
+
 </html>
