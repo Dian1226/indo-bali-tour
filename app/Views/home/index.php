@@ -222,7 +222,7 @@
 
         <div class="promo">
         <div class="btn-m" data-aos="fade-up" data-aos-duration="1000">
-            <button type="button" class="btn btn-primary btn-lg"><a href="">More</a></button>
+            <button type="button" class="btn btn-primary btn-lg"><a href="promo.php">More</a></button>
         </div>
 
         <div class="promo-1">
@@ -413,7 +413,7 @@ Hiking in Bali offers a multifaceted experience, from serene rice terraces to ma
     <span>t</span>
 </h1>
 <div class="btn-m" data-aos="fade-up" data-aos-duration="1000">
-<button type="button" class="btn btn-primary btn-lg"><a href="transport.html">More</a></button>
+<button type="button" class="btn btn-primary btn-lg"><a href="transport.php">More</a></button>
 </div>
 
 <div class="transportations-1">
