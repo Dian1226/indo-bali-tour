@@ -35,7 +35,12 @@ class Pages extends BaseController
 
     public function blogEvents() : string
     {
-        return view('pages/blogEvents');
+        return view('blog-events/index');
+    }
+
+    public function article() : string
+    {
+        return view('blog-events/article');
     }
 
     public function contactus(): string

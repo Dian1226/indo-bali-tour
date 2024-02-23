@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artikel</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/blog-events/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 </head>
@@ -19,7 +19,7 @@
             </div>
         </nav>
         <div class="background">
-            <img src="img/bg-blog.avif" alt="">
+            <img src="blog-events/img/bg-blog.avif" alt="">
             <div class="heading">
                 <h1>Apa Yang <br>Anda Cari?</h1>
                 <p>Baca Blog Harian Kami!</p>
@@ -38,7 +38,7 @@
             </div>
 
             <div class="author-b">
-                <img src="img/blog-2.avif" alt="">
+                <img src="blog-events/img/blog-2.avif" alt="">
                 <p>Mitha</p>
             </div>
 
@@ -50,7 +50,7 @@
             </div>
 
             <div class="img-b">
-                <img src="img/bg-blog.avif" alt="">
+                <img src="blog-events/img/bg-blog.avif" alt="">
             </div>
 
             <div class="text-b">
@@ -79,7 +79,7 @@
       <!-- ======= Footer section design ========--> 
       <footer class="Footer">
         <div class="Footer-content">
-           <img src="img/Logo_IBT.png">
+           <img src="blog-events/img/Logo_IBT.png">
 
            <div class="icons">
                <br><h4>Folow Us</h4>
@@ -92,7 +92,7 @@
 
                <div class="Footer-content payment-section">
                    <br><h4>Payment</h4>
-                   <img src="img/Logo payment BRI_IBT (1).jpg" width="100" height="70" alt="Payment Logo">
+                   <img src="blog-events/img/Logo payment BRI_IBT (1).jpg" width="100" height="70" alt="Payment Logo">
                </div></br>
            </div></br>
        </div>
@@ -112,7 +112,7 @@
 
            <div class="Footer-content">
                <br><strong><h4>Excellent Review</h4></strong>
-               <img src="img/Tripadvisor.jpg" alt="Tripadvisor Logo"></br>
+               <img src="blog-events/img/Tripadvisor.jpg" alt="Tripadvisor Logo"></br>
            </div>
        </div>
 

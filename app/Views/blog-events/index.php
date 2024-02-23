@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BLOG & EVENTS</title>
-    <link rel="stylesheet" href="css/transport.css">
+    <link rel="stylesheet" href="/blog-events/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
     <!-- HEADER -->
@@ -19,7 +19,7 @@
         </div>
     </nav>
     <div class="background">
-        <img src="img/bg-blog.avif" alt="">
+        <img src="/blog-events/img/bg-blog.avif" alt="">
         <div class="heading">
             <h1>Apa Yang <br>Anda Cari?</h1>
             <p>Baca Blog Harian Kami!</p>
@@ -35,7 +35,7 @@
         <div class="blog-box-container">
             <div class="blog-box">
                 <div class="blog-box-img"> 
-                    <img src="img/blog-1.avif" alt="">
+                    <img src="/blog-events/img/blog-1.avif" alt="">
                     <a href="#" class="blog-img-link">
                         <i class='bx bx-right-top-arrow-circle'></i>
                     </a>
@@ -46,7 +46,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita possimus exercitationem deleniti dolorum fugit magnam reprehenderit consequuntur quis dolore, corporis inventore officiis quasi debitis nihil ea consequatur consectetur iste?</p>
                         <div class="blog-author">
                             <div class="blog-author-img">
-                                <img src="img/blog-2.avif" alt="">
+                                <img src="/blog-events/img/blog-2.avif" alt="">
                             </div>
                             <div class="blog-author-text">
                                 <strong>Alax</strong>
@@ -57,7 +57,7 @@
             </div>
             <div class="blog-box">
                 <div class="blog-box-img"> 
-                    <img src="img/blog-n.jpg" alt="">
+                    <img src="/blog-events/img/blog-n.jpg" alt="">
                     <a href="#" class="blog-img-link">
                         <i class='bx bx-right-top-arrow-circle'></i>
                     </a>
@@ -68,7 +68,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita possimus exercitationem deleniti dolorum fugit magnam reprehenderit consequuntur quis dolore, corporis inventore officiis quasi debitis nihil ea consequatur consectetur iste?</p>
                         <div class="blog-author">
                             <div class="blog-author-img">
-                                <img src="img/blog-2.avif" alt="">
+                                <img src="/blog-events/img/blog-2.avif" alt="">
                             </div>
                             <div class="blog-author-text">
                                 <strong>Alax</strong>
@@ -79,7 +79,7 @@
             </div>
             <div class="blog-box">
                 <div class="blog-box-img"> 
-                    <img src="img/blog-bg.jpg" alt="">
+                    <img src="/blog-events/img/blog-bg.jpg" alt="">
                     <a href="#" class="blog-img-link">
                         <i class='bx bx-right-top-arrow-circle'></i>
                     </a>
@@ -90,7 +90,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita possimus exercitationem deleniti dolorum fugit magnam reprehenderit consequuntur quis dolore, corporis inventore officiis quasi debitis nihil ea consequatur consectetur iste?</p>
                         <div class="blog-author">
                             <div class="blog-author-img">
-                                <img src="img/blog-2.avif" alt="">
+                                <img src="/blog-events/img/blog-2.avif" alt="">
                             </div>
                             <div class="blog-author-text">
                                 <strong>Alax</strong>
@@ -101,7 +101,7 @@
             </div>
             <div class="blog-box">
                 <div class="blog-box-img"> 
-                    <img src="img/blog-1.avif" alt="">
+                    <img src="/blog-events/img/blog-1.avif" alt="">
                     <a href="#" class="blog-img-link">
                         <i class='bx bx-right-top-arrow-circle'></i>
                     </a>
@@ -112,7 +112,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita possimus exercitationem deleniti dolorum fugit magnam reprehenderit consequuntur quis dolore, corporis inventore officiis quasi debitis nihil ea consequatur consectetur iste?</p>
                         <div class="blog-author">
                             <div class="blog-author-img">
-                                <img src="img/blog-2.avif" alt="">
+                                <img src="/blog-events/img/blog-2.avif" alt="">
                             </div>
                             <div class="blog-author-text">
                                 <strong>Alax</strong>
@@ -123,7 +123,7 @@
             </div>
             <div class="blog-box">
                 <div class="blog-box-img"> 
-                    <img src="img/blog-n.jpg" alt="">
+                    <img src="/blog-events/img/blog-n.jpg" alt="">
                     <a href="#" class="blog-img-link">
                         <i class='bx bx-right-top-arrow-circle'></i>
                     </a>
@@ -134,7 +134,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita possimus exercitationem deleniti dolorum fugit magnam reprehenderit consequuntur quis dolore, corporis inventore officiis quasi debitis nihil ea consequatur consectetur iste?</p>
                         <div class="blog-author">
                             <div class="blog-author-img">
-                                <img src="img/blog-2.avif" alt="">
+                                <img src="/blog-events/img/blog-2.avif" alt="">
                             </div>
                             <div class="blog-author-text">
                                 <strong>Alax</strong>
@@ -145,7 +145,7 @@
             </div>
             <div class="blog-box">
                 <div class="blog-box-img"> 
-                    <img src="img/blog-bg.jpg" alt="">
+                    <img src="/blog-events/img/blog-bg.jpg" alt="">
                     <a href="#" class="blog-img-link">
                         <i class='bx bx-right-top-arrow-circle'></i>
                     </a>
@@ -156,7 +156,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate expedita possimus exercitationem deleniti dolorum fugit magnam reprehenderit consequuntur quis dolore, corporis inventore officiis quasi debitis nihil ea consequatur consectetur iste?</p>
                         <div class="blog-author">
                             <div class="blog-author-img">
-                                <img src="img/blog-2.avif" alt="">
+                                <img src="/blog-events/img/blog-2.avif" alt="">
                             </div>
                             <div class="blog-author-text">
                                 <strong>Alax</strong>
@@ -195,7 +195,7 @@
     <!-- ======= Footer section design ========--> 
      <footer class="Footer">
          <div class="Footer-content">
-            <img src="img/Logo_IBT.png">
+            <img src="/blog-events/img/Logo_IBT.png">
 
             <div class="icons">
                 <br><h4>Folow Us</h4>
@@ -208,7 +208,7 @@
 
                 <div class="Footer-content payment-section">
                     <br><h4>Payment</h4>
-                    <img src="img/Logo payment BRI_IBT (1).jpg" width="100" height="70" alt="Payment Logo">
+                    <img src="/blog-events/img/Logo payment BRI_IBT (1).jpg" width="100" height="70" alt="Payment Logo">
                 </div></br>
             </div></br>
         </div>
@@ -228,7 +228,7 @@
 
             <div class="Footer-content">
                 <br><strong><h4>Excellent Review</h4></strong>
-                <img src="img/Tripadvisor.jpg" alt="Tripadvisor Logo"></br>
+                <img src="/blog-events/img/Tripadvisor.jpg" alt="Tripadvisor Logo"></br>
             </div>
         </div>
 
