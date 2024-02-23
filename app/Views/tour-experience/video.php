@@ -26,7 +26,7 @@
         </div>
     </nav>
     <div class="background">
-        <img src="img/bg-tour.avif" alt="">
+        <img src="/tour-experience/img/bg-tour.avif" alt="">
         <div class="heading">
             <h1>Lihatlah!<br>Lembayung Bali!</h1>
             <p>Memukau Hati dan Mata Anda.</p>
@@ -58,6 +58,6 @@
 
 
 
-  <script src="script.js"></script>
+  <script src="/tour-experience/js/script.js"></script>
 </body>
 </html>

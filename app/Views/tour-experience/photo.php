@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GALLERY | PHOTO</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/tour-experience/css/style.css">
 </head>
 <body>
     <nav>
@@ -26,7 +26,7 @@
         </div>
     </nav>
     <div class="background">
-        <img src="img/bg-tour.avif" alt="">
+        <img src="/tour-experience/img/bg-tour.avif" alt="">
         <div class="heading">
             <h1>Lihatlah!<br>Lembayung Bali!</h1>
             <p>Memukau Hati dan Mata Anda.</p>
@@ -47,7 +47,7 @@
         </div> -->
         <div class="box-container" style="display: grid; grid-template-columns: 1fr 1fr;">
             <div class="box" data-aos="fade-left" data-aos-duration="1000">
-                <img src="img/gal-1.avif" alt="">
+                <img src="/tour-experience/img/gal-1.avif" alt="">
                 <div class="content">
                     <h3>Temple</h3>
                     <p>Bali, known as the "Island of the Gods," is renowned for its numerous temples scattered across the landscape. These temples, known locally as "pura," hold immense significance in Balinese culture and spirituality</p>
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="box" data-aos="fade-left" data-aos-duration="1000">
-                <img src="img/gal-2.avif" alt="">
+                <img src="/tour-experience/img/gal-2.avif" alt="">
                 <div class="content">
                     <h3>Tirta Gangga</h3>
                     <p>Tirta Gangga is a breathtaking water palace nestled in the eastern part of Bali, Indonesia. Renowned for its serene beauty and cultural significance, this enchanting destination is a must-visit for travelers seeking tranquility and a glimpse into Bali's rich heritage.</p>
@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div class="box" data-aos="fade-left" data-aos-duration="1000">
-                <img src="img/gal-3.avif" alt="">
+                <img src="/tour-experience/img/gal-3.avif" alt="">
                 <div class="content">
                     <h3>Nusa Penida</h3>
                     <p>Nusa Penida is also home to picturesque natural wonders like Angel's Billabong, a stunning natural infinity pool, and Broken Beach, a unique coastal formation with a natural archway over crystal-clear waters.</p>
@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="box" data-aos="fade-left" data-aos-duration="1000">
-                <img src="img/gal-6.avif" alt="">
+                <img src="/tour-experience/img/gal-6.avif" alt="">
                 <div class="content">
                     <h3>Tirta Gangga</h3>
                     <p>Visitors to Tirta Gangga can wander through the expansive grounds, marveling at the intricate Balinese design elements and tranquil ambiance. The highlight of the palace is its series of tiered pools adorned with ornate statues and surrounded by verdant foliage.</p>
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div class="box" data-aos="fade-left" data-aos-duration="1000">
-                <img src="img/gal-4.avif" alt="">
+                <img src="/tour-experience/img/gal-4.avif" alt="">
                 <div class="content">
                     <h3>Lempuyang</h3>
                     <p>Lempuyang Temple, also known as Pura Lempuyang Luhur, is a sacred Hindu temple located in East Bali, Indonesia. Situated on the slopes of Mount Lempuyang, the temple is renowned for its iconic "Gates of Heaven" (Pura Penataran Agung Lempuyang). </p>
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div class="box" data-aos="fade-left" data-aos-duration="1000">
-                <img src="img/gal-5.avif" alt="">
+                <img src="/tour-experience/img/gal-5.avif" alt="">
                 <div class="content">
                     <h3>Nusa Dua</h3>
                     <p>The area boasts a collection of upscale hotels, resorts, and villas, each offering top-notch amenities and impeccable service. Apart from its picturesque coastline, Nusa Dua is also home to an 18-hole golf course, upscale shopping centers, and a range of water sports activities. </p>
@@ -95,7 +95,7 @@
                 </div>
             </div>
             <!-- <div class="box" data-aos="fade-left" data-aos-duration="1000">
-                <img src="img/gal-6.avif" alt="">
+                <img src="/tour-experience/img/gal-6.avif" alt="">
                 <div class="content">
                     <h3>The New Place For New You</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quis earum atque ducimus vitae, tempora iure adipisci modi odio!</p>
@@ -115,6 +115,6 @@
 
 
 
-  <script src="script.js"></script>
+  <script src="/tour-experience/js/script.js"></script>
 </body>
 </html>

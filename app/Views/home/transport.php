@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promo</title>
-    <link rel="stylesheet" href="css/transport.css">
+    <link rel="stylesheet" href="/home/css/transport.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -18,7 +18,7 @@
         </div>
     </nav>
     <div class="background">
-        <img src="img/bg-yy.webp" alt="">
+        <img src="/home/img/bg-yy.webp" alt="">
         <div class="heading">
             <h1>Pilih <br>Transportasimu!</h1>
             <p>Pastikan Anda Nyaman.</p>
@@ -31,7 +31,7 @@
 <section class="transportations" id="transportations">
 <div class="box-container">
     <div class="box">
-        <img src="img/avanza.png" alt="">
+        <img src="/home/img/avanza.png" alt="">
         <div class="content">
             <h3> <a href=""> Toyota Avanza</a></h3>
             <p>Accommodates : 6 person</p>
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="box">
-        <img src="img/terrios.png" alt="">
+        <img src="/home/img/terrios.png" alt="">
         <div class="content">
             <h3> <a href=""> Daihatsu Terrios</a></h3>
             <p>Accommodates : 6 person</p>
@@ -54,7 +54,7 @@
         </div>
     </div>
     <div class="box">
-        <img src="img/apv.png" alt="">
+        <img src="/home/img/apv.png" alt="">
         <div class="content">
             <h3> <a href=""> Suzuki APV</a></h3>
             <p>Accommodates : 7 person</p>
@@ -65,18 +65,7 @@
     </div>
     </div>
     <div class="box">
-        <img src="img/apv.png" alt="">
-        <div class="content">
-            <h3> <a href=""> Suzuki APV</a></h3>
-            <p>Accommodates : 7 person</p>
-            <p>Include</p>
-            <p>English Speaking Driver</p>
-            <p>Petrol/Gazoline</p>
-               <div class="price">USD $43/Day (10 Hours)</div>
-    </div>
-</div>
-    <div class="box">
-        <img src="img/apv.png" alt="">
+        <img src="/home/img/apv.png" alt="">
         <div class="content">
             <h3> <a href=""> Suzuki APV</a></h3>
             <p>Accommodates : 7 person</p>
@@ -87,7 +76,18 @@
     </div>
 </div>
     <div class="box">
-        <img src="img/apv.png" alt="">
+        <img src="/home/img/apv.png" alt="">
+        <div class="content">
+            <h3> <a href=""> Suzuki APV</a></h3>
+            <p>Accommodates : 7 person</p>
+            <p>Include</p>
+            <p>English Speaking Driver</p>
+            <p>Petrol/Gazoline</p>
+               <div class="price">USD $43/Day (10 Hours)</div>
+    </div>
+</div>
+    <div class="box">
+        <img src="/home/img/apv.png" alt="">
         <div class="content">
             <h3> <a href=""> Suzuki APV</a></h3>
             <p>Accommodates : 7 person</p>
@@ -107,7 +107,7 @@
     <!--======= Footer section design ========-->
     <footer class="Footer">
         <div class="Footer-content">
-            <img src="img/Logo_IBT.png">
+            <img src="/home/img/Logo_IBT.png">
 
             <div class="icons">
                 <br><h4>Folow Us</h4>
@@ -120,7 +120,7 @@
 
                 <div class="Footer-content payment-section">
                     <br><h4>Payment</h4>
-                    <img src="img/Logo payment BRI_IBT (1).jpg" width="100" height="70" alt="Payment Logo">
+                    <img src="/home/img/Logo payment BRI_IBT (1).jpg" width="100" height="70" alt="Payment Logo">
                 </div></br>
             </div></br>
         </div>
@@ -140,7 +140,7 @@
 
             <div class="Footer-content">
                 <br><strong><h4>Excellent Review</h4></strong>
-                <img src="img/Tripadvisor.jpg" alt="Tripadvisor Logo"></br>
+                <img src="/home/img/Tripadvisor.jpg" alt="Tripadvisor Logo"></br>
             </div>
         </div>
 

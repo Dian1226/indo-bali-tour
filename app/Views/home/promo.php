@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promo</title>
-    <link rel="stylesheet" href="css/promo.css">
+    <link rel="stylesheet" href="/home/css/promo.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -45,7 +45,7 @@
         </div>
     </nav>
     <div class="background">
-        <img src="img/bg-xx.webp" alt="">
+        <img src="/home/img/bg-xx.webp" alt="">
         <div class="heading">
             <h1>Promo <br>Menarik!</h1>
             <p>Ciptakan Kreasimu Bersama Kami.</p>
@@ -70,22 +70,22 @@
         <p>(Berlaku sampai 15 Juli 2024)</p>
         <div class="box-area">
             <div class="box-f">
-             <a href="index.html"><img src="img/promo-card.avif" alt=""></a>
+             <a href="index.html"><img src="/home/img/promo-card.avif" alt=""></a>
             </div>
             <div class="box-f">
-                <a href="index.html"><img src="img/promo-card.avif" alt=""></a>
+                <a href="index.html"><img src="/home/img/promo-card.avif" alt=""></a>
             </div>
             <div class="box-f">
-                <a href="index.html"><img src="img/promo-card.avif" alt=""></a>
+                <a href="index.html"><img src="/home/img/promo-card.avif" alt=""></a>
             </div>
             <div class="box-f">
-                <a href="index.html"><img src="img/promo-card.avif" alt=""></a>
+                <a href="index.html"><img src="/home/img/promo-card.avif" alt=""></a>
         </div>
             <div class="box-f">
-                <a href="index.html"><img src="img/promo-card.avif" alt=""></a>
+                <a href="index.html"><img src="/home/img/promo-card.avif" alt=""></a>
         </div>
             <div class="box-f">
-                <a href="index.html"><img src="img/promo-card.avif" alt=""></a>
+                <a href="index.html"><img src="/home/img/promo-card.avif" alt=""></a>
         </div>
     </div>
    </div>
@@ -100,7 +100,7 @@
      <!--======= Footer section design ========-->
         <footer class="Footer">
             <div class="Footer-content">
-                <img src="img/Logo_IBT.png">
+                <img src="/home/img/Logo_IBT.png">
 
                 <div class="icons">
                     <br><h4>Folow Us</h4>
@@ -113,7 +113,7 @@
 
                     <div class="Footer-content payment-section">
                         <br><h4>Payment</h4>
-                        <img src="img/Logo payment BRI_IBT (1).jpg" width="100" height="70" alt="Payment Logo">
+                        <img src="/home/img/Logo payment BRI_IBT (1).jpg" width="100" height="70" alt="Payment Logo">
                     </div></br>
                 </div></br>
             </div>
@@ -133,7 +133,7 @@
 
                 <div class="Footer-content">
                     <br><strong><h4>Excellent Review</h4></strong>
-                    <img src="img/Tripadvisor.jpg" alt="Tripadvisor Logo"></br>
+                    <img src="/home/img/Tripadvisor.jpg" alt="Tripadvisor Logo"></br>
                 </div>
             </div>
 
