@@ -57,8 +57,8 @@
             <p>forget password? <a href="#">Click Here</a></p>
         </form>
 
-      </div>
- <!-- login form ends -->
+    </div>
+    <!-- login form ends -->
 
     <!-- home section -->
     <section class="home" id="home">
@@ -159,38 +159,6 @@
                     </div>
                 </div>
             <?php endforeach; ?>
-            <!-- <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                <img src="home/img/pa-2.jpg" alt="">
-                <div class="content">
-                    <h3><i class="fas fa-map-marker-alt"></i> <a href=""> Packages 5 Days Tour</a></h3>
-                    <p>Let's Explore The New World! Tap for more!</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="price">$238/Person <span>$300.00</span></div>
-                    <a href="" class="btn">Book Now</a>
-                </div>
-            </div>
-            <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                <img src="home/img/pa-3.jpg" alt="">
-                <div class="content">
-                    <h3><i class="fas fa-map-marker-alt"></i> <a href=""> Packages 3 Days Tour</a> </h3>
-                    <p>Make Your Journey! Now!</p>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="price">148.00/Person <span>$165.00</span></div>
-                    <a href="" class="btn">Book Now</a>
-                </div>
-            </div> -->
         </div>
     </section>
 
@@ -443,30 +411,6 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
-                <!-- <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="home/img/terrios.png" alt="">
-                    <div class="content">
-                        <h3> <a href=""> Daihatsu Terrios</a></h3>
-                        <p>Accommodates : 6 person</p>
-                        <p>Include</p>
-                        <p>English Speaking Driver</p>
-                        <p>Petrol/Gazoline</p>
-                        <div class="price">USD $47/Day (10 Hours)</div>
-                        <a href="" class="btn">VIEW DETAILS</a>
-                    </div>
-                </div>
-                <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="home/img/apv.png" alt="">
-                    <div class="content">
-                        <h3> <a href=""> Suzuki APV</a></h3>
-                        <p>Accommodates : 7 person</p>
-                        <p>Include</p>
-                        <p>English Speaking Driver</p>
-                        <p>Petrol/Gazoline</p>
-                        <div class="price">USD $43/Day (10 Hours)</div>
-                        <a href="" class="btn">VIEW DETAILS</a>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -591,50 +535,6 @@
                         </div>
                     </div>
                 <?php endforeach; ?>
-                <!-- <div class="blog-box" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="blog-box-img">
-                        <img src="home/img/g-2.webp" alt="">
-                        <a href="#" class="blog-img-link">
-                            <i class='bx bx-right-top-arrow-circle'></i>
-                        </a>
-                    </div>
-                    <div class="blog-box-text">
-                        <strong>Bali</strong>
-                        <a href="">Bali: Where Serenity Meets Adventure</a>
-                        <p>Bali's allure lies in its serene landscapes, where emerald rice terraces cascade down lush hillsides and pristine beaches stretch as far as the eye can see. From the tranquil shores of Nusa Dua to the mystical ambiance of Ubud's verdant jungles, Bali beckons visitors to unwind and rejuvenate amidst nature's embrace. </p>
-                        <div class="blog-author">
-                            <div class="blog-author-img">
-                                <img src="home/img/re-3.jpg" alt="">
-                            </div>
-                            <div class="blog-author-text">
-                                <strong>Alax</strong>
-                                <span>Jan 12, 2024</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="blog-box" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="blog-box-img">
-                        <img src="home/img/g-4.jpeg" alt="">
-                        <a href="#" class="blog-img-link">
-                            <i class='bx bx-right-top-arrow-circle'></i>
-                        </a>
-                    </div>
-                    <div class="blog-box-text">
-                        <strong>Bali</strong>
-                        <a href="">Discover Bali: Where Adventure and Serenity Converge</a>
-                        <p>From lush rice terraces to pristine beaches, Bali's natural beauty is simply breathtaking. Explore the emerald green rice paddies of Ubud, where tranquility reigns supreme, or bask in the sun on the golden sands of Kuta Beach. </p>
-                        <div class="blog-author">
-                            <div class="blog-author-img">
-                                <img src="home/img/re-3.jpg" alt="">
-                            </div>
-                            <div class="blog-author-text">
-                                <strong>Alax</strong>
-                                <span>Jan 13, 2024</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -656,20 +556,6 @@
                     <p><?= $faq['answer']; ?></p>
                 </div>
             <?php endforeach; ?>
-            <!-- <div class="question">
-            <button>
-                <span>Lorem ipsum dolor sit amet?</span>
-                <span><i class="fas fa-chevron-down"></i></span>
-            </button>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, quas.</p>
-        </div>
-        <div class="question">
-            <button>
-                <span>Lorem ipsum dolor sit amet?</span>
-                <span><i class="fas fa-chevron-down"></i></span>
-            </button>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, quas.</p>
-        </div> -->
         </div>
 
 
@@ -769,115 +655,11 @@
         </div>
     </section>
     <!-- review ends-->
-    <!-- contact section -->
-    <!-- <section class="contact" id="contact">
-    <h1 class="heading" data-aos="fade-down-right" data-aos-duration="1000">
-        <span>c</span>
-        <span>o</span>
-        <span>n</span>
-        <span>t</span>
-        <span>a</span>
-        <span>c</span>
-        <span>t</span>
-    </h1>
-   <div class="row">
-    <div class="image" data-aos="fade-down-right" data-aos-duration="1000">
-        <img src="home/img/contact-2.png" alt="">
-    </div>
-    <form action=""  data-aos="fade-down-right" data-aos-duration="1000">
-        <div class="inputBox">
-            <input type="text" placeholder="name">
-            <input type="email" placeholder="email">
-        </div>
-        <div class="inputBox">
-            <input type="number" placeholder="number">
-            <input type="text" placeholder="subject">
-        </div>
-        <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
-        <input type="submit" class="btn" value="Send">
-    </form>
-   </div>
-</section> -->
-    <!-- contact section -->
-
-    <!-- ======= Footer section design ========-->
-    <!-- <footer class="Footer">
-        <div class="Footer-content">
-            <img src="/footer/img/Logo_IBT.png">
-
-            <div class="icons">
-                <br>
-                <h4>Folow Us</h4>
-                <a href="tel:+6282144678456"><i class='bx bxs-phone'></i></a>
-                <a href="https://wa.me/6282144678456"><i class='bx bxl-whatsapp-square'></i></a>
-                <a href="mailto:enjoy@indobalitour.com"><i class='bx bxs-envelope'></i></a>
-                <a href="https://www.youtube.com/@indobalitour2505"><i class='bx bxl-youtube'></i></a>
-                <a href="#https://www.facebook.com/indobalitour"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="#https://www.instagram.com/indobalitourcom/"><i class='bx bxl-instagram-alt'></i></a>
-
-                <div class="Footer-content payment-section">
-                    <br>
-                    <h4>Payment</h4>
-                    <img src="/home/img/Logo payment BRI_IBT (1).jpg" width="100" height="70" alt="Payment Logo">
-                </div></br>
-            </div></br>
-        </div>
-
-        <div class="Footer-content">
-            <br>
-            <h4>About IBT</h4>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Tours</a></li>
-                <li><a href="#">Blog & Events</a></li>
-                <li><a href="#">Member</a></li>
-                <li><a href="#">Tour Experience</a></li>
-                <li><a href="#">Packages</a></li>
-                <li><a href="#">Contact Us</a></li><br>
-            </ul>
-
-            <div class="Footer-content">
-                <br><strong>
-                    <h4>Excellent Review</h4>
-                </strong>
-                <img src="/home/img/Tripadvisor.jpg" alt="Tripadvisor Logo"></br>
-            </div>
-        </div>
-
-        <div class="Footer-content">
-            <br>
-            <h4>IBT Recommended Tour</h4>
-            <ul>
-                <li><a href="#">Promo</a></li>
-                <li><a href="#">Adventures</a></li>
-                <li><a href="#">Fun Activities</a></li>
-                <li><a href="#">Transport Service</a></li>
-                <li><a href="#">Airport Transfer</a></li><br>
-
-                <div class="Footer-content G-maps">
-                    <h4><br>Our Location</h4>
-                    <h5>Jln. Ganetri IV No. 4 Denpasar 80237 Bali</h5>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.553840585376!2d115.22995007450947!3d-8.638757491407803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23f79d0b9c291%3A0x28fcef04fc4ddfb!2sJl.%20Ganetri%20IV%20No.4%2C%20Tonja%2C%20Kec.%20Denpasar%20Utara%2C%20Kota%20Denpasar%2C%20Bali%2080235!5e0!3m2!1sid!2sid!4v1707716498050!5m2!1sid!2sid" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </ul>
-        </div>
-
-        <div class="Footer-Bottom">
-            <p>Copyright &copy;2024; Designed by <span class="designer">INDO APPS SOLUSINDO</span></p>
-        </div>
-
-
-    </footer> -->
-    <!-- footer ends -->
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="/home/js/main.js"></script>
-</body>
 
-</html>
-
-<?= $this->endSection('content'); ?>
+    <?= $this->endSection('content'); ?>

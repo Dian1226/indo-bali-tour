@@ -77,3 +77,12 @@ $routes->get('/backoffice/tours/add', '\App\Modules\manage_tours\Controllers\Tou
 $routes->post('/backoffice/tours/save', '\App\Modules\manage_tours\Controllers\Tours::save');
 $routes->get('/backoffice/tours/edit/(:num)', '\App\Modules\manage_tours\Controllers\Tours::edit/$1');
 $routes->post('/backoffice/tours/update/(:num)', '\App\Modules\manage_tours\Controllers\Tours::update/$1');
+
+// member
+$routes->get('/register', '\App\Modules\member\Controllers\Member');
+$routes->post('/email', '\App\Modules\member\Controllers\Member::register');
+$routes->delete('/backoffice/tours/(:num)', '\App\Modules\manage_tours\Controllers\Tours::delete/$1');
+$routes->get('/backoffice/tours/add', '\App\Modules\manage_tours\Controllers\Tours::add');
+$routes->post('/backoffice/tours/save', '\App\Modules\manage_tours\Controllers\Tours::save');
+$routes->get('/backoffice/tours/edit/(:num)', '\App\Modules\manage_tours\Controllers\Tours::edit/$1');
+$routes->post('/backoffice/tours/update/(:num)', '\App\Modules\manage_tours\Controllers\Tours::update/$1');

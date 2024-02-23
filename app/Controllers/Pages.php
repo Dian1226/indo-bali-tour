@@ -74,6 +74,6 @@ class Pages extends BaseController
 
     public function footer(): string
     {
-        return view('footer/footer');
+        return view('layout/footer');
     }
 }
