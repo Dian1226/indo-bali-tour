@@ -26,9 +26,9 @@
             <a href="/">Home</a>
             <a href="/index.php/about">About</a>
             <a href="/index.php/tours">Tours</a>
-            <a href="#blog-events">Blog & Events</a>
-            <a href="#member">Member</a>
-            <a href="#tour-experience">Tour Experience</a>
+            <a href="/index.php/blogsevents">Blog & Events</a>
+            <a href="/index.php/member">Member</a>
+            <a href="/index.php/tour-experience">Tour Experience</a>
             <a href="/index.php/contact">Contact Us</a>
         </nav>
         <div class="icons">
@@ -477,7 +477,7 @@
             <span>y</span>
         </h1>
         <div class="btn-m" data-aos="fade-left" data-aos-duration="1000">
-            <button type="button" class="btn btn-primary btn-lg">More</button>
+            <a href="/index.php/tour-experience"><button type="button" class="btn btn-primary btn-lg">More</button></a>
         </div>
         <div class="box-container">
             <!-- maksimal 6 foto -->
@@ -509,7 +509,7 @@
             <span>s</span>
         </h1>
         <div class="btn-m" data-aos="fade-right" data-aos-duration="1000">
-            <button type="button" class="btn btn-primary btn-lg">More</button>
+            <button type="button" class="btn btn-primary btn-lg"><a href="/index.php/blogsevents">More</a></button>
         </div>
         <div class="blog-events">
             <div class="blog-box-container">

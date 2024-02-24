@@ -15,10 +15,12 @@ class Member extends BaseController
 
     public function index()
     {
-        $data = [
-            'title' => 'Form Register'
-        ];
-        return view('\App\Modules\member\Views\register', $data);
+        return view('\App\Modules\member\Views\index');
+    }
+
+    public function team()
+    {
+        return view('\App\Modules\member\Views\team');
     }
 
     public function register()

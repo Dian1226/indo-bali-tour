@@ -105,61 +105,18 @@
 
         <section>
             <div class="ques-container">
-                <div class="ques">
-                    <button>
-                        <span>what's your name ?</span>
-                        <span><i class='bx bx-chevron-down n-arrow'></i></span>
-                    </button>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure ab quis totam vero officiis repellendus molestiae pariatur facilis sunt omnis dolorum quisquam, perspiciatis magnam asperiores porro maiores incidunt maxime praesentium.
-                    </p>
-                </div>
+                <?php foreach ($faqs as $faq) : ?>
+                    <div class="ques">
+                        <button>
+                            <span><?= $faq['question']; ?></span>
+                            <span><i class='bx bx-chevron-down n-arrow'></i></span>
+                        </button>
+                        <p>
+                            <?= $faq['answer']; ?>
+                        </p>
+                    </div>
+                <?php endforeach; ?>
 
-                <div class="ques">
-                    <button>
-                        <span>what's your name ?</span>
-                        <span><i class='bx bx-chevron-down n-arrow'></i></span>
-                    </button>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia animi dolorum expedita! Corrupti incidunt atque eum aperiam optio hic consectetur soluta aspernatur, fugiat, asperiores enim velit a temporibus perspiciatis nam.
-                    </p>
-                </div>
-
-                <div class="ques">
-                    <button>
-                        <span>
-                            what's your name ?
-                        </span>
-                        <span><i class='bx bx-chevron-down n-arrow'></i></span>
-                    </button>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam ad, error voluptatibus odit at obcaecati eum eos accusamus cum nihil minima incidunt natus fuga repellat nulla fugiat quis molestiae necessitatibus.
-                    </p>
-                </div>
-
-                <div class="ques">
-                    <button>
-                        <span>
-                            what's your name ?
-                        </span>
-                        <span><i class='bx bx-chevron-down n-arrow'></i></span>
-                    </button>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquid architecto praesentium, alias dolor aspernatur fugit beatae minima incidunt iusto similique, atque possimus commodi nulla, eveniet consequuntur. Obcaecati, impedit maxime.
-                    </p>
-                </div>
-
-                <div class="ques">
-                    <button>
-                        <span>
-                            what's your name ?
-                        </span>
-                        <span><i class='bx bx-chevron-down n-arrow'></i></span>
-                    </button>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vitae quibusdam architecto officia rem sint distinctio officiis, fuga dolores hic aliquam repudiandae fugit dicta dolore facilis, veritatis accusamus, dolorem commodi.
-                    </p>
-                </div>
             </div>
         </section>
     </section>
@@ -175,4 +132,4 @@
 
     <script src="/contact/js/contactus.js"></script>
 
-<?= $this->endSection('content'); ?>
+    <?= $this->endSection('content'); ?>

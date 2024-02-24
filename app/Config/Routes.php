@@ -10,10 +10,17 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', '\App\Modules\home\Controllers\Home');
 $routes->get('/about', '\App\Modules\about\Controllers\About');
 $routes->get('/contact', '\App\Modules\contact\Controllers\Contact');
-
 $routes->get('/tours', 'Pages::tours');
 $routes->get('/tours/(:any)', 'Pages::toursDetail/$1');
-$routes->get('/newsevents', 'Pages::blogEvents');
+$routes->get('/blogsevents', '\App\Modules\blogsevents\Controllers\Blog');
+$routes->get('/blogsevents/(:any)', '\App\Modules\blogsevents\Controllers\Blog::article/$1');
+$routes->get('/category/(:any)', '\App\Modules\blogsevents\Controllers\Blog::category/$1');
+$routes->get('/tour-experience', '\App\Modules\gallery\Controllers\Gallery');
+$routes->get('/tour-experience/photo', '\App\Modules\gallery\Controllers\Gallery::photo');
+$routes->get('/tour-experience/video', '\App\Modules\gallery\Controllers\Gallery::video');
+$routes->get('/member', '\App\Modules\member\Controllers\Member');
+$routes->get('/team', '\App\Modules\member\Controllers\Member::team');
+
 $routes->get('/Footer', 'Pages::footer');
 $routes->get('/success', 'Pages::success');
 
