@@ -1,3 +1,6 @@
+<?= $this->extend('layout/footer'); ?>
+
+<?= $this->section('content'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,8 +72,8 @@
                         <!-- this is the select option -->
                         <span>Package</span>
                         <select name="people" id="people" required>
-                            <?php foreach ($data as $package) : ?>
-                                <option value="<?= $package['place']; ?>"><?= $package['place']; ?></option>
+                            <?php foreach ($packages as $package) : ?>
+                                <option value="<?= $package['title']; ?>"><?= $package['title']; ?></option>
                             <?php endforeach; ?>
                         </select>
                         <!-- this is the select option -->
@@ -96,7 +99,5 @@
         </div>
     </div>
 
-    <script src="form pemesanan/js/form.js"></script>
-</body>
-
-</html>
+    <script src="/form pemesanan/js/form.js"></script>
+<?= $this->endSection('content'); ?>

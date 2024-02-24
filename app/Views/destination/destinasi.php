@@ -1,5 +1,9 @@
+<?= $this->extend('layout/footer'); ?>
+
+<?= $this->section('content'); ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +12,9 @@
     <!-- =======box ion====== -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="destinasi.css">
+    <link rel="stylesheet" href="/destination/css/destinasi.css">
 </head>
+
 <body>
     <nav>
         <div class="navbar">
@@ -25,18 +30,18 @@
                         <a href="#">RECOMENDATION</a>
                         <i class='bx bxs-chevron-down arrow html-arrow'></i>
                         <ul class="html-submenu sub-menu">
-                            <li><a href="#">Adventures</a></li>
-                            <li><a href="#">Fun Activities</a></li>
-                            <li><a href="#">Transport Service</a></li>
-                            <li><a href="#">Airport Service</a></li>
+                            <li><a href="/index.php/adventures">Adventures</a></li>
+                            <li><a href="/index.php/fun-activities">Fun Activities</a></li>
+                            <li><a href="/index.php/transport">Transport Service</a></li>
+                            <li><a href="/index.php/airport">Airport Service</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">TRENDING</a>
                         <i class='bx bxs-chevron-down arrow js-arrow'></i>
                         <ul class="js-submenu sub-menu">
-                            <li><a href="#">Destinasion</a></li>
-                            <li><a href="#">Package</a></li>
+                            <li><a href="/index.php/destination">Destination</a></li>
+                            <li><a href="/index.php/package">Package</a></li>
                         </ul>
                     </li>
                     <li><a href="#">PROMO</a></li>
@@ -45,11 +50,11 @@
         </div>
     </nav>
 
-<!-- ========================================================================================================= -->
-    
+    <!-- ========================================================================================================= -->
+
     <div class="container-adv">
-        <img src="image projek PKL/goa-gajah-bali[1].jpg">
-        <h1 class="desk-adv">Destinasion</h1>
+        <img src="/destination/image projek PKL/goa-gajah-bali[1].jpg">
+        <h1 class="desk-adv">Destination</h1>
         <ul class="adv-links">
             <li class="link-adv"><a href="#">home ></a></li>
             <li class="link-adv"><a href="#">category ></a></li>
@@ -57,15 +62,15 @@
         </ul>
     </div>
 
-<!-- =====================================================================================================     -->
+    <!-- =====================================================================================================     -->
     <div class="bg-desk">
         <h1 class="desk1">sedang trending!</h1>
-    </div>    
+    </div>
 
     <div class="container-destinasi">
         <div class="card">
             <div class="face front">
-                <img src="image projek PKL/nusadua.jpg" alt="">
+                <img src="/destination/image projek PKL/nusadua.jpg" alt="">
                 <h3>contoh</h3>
             </div>
             <div class="face back">
@@ -79,7 +84,7 @@
 
         <div class="card">
             <div class="face front">
-                <img src="image projek PKL/nusadua.jpg" alt="">
+                <img src="/destination/image projek PKL/nusadua.jpg" alt="">
                 <h3>contoh</h3>
             </div>
             <div class="face back">
@@ -93,21 +98,7 @@
 
         <div class="card">
             <div class="face front">
-                <img src="image projek PKL/nusadua.jpg" alt="">
-                <h3>contoh</h3>
-            </div>
-            <div class="face back">
-                <h3>contoh</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iure natus quam minima! Maxime aliquam</p>
-                <div class="detail">
-                    <a href="#">Details</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="face front">
-                <img src="image projek PKL/nusadua.jpg" alt="">
+                <img src="/destination/image projek PKL/nusadua.jpg" alt="">
                 <h3>contoh</h3>
             </div>
             <div class="face back">
@@ -121,7 +112,7 @@
 
         <div class="card">
             <div class="face front">
-                <img src="image projek PKL/nusadua.jpg" alt="">
+                <img src="/destination/image projek PKL/nusadua.jpg" alt="">
                 <h3>contoh</h3>
             </div>
             <div class="face back">
@@ -135,7 +126,21 @@
 
         <div class="card">
             <div class="face front">
-                <img src="image projek PKL/nusadua.jpg" alt="">
+                <img src="/destination/image projek PKL/nusadua.jpg" alt="">
+                <h3>contoh</h3>
+            </div>
+            <div class="face back">
+                <h3>contoh</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iure natus quam minima! Maxime aliquam</p>
+                <div class="detail">
+                    <a href="#">Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="/destination/image projek PKL/nusadua.jpg" alt="">
                 <h3>contoh</h3>
             </div>
             <div class="face back">
@@ -147,6 +152,5 @@
             </div>
         </div>
     </div>
-    
-</body>
-</html>
+
+    <?= $this->endSection('content'); ?>

@@ -26,4 +26,12 @@ class ActivityModel extends Model
 
         return $this->where(['slug' => $slug])->first();
     }
+
+    public function getAdventure()
+    {
+        // if ($category == false) {
+        //     return $this->findAll();
+        // }
+        return $this->where(['category' => 'adventure'])->findAll();
+    }
 }

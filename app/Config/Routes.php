@@ -21,6 +21,15 @@ $routes->get('/tour-experience/video', '\App\Modules\gallery\Controllers\Gallery
 $routes->get('/member', '\App\Modules\member\Controllers\Member');
 $routes->get('/team', '\App\Modules\member\Controllers\Member::team');
 
+// tours
+$routes->get('/fun-activities', 'Pages::funactivities');
+$routes->get('/adventures', 'Pages::adventures');
+$routes->get('/transport', 'Pages::transport');
+$routes->get('/airport', 'Pages::airport');
+$routes->get('/destination', 'Pages::destination');
+$routes->get('/package', 'Pages::package');
+$routes->get('/promo', 'Pages::promo');
+
 $routes->get('/Footer', 'Pages::footer');
 $routes->get('/success', 'Pages::success');
 

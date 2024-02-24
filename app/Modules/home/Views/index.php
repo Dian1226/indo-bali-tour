@@ -78,7 +78,7 @@
         </div>
 
         <div class="vid-container">
-            <video src="home/img/vidd-1 - rmv.mp4" id="vid-slider" autoplay loop></video>
+            <video src="/home/img/vidd-1 - rmv.mp4" id="vid-slider" autoplay loop></video>
         </div>
     </section>
     <!-- home section ends -->
@@ -136,7 +136,7 @@
         <div class="box-container">
             <?php foreach ($packages as $package) : ?>
                 <div class="box" data-aos="fade-up" data-aos-duration="1000">
-                    <form action="/booking-form/<?= $package['slug']; ?>" method="post">
+                    <form action="/booking-form" method="post">
                         <?php
                         $price = $package['price'];
                         $discount = $package['discount'];
@@ -181,7 +181,8 @@
             <span>s</span>
         </h1>
         <div class="btn-m" data-aos="fade-out" data-aos-duration="1000">
-            <button type="button" class="btn btn-primary btn-lg">More</button>
+            <a href="/index.php/tours"><button type="button" class="btn btn-primary btn-lg">More</button></a>
+
         </div>
         <div class="swiper mySwiper4">
             <div class="swiper-wrapper" data-aos="fade-out" data-aos-duration="1000">
@@ -204,7 +205,7 @@
 
         <div class="promo">
             <div class="btn-m" data-aos="fade-up" data-aos-duration="1000">
-                <button type="button" class="btn btn-primary btn-lg"><a href="">More</a></button>
+                <a href="/index.php/promo"><button type="button" class="btn btn-primary btn-lg">More</button></a>
             </div>
 
             <div class="promo-1">
@@ -252,7 +253,8 @@
             <span>s</span>
         </h1>
         <div class="btn-m">
-            <button type="button" class="btn btn-primary btn-lg">More</button>
+            <a href="/fun-activities"><button type="button" class="btn btn-primary btn-lg">More</button></a>
+
         </div>
         <div id="card-area">
             <div class="wrapper">
@@ -395,7 +397,7 @@
             <span>t</span>
         </h1>
         <div class="btn-m" data-aos="fade-up" data-aos-duration="1000">
-            <button type="button" class="btn btn-primary btn-lg"><a href="transport.html">More</a></button>
+            <a href="/transport"><button type="button" class="btn btn-primary btn-lg">More</button></a>
         </div>
 
         <div class="transportations-1">
@@ -509,7 +511,7 @@
             <span>s</span>
         </h1>
         <div class="btn-m" data-aos="fade-right" data-aos-duration="1000">
-            <button type="button" class="btn btn-primary btn-lg"><a href="/index.php/blogsevents">More</a></button>
+            <a href="/index.php/blogsevents"><button type="button" class="btn btn-primary btn-lg">More</button></a>
         </div>
         <div class="blog-events">
             <div class="blog-box-container">
@@ -517,13 +519,13 @@
                     <div class="blog-box" data-aos="fade-right" data-aos-duration="1000">
                         <div class="blog-box-img">
                             <img src="/backoffice/blog/<?= $blog['image']; ?>" alt="">
-                            <a href="#" class="blog-img-link">
-                                <i class='bx bx-right-top-arrow-circle'></i>
+                            <a href="/blogsevents/<?= $blog['slug']; ?>" class="blog-img-link">
+                                <i class='bx bx-right-top-arrow-circle'></a></i>
                             </a>
                         </div>
                         <div class="blog-box-text">
                             <strong><?= $blog['category']; ?></strong>
-                            <a href=""><?= $blog['title']; ?></a>
+                            <a href="/blogsevents/<?= $blog['slug']; ?>"><?= $blog['title']; ?></a>
                             <p><?= $blog['content']; ?></p>
                             <div class="blog-author">
                                 <div class="blog-author-img">

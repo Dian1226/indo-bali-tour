@@ -2,7 +2,7 @@
 
 <?= $this->section('content'); ?>
 
-<form action="/backoffice/activity/update" method="post" enctype="multipart/form-data">
+<form action="/backoffice/activity/update/<?= $activity['id']; ?>" method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="col">
             <div class="mb-3">

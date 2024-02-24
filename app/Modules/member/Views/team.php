@@ -80,7 +80,7 @@
 
                 <div class="input-box">
                     <label>Language Competencies</label>
-                    <input type="text" placeholder="Enter full name" />
+                    <input type="text" placeholder="" />
                 </div>
 
                 <div class="select-box">

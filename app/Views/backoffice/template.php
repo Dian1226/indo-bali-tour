@@ -46,7 +46,7 @@
                         </ul>
                     </li>
                     <li><a class="nav-link" href="/index.php/backoffice/tours">Tours</a></li>
-                    <li><a class="nav-link" href="/backoffice/activity">Activity</a></li>
+                    <li><a class="nav-link" href="/index.php/backoffice/activity">Activity</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Tour Package

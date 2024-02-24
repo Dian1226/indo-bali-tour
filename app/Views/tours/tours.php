@@ -3,21 +3,24 @@
 <?= $this->section('content'); ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>TOUR INDO BALI TOUR</title> 
+    <title>TOUR INDO BALI TOUR</title>
 
     <!-- -----carousel------- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
+
     <!-- ---------icon----- -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- --------AOS------ -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <link rel="stylesheet" href="/tours/css/tour.css">    
+    <link rel="stylesheet" href="/tours/css/tour.css">
+    <link rel="stylesheet" href="/activities/css/activities.css">
 </head>
+
 <body>
     <nav>
         <div class="navbar">
@@ -32,12 +35,11 @@
                     <li>
                         <a href="#">RECOMENDATIONS</a>
                         <i class='bx bxs-chevron-down arrow htmlcss-arrow'></i>
-                        <ul class="htmlCss-sub-menu sub-menu">
-                            <li><a href="#">Tour</a></li>
-                            <li><a href="#">Adventures</a></li>
-                            <li><a href="#">Fun Activities</a></li>
-                            <li><a href="#">Transport Service</a></li>
-                            <li><a href="#">Airport Transfer</a></li>
+                        <ul class="html-submenu sub-menu">
+                            <li><a href="/index.php/adventures">Adventures</a></li>
+                            <li><a href="/index.php/fun-activities">Fun Activities</a></li>
+                            <li><a href="/index.php/transport">Transport Service</a></li>
+                            <li><a href="/index.php/airport">Airport Service</a></li>
                         </ul>
                     </li>
                     <li>
@@ -60,46 +62,17 @@
         </h1>
         <hr class="h" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="200">
     </div>
-    
+
     <div class="carousel" data-aos="fade-up" data-aos-duration="1000">
         <?php foreach ($tours as $tour) : ?>
-        <a class="carousel-item" href="/tours/<?= $tour['slug']; ?>">
-            <div class="testi">
-                <div class="img-area">
-                    <img src="/backoffice/tours/<?= $tour['image']; ?>">
+            <a class="carousel-item" href="/tours/<?= $tour['slug']; ?>">
+                <div class="testi">
+                    <div class="img-area">
+                        <img src="/backoffice/tours/<?= $tour['image']; ?>">
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
         <?php endforeach; ?>
-        <!-- <a class="carousel-item" href="#">
-            <div class="testi">
-                <div class="img-area">
-                    <img src="/tours/image/pantai karang sanur.jpg">
-                </div>
-            </div>
-        </a>
-        <a class="carousel-item" href="#">
-            <div class="testi">
-                <div class="img-area">
-                    <img src="/tours/image/besakih.jpg">
-                </div>
-            </div>
-        </a>
-        <a class="carousel-item" href="#">
-            <div class="testi">
-                <div class="img-area">
-                    <img src="/tours/image/tanah lot.jpg">
-                </div>
-            </div>
-        </a>
-        <a class="carousel-item" href="#">
-            <div class="testi">
-                <div class="img-area">
-                    <img src="/tours/image/UBUD.jpeg">
-                </div>
-            </div>
-        </a>
- -->
         <div class="dots-container">
             <span class="dot"></span>
             <span class="dot"></span>
@@ -107,72 +80,66 @@
             <span class="dot"></span>
             <span class="dot"></span>
         </div>
-   </div>
+    </div>
 
-   <div data-aos="zoom-in-down" data-aos-duration="1000">
-    <h1 class="desk2">promo minggu ini !</h1>
-   </div>
+    <div data-aos="zoom-in-down" data-aos-duration="1000">
+        <h1 class="desk2">promo minggu ini !</h1>
+    </div>
 
-   <div data-aos="zoom-in-down" data-aos-duration="1500">
-    <a href="#">
-        <button class="button-LS">Lihat semua</button>
-    </a>
-   </div>
+    <!-- <div data-aos="zoom-in-down" data-aos-duration="1500">
+        <a href="#">
+            <button class="button-LS">Lihat semua</button>
+        </a>
+    </div> -->
 
-   <div class="promo">
-    <a href="#">
-        <img class="promo-img" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150"
-        src="/tours/image/image1.jpg">
-    </a>
-    <a href="#">
-        <img class="promo-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="200"
-        src="/tours/image/image2.jpg">
-    </a><a href="#">
-        <img class="promo-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-offset="250"
-        src="/tours/image/image3.jpg">
-    </a>
-   </div>
+    <div class="promo">
+        <a href="#">
+            <img class="promo-img" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150" src="/home/img/promo-card.avif">
+        </a>
+        <a href="#">
+            <img class="promo-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="200" src="/home/img/promo-card.avif">
+        </a><a href="#">
+            <img class="promo-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-offset="250" src="/home/img/promo-card.avif">
+        </a>
+    </div>
 
-   <div data-aos="zoom-in-up" data-aos-duration="1000">
-    <h1 class="desk3">promo menarik !</h1>
-   </div>
+    <div data-aos="zoom-in-up" data-aos-duration="1000">
+        <h1 class="desk3">promo menarik !</h1>
+    </div>
 
-   <div data-aos="zoom-in-up" data-aos-duration="1500">
-    <a href="#">
-        <button class="button-LS">Lihat semua</button>
-    </a>
-   </div>
+    <div data-aos="zoom-in-up" data-aos-duration="1500">
+        <a href="/index.php/promo">
+            <button class="button-LS">Lihat semua</button>
+        </a>
+    </div>
 
-   <div class="promo">
-    <a href="#">
-        <img class="promo-img" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150"
-        src="/tours/image/image1.jpg">
-    </a>
-    <a href="#">
-        <img class="promo-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="200"
-        src="/tours/image/image2.jpg">
-    </a>
-    <a href="#">
-        <img class="promo-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-offset="250"
-        src="/tours/image/image3.jpg">
-    </a>
-   </div>
+    <div class="promo">
+        <a href="#">
+            <img class="promo-img" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="150" src="/home/img/promo-card.avif">
+        </a>
+        <a href="#">
+            <img class="promo-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="200" src="/home/img/promo-card.avif">
+        </a>
+        <a href="#">
+            <img class="promo-img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-offset="250" src="/home/img/promo-card.avif">
+        </a>
+    </div>
 
-   
 
-    
-    
+
+
+
 
     <!-- ------carousel------- -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- -------AOS----- -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
     </script>
 
-<script src="/tours/js/tour.js"></script>
+    <script src="/tours/js/tour.js"></script>
 
-<?= $this->endSection('content'); ?>
+    <?= $this->endSection('content'); ?>
