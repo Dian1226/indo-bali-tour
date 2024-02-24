@@ -35,16 +35,25 @@
                             <li><a class="dropdown-item" href="/backoffice/blogsevents">Blogs & Events</a></li>
                         </ul>
                     </li>
-                    <li><a class="nav-link" href="/backoffice/gallery">Gallery</a></li>
-                    <li><a class="nav-link" href="/backoffice/faq">FAQ</a></li>
+                    <li><a class="nav-link" href="/index.php/backoffice/gallery">Gallery</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            FAQ
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/backoffice/faq">FAQ General</a></li>
+                            <li><a class="dropdown-item" href="/backoffice/faq-contact">FAQ Contact</a></li>
+                        </ul>
+                    </li>
                     <li><a class="nav-link" href="/index.php/backoffice/tours">Tours</a></li>
+                    <li><a class="nav-link" href="/index.php/backoffice/activity">Activity</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Tour Package
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/backoffice/transportation">Transportation</a></li>
-                            <li><a class="dropdown-item" href="/backoffice/index.php/package">Tour Package</a></li>
+                            <li><a class="dropdown-item" href="/index.php/backoffice/transportation">Transportation</a></li>
+                            <li><a class="dropdown-item" href="/index.php/backoffice/package">Tour Package</a></li>
                         </ul>
                     </li>
                 </ul>

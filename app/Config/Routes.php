@@ -5,13 +5,37 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Pages::index');
+
+//  Home
+$routes->get('/', '\App\Modules\home\Controllers\Home');
+$routes->get('/about', '\App\Modules\about\Controllers\About');
+$routes->get('/contact', '\App\Modules\contact\Controllers\Contact');
 $routes->get('/tours', 'Pages::tours');
 $routes->get('/tours/(:any)', 'Pages::toursDetail/$1');
-$routes->get('/about', 'Pages::about');
-$routes->get('/newsevents', 'Pages::blogEvents');
+$routes->get('/blogsevents', '\App\Modules\blogsevents\Controllers\Blog');
+$routes->get('/blogsevents/(:any)', '\App\Modules\blogsevents\Controllers\Blog::article/$1');
+$routes->get('/category/(:any)', '\App\Modules\blogsevents\Controllers\Blog::category/$1');
+$routes->get('/tour-experience', '\App\Modules\gallery\Controllers\Gallery');
+$routes->get('/tour-experience/photo', '\App\Modules\gallery\Controllers\Gallery::photo');
+$routes->get('/tour-experience/video', '\App\Modules\gallery\Controllers\Gallery::video');
+$routes->get('/member', '\App\Modules\member\Controllers\Member');
+$routes->get('/team', '\App\Modules\member\Controllers\Member::team');
+
+// tours
+$routes->get('/fun-activities', 'Pages::funactivities');
+$routes->get('/adventures', 'Pages::adventures');
+$routes->get('/transport', 'Pages::transport');
+$routes->get('/airport', 'Pages::airport');
+$routes->get('/destination', 'Pages::destination');
+$routes->get('/package', 'Pages::package');
+$routes->get('/promo', 'Pages::promo');
+
 $routes->get('/Footer', 'Pages::footer');
-$routes->get('/contact', 'Pages::contactus');
+$routes->get('/success', 'Pages::success');
+
+// booking
+$routes->post('/booking-form', 'Pages::bookingForm');
+$routes->post('/booking-form/(:any)', 'Pages::bookingForm/$1');
 
 // menu
 $routes->get('/backoffice', '\App\Modules\manage_menu\Controllers\Menu');
@@ -77,3 +101,11 @@ $routes->get('/backoffice/tours/add', '\App\Modules\manage_tours\Controllers\Tou
 $routes->post('/backoffice/tours/save', '\App\Modules\manage_tours\Controllers\Tours::save');
 $routes->get('/backoffice/tours/edit/(:num)', '\App\Modules\manage_tours\Controllers\Tours::edit/$1');
 $routes->post('/backoffice/tours/update/(:num)', '\App\Modules\manage_tours\Controllers\Tours::update/$1');
+
+// activity
+$routes->get('/backoffice/activity', '\App\Modules\manage_activity\Controllers\Activity');
+$routes->delete('/backoffice/activity/(:num)', '\App\Modules\manage_activity\Controllers\Activity::delete/$1');
+$routes->get('/backoffice/activity/add', '\App\Modules\manage_activity\Controllers\Activity::add');
+$routes->post('/backoffice/activity/save', '\App\Modules\manage_activity\Controllers\Activity::save');
+$routes->get('/backoffice/activity/edit/(:num)', '\App\Modules\manage_activity\Controllers\Activity::edit/$1');
+$routes->post('/backoffice/activity/update/(:num)', '\App\Modules\manage_activity\Controllers\Activity::update/$1');
