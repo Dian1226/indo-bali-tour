@@ -158,6 +158,7 @@
             <?php endforeach; ?>
         </div>
     </section>
+    <!-- packages ends -->
 
     <!-- DESTINATION PAGE -->
     <section class="ibt-fun-destinations">
@@ -179,8 +180,9 @@
             </div>
         </div>
     </section>
-    <!-- DESTINATION PAGE -->
+    <!-- DESTINATION PAGE ENDS-->
 
+    <!-- promo -->
     <section class="promo" id="promo">
         <h1 class="heading" data-aos="fade-up" data-aos-duration="1000">
             <?php $sec = "promo";
@@ -224,7 +226,9 @@
                 </div>
             </div>
     </section>
+    <!-- promo end -->
 
+    <!-- fun activities -->
     <section class="ibt-fun-activities">
         <h1 class="heading" data-aos="fade-down" data-aos-duration="1000">
             <br><br>
@@ -254,11 +258,9 @@
             </div>
         </div>
     </section>
-
-    <!-- packages end-->
+    <!-- fun activities end -->
 
     <!-- IBT FUN ADVENTURES START -->
-
     <section class="ibt-fun-adventures" id="ibt-fun-adventures">
         <h1 class="heading" data-aos="fade-up-right" data-aos-duration="1000">
             <?php $sec = "adventures";
@@ -287,22 +289,6 @@
     </section>
     <!-- IBT FUN ADVENTURES ENDS -->
 
-<!-- TRANSPORT START -->
-<section class="transportations" id="transportations">
-    <h1 class="heading"  data-aos="fade-up" data-aos-duration="1000">
-    <span>T</span>
-    <span>r</span>
-    <span>a</span>
-    <span>n</span>
-    <span>s</span>
-    <span>p</span>
-    <span>o</span>
-    <span>r</span>
-    <span>t</span>
-</h1>
-<div class="btn-m" data-aos="fade-up" data-aos-duration="1000">
-<button type="button" class="btn btn-primary btn-lg"><a href="transport.php">More</a></button>
-</div>
     <!-- TRANSPORT START -->
     <section class="transportations" id="transportations">
         <h1 class="heading" data-aos="fade-up" data-aos-duration="1000">
@@ -335,6 +321,7 @@
         </div>
     </section>
     <!-- TRANSPORT ENDS -->
+
     <!-- service section -->
     <section class="services" id="services">
         <h1 class="heading" data-aos="zoom-in" data-aos-duration="1000">
@@ -406,6 +393,7 @@
         </div>
     </section>
     <!-- gallery ends -->
+
     <!-- BLOG STARTS -->
     <section class="blog-events-1" id="blog-events-1" data-aos="fade-right" data-aos-duration="1000">
         <h1 class="heading">
@@ -448,6 +436,7 @@
         </div>
     </section>
     <!-- BLOG ENDS -->
+
     <!-- FAQ STARTS -->
     <section class="faq" id="faq">
         <h1 class="heading">
@@ -472,6 +461,7 @@
 
     </section>
     <!-- FAQ ENDS -->
+
     <!-- AJAKAN STARTS -->
     <section class="market">
         <div class="row">
@@ -491,6 +481,7 @@
         </div>
     </section>
     <!-- AJAKAN ENDS -->
+
     <!-- review starts -->
     <section class="review" id="review">
         <h1 class="heading" data-aos="fade-up-right" data-aos-duration="1000">

@@ -2,11 +2,11 @@
 
 <!--======= Footer section design ========-->
 <footer>
-    <link rel="stylesheet" href="/footer/css/Footer.css">
+    <link rel="stylesheet" href="/layout/css/Footer.css">
     <div class="footer">
         <div class="Footer-content">
             <div class="logo-footer">
-                <img src="/footer/img/Logo_IBT.png">
+                <img src="/layout/img/Logo_IBT.png">
             </div>
 
 
@@ -17,13 +17,13 @@
                 <a href="https://wa.me/6282144678456"><i class='bx bxl-whatsapp-square'></i></a>
                 <a href="mailto:enjoy@indobalitour.com"><i class='bx bxs-envelope'></i></a>
                 <a href="https://www.youtube.com/@indobalitour2505"><i class='bx bxl-youtube'></i></a>
-                <a href="#https://www.facebook.com/indobalitour"><i class='bx bxl-facebook-circle'></i></a>
-                <a href="#https://www.instagram.com/indobalitourcom/"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.facebook.com/indobalitour"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://www.instagram.com/indobalitourcom/"><i class='bx bxl-instagram-alt'></i></a>
             </div>
             <div class="Footer-content payment-section">
                 <br>
                 <h4>Payment</h4>
-                <img src="/footer/img/Logo payment BRI_IBT (1).jpg" width="150" height="100" alt="Payment Logo">
+                <img src="/layout/img/Logo payment BRI_IBT (1).jpg" width="150" height="100" alt="Payment Logo">
             </div></br>
             </br>
         </div>
@@ -34,19 +34,19 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/index.php/about">About</a></li>
-                <li><a href="#">Tours</a></li>
-                <li><a href="#">Blog & Events</a></li>
-                <li><a href="#">Member</a></li>
-                <li><a href="#">Tour Experience</a></li>
-                <li><a href="#">Packages</a></li>
-                <li><a href="#">Contact Us</a></li><br>
+                <li><a href="/index.php/tours">Tours</a></li>
+                <li><a href="/index.php/blogsevents">Blog & Events</a></li>
+                <li><a href="/index.php/member">Member</a></li>
+                <li><a href="/index.php/tour-experience">Tour Experience</a></li>
+                <li><a href="/index.php/package">Packages</a></li>
+                <li><a href="/index.php/contact">Contact Us</a></li><br>
             </ul>
 
             <div class="Footer-content-tripad">
                 <br><strong>
                     <h4>Excellent Review</h4>
                 </strong>
-                <img src="/footer/img/Tripadvisor.jpg" alt="Tripadvisor Logo"></br>
+                <img src="/layout/img/Tripadvisor.jpg" alt="Tripadvisor Logo"></br>
             </div>
         </div>
 
@@ -54,11 +54,11 @@
             <br>
             <h4>IBT Recommended Tour</h4>
             <ul>
-                <li><a href="#">Promo</a></li>
-                <li><a href="#">Adventures</a></li>
-                <li><a href="#">Fun Activities</a></li>
-                <li><a href="#">Transport Service</a></li>
-                <li><a href="#">Airport Transfer</a></li><br>
+                <li><a href="/promo">Promo</a></li>
+                <li><a href="/adventures">Adventures</a></li>
+                <li><a href="/fun-activities">Fun Activities</a></li>
+                <li><a href="/transport">Transport Service</a></li>
+                <li><a href="/index.php/airport">Airport Transfer</a></li><br>
 
                 <div class="Footer-content G-maps">
                     <h4><br>Our Location</h4>
