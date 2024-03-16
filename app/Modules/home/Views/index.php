@@ -287,6 +287,22 @@
     </section>
     <!-- IBT FUN ADVENTURES ENDS -->
 
+<!-- TRANSPORT START -->
+<section class="transportations" id="transportations">
+    <h1 class="heading"  data-aos="fade-up" data-aos-duration="1000">
+    <span>T</span>
+    <span>r</span>
+    <span>a</span>
+    <span>n</span>
+    <span>s</span>
+    <span>p</span>
+    <span>o</span>
+    <span>r</span>
+    <span>t</span>
+</h1>
+<div class="btn-m" data-aos="fade-up" data-aos-duration="1000">
+<button type="button" class="btn btn-primary btn-lg"><a href="transport.php">More</a></button>
+</div>
     <!-- TRANSPORT START -->
     <section class="transportations" id="transportations">
         <h1 class="heading" data-aos="fade-up" data-aos-duration="1000">
