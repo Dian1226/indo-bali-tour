@@ -223,6 +223,7 @@ nav .navbar .nav-links .links li .arrow{
     margin-left: 7%;
 } 
 
+/* ========================================DETAIL SLIDER====================================== */
 .desk4{
     font-size: 50px;
     margin-top: 7rem;
@@ -248,24 +249,27 @@ nav .navbar .nav-links .links li .arrow{
     font-style: italic;
     margin-top: 2%;
 }
-.see1{
+.see1 {
     /* background-color: #A8A1FA; */
-    height: auto;
-    width: 100%;
-    margin-top: 3%;
+    height: 300px;
+    /* width: 100%; */
+    margin: 3% 7%;
     display: flex;
-    /* justify-content: space-between; */
+    /* border: #000 1px solid; */
+    justify-content: space-between;
 }
 .see-image{
     width: 400px;
     height: 300px;
-    margin-left: 7%;
+    /* border: #000 1px solid; */
+    /* margin-left: 7%; */
     border-radius: 8%;
 }
 .see-desk{
     font-size: 20px;
-    width: 50%;
-    margin-left: 8%;
+    /* border: #000 1px solid; */
+    width: 700px;
+    /* margin-left: 8%; */
     text-align: justify;
 }
 .desk6{
@@ -282,18 +286,31 @@ nav .navbar .nav-links .links li .arrow{
     margin-top: 3%;
     margin-left: 1.5%;
 }
+
 .container-sar-pack{
     /* background-color: #A8A1FA; */
     display: flex;
+    width: 100%;
     margin-top: 3%;
-    justify-content: center;
+    padding: 0 7%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
 }
+
+.container-sar-pack a {
+    display: block;
+    /* background-color: #FF0505; */
+    width: 350px;
+    margin-bottom: 30px;
+}
+
 .saran-img{
     width: 350px;
     height: 250px;
     border-radius: 5%;
-    margin-left: 3%;
-    margin: 0 45px;
+    /* margin-left: 3%; */
+    /* margin: 0 45px; */
 }
 .desk-sar-pack{
     font-size: 21px;
@@ -301,7 +318,7 @@ nav .navbar .nav-links .links li .arrow{
     text-decoration: none;
     color: #0f0f0f;
     text-transform: capitalize;
-    margin-left: 11%;
+    /* margin-left: 11%; */
     margin-top: 2px;
 }
 .desk-sar-packet{
@@ -315,10 +332,155 @@ nav .navbar .nav-links .links li .arrow{
     text-decoration: none;
     color: #0f0f0f;
     margin-top: 2px;
-    margin-left: 11%;
-    margin-right: 11%;
+    /* margin-left: 11%;
+    margin-right: 11%; */
 }
 
+/* ======FOOTER====== */
+footer {
+    padding: 30px 0 0;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    /* background-color: #000; */
+}
+.footer{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(400px, auto));
+    width: 100%;
+    background: black;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.logo-footer{
+    margin-top: 10px;
+    /* margin-left: 2rem; */
+    /* background-color: #A7FAFA; */
+    width: 60%;
+}
+.Footer-content h4{
+    color: whitesmoke;
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+    /* margin-left: 2rem; */
+}
+.Footer-content{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Footer-content iframe{
+    width: 95%;
+    height: 200px;
+    
+}
+.Footer-content h4:hover {
+    text-decoration: dotted;
+    color: #ff0505;
+}
 
+.Footer-content li {
+    margin-bottom: 12px;
+    /* margin-left: 2rem; */
+}
+
+.Footer-content li a {
+    display: block;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all .40s ease;
+}
+
+.Footer-content li a:hover {
+    transform: translateY(-3px) translateX(-5px);
+    text-decoration: underline;
+    color: #ff0505;
+}
+.icons{
+    /* background-color: pink; */
+    width: 60%;
+    /* margin-left: 2rem; */
+    margin-top: 10px;
+}
+.icons a{
+    display: inline-block;
+    font-size: 22px;
+    color: #d6d6d6d6;
+    margin-right: 10px;
+    transition: all .40s ease;
+}
+
+.icons a:hover {
+    color:#ff0505;
+    transform: translateY(-5px);
+}
+
+.Footer-content.payment-section {
+    margin-top: 20px;
+    /* background-color: #A7FAFA; */
+    margin-left: 0;
+}
+
+.Footer-Bottom {
+    box-sizing: border-box; 
+    grid-column: span 3;
+    background-color: #ff0505;
+    /* padding: 20px; */
+    width: 100%;
+    text-align: center;
+    align-self: end;
+}
+
+.Footer-content-tripad{
+    margin-top: -2rem;
+    /* background-color: pink; */
+
+}
+.Footer-content .G-maps{
+    margin-top: -2rem;
+    width: 100%;
+    /* background-color: pink; */
+}
+
+.Footer-Bottom p {
+    margin: 0; 
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* Media Query untuk Responsif */
+@media only screen and (max-width: 767px) {
+    .Footer-Bottom {
+        grid-column: span 1; 
+    }
+}
+
+.Footer-Bottom p{
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    font-size: 18px;
+}
+
+.designer{
+    font-weight: 600;
+}
+
+.Footer-content h4 {
+    color: whitesmoke;
+    margin-bottom: 1rem; 
+    font-size: 20px;
+}
+
+.Footer-content h4:hover {
+    text-decoration: dotted;
+    color: #ff0505;
+}
+
+/* ======================FOOTER END======================== */
 
 /* ------------------------------------------RESPONSIVE--------------------- */

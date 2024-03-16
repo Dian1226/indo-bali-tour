@@ -2,8 +2,8 @@
 
 namespace App\Modules\manage_gallery\Controllers;
 
-use App\Modules\manage_gallery\Models\GalleryModel;
 use App\Controllers\BaseController;
+use App\Modules\manage_gallery\Models\GalleryModel;
 
 class Gallery extends BaseController
 {
@@ -15,20 +15,17 @@ class Gallery extends BaseController
 
     public function index(): string
     {
-        $gallery = $this->galleryModel->findAll();
         $data = [
             'title' => 'Gallery',
-            'galleries' => $gallery
+            'gallery' => $this->galleryModel->getGallery()
         ];
-
         return view('\App\Modules\manage_gallery\Views\index', $data);
     }
 
     public function add(): string
     {
         $data = [
-            'title' => 'Add Gallery',
-            'errors' => \Config\Services::validation()
+            'title' => 'Add Data',
         ];
 
         return view('\App\Modules\manage_gallery\Views\add', $data);
@@ -41,38 +38,29 @@ class Gallery extends BaseController
                 'rules' => 'required|is_unique[gallery.title]',
                 'errors' => [
                     'required' => 'Title wajib diisi',
-                    'is_unique' => 'Title tersebut sudah terdaftar'
+                    'is_unique' => 'Package tersebut sudah terdaftar'
                 ]
-            ],
-            // 'image' => [
-            //     'rules' => 'uploaded[image]|max_size[image,2048]|mime_in[image,image/png,image/jpeg,image/jpg]|is_image[image]',
-            //     'errors' => [
-            //         'uploaded' => 'Image wajib diisi',
-            //         'max_size' => 'Ukuran file terlalu besar',
-            //         'mime_in' => 'File tersebut bukan gambar',
-            //         'is_image' => 'File tersebut bukan gambar'
-            //     ]
-            // ]
+            ]
         ])) {
-            // $validation = \Config\Services::validation();
-            // return redirect()->to('/backoffice/gallery/add')->withInput()->with('validation', $validation);
-            return redirect()->to('/backoffice/gallery/add')->withInput();
+            $validation = \Config\Services::validation();
+            return redirect()->to('/backoffice/gallery/add')->withInput()->with('validation', $validation);
         }
 
-        // ambil gambar
         $image = $this->request->getFile('image');
-
-        // pindahkan gambar
-        $image->move('backoffice/gallery');
-
-        // ambil nama file
-        $fileImage = $image->getName();
+        if ($image->getError(4)) {
+            $fileImage = '';
+        } else {
+            $image->move('backoffice/gallery');
+            $fileImage = $image->getName();
+        }
 
         $this->galleryModel->save([
             'title' => $this->request->getVar('title'),
             'description' => $this->request->getVar('description'),
-            'image' => $fileImage
+            'image' => $fileImage,
         ]);
+
+        session()->setFlashdata('pesan', 'Data baru berhasil ditambahkan');
 
         return redirect()->to('/backoffice/gallery');
     }
@@ -81,9 +69,53 @@ class Gallery extends BaseController
     {
         $this->galleryModel->delete($id);
 
-        session()->setFlashdata('pesan', 'Gambar berhasil dihapus');
+        session()->setFlashdata('pesan', 'Data berhasil dihapus');
 
         return redirect()->to('/backoffice/gallery');
     }
 
+    public function edit($id): string
+    {
+        $data = [
+            'title' => 'Edit Data',
+            'gallery' => $this->galleryModel->getGallery($id),
+        ];
+
+        return view('\App\Modules\manage_gallery\Views\edit', $data);
+    }
+
+    public function update($id)
+    {
+        if (!$this->validate([
+            'title' => [
+                'rules' => 'required|is_unique[gallery.title,id,' . $id . ']',
+                'errors' => [
+                    'required' => 'Title wajib diisi',
+                    'is_unique' => 'Judul tersebut sudah terdaftar',
+                ]
+            ],
+        ])) {
+            $validation = \Config\Services::validation();
+            return redirect()->back()->withInput()->with('validation', $validation);
+        }
+
+        $image = $this->request->getFile('image');
+        if ($image->getError(4)) {
+            $fileImage = '';
+        } else {
+            $image->move('backoffice/gallery');
+            $fileImage = $image->getName();
+        }
+
+        $data = [
+            'title' => $this->request->getVar('title'),
+            'description' => $this->request->getVar('description'),
+            'image' => $fileImage,
+        ];
+        $this->galleryModel->update($id, $data);
+
+        session()->setFlashdata('pesan', 'Data berhasil diubah');
+
+        return redirect()->to('/backoffice/gallery');
+    }
 }
