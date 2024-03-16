@@ -9,7 +9,6 @@
                 <img src="/layout/img/Logo_IBT.png">
             </div>
 
-
             <div class="icons">
                 <br>
                 <h4>Follow Us</h4>
