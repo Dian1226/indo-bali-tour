@@ -1,5 +1,10 @@
+<?= $this->extend('layout/tourNav'); ?>
+
+<?= $this->section('isi'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +17,11 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- --------CSS------ -->
-    <link rel="stylesheet" href="adventure.css">
+    <link rel="stylesheet" href="/adventure/css/adventure.css">
 </head>
+
 <body>
-    <nav>
+    <!-- <nav>
         <div class="navbar">
             <i class='bx bx-menu'></i>
             <div class="logo"><a href="tours.html">Tours</a></div>
@@ -47,10 +53,9 @@
                 </ul>
             </div>
         </div>
-    </nav>
-
+    </nav> -->
     <div class="container-adv">
-        <img src="image projek PKL/UBUD.jpeg">
+        <img src="/adventure/image projek PKL/UBUD.jpeg">
         <h1 class="desk-adv">Adventures</h1>
         <ul class="adv-links">
             <li class="link-adv"><a href="#">home ></a></li>
@@ -59,50 +64,54 @@
         </ul>
     </div>
 
-    <div>
-        <h1 class="desk1">petualangan yang seru!</h1>
+    <div class="desk1">
+        <h1 class="">petualangan yang seru!</h1>
     </div>
 
     <div class="adv-line">
+        <?php foreach ($adventure as $a) : ?>
         <div class="adventure">
             <div class="card">
                 <div class="imgBx">
-                    <img src="image projek PKL/Pantai Lovina.jpg">
+                    <img src="/backoffice/activity/<?= $a['image']; ?>">
                 </div>
                 <div class="content">
-                    <h2>Atv Or Quad Bike Ride</h2>
-                    <P>Explore the jungle of Bali by driving a top-class ATV car for an unforgettable driving experience.</P>
+                    <h2><?= $a['title']; ?></h2>
+                    <P><?= $a['description']; ?></P>
                     <!-- <a href="#">view detail</a> -->
                 </div>
             </div>
         </div>
-        <div class="adventure">
+        <?php endforeach; ?>
+        <!-- <div class="adventure">
             <div class="card">
                 <div class="imgBx">
-                    <img src="image projek PKL/Pantai Lovina.jpg">
+                    <img src="/adventure/image projek PKL/Pantai Lovina.jpg">
                 </div>
                 <div class="content">
                     <h2>Ayung River Rafting</h2>
                     <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, voluptatibus quo consequatur vel numquam consectetur nemo cum eveniet possimus! Eaque iste explicabo quasi rem ipsum magni sequi id est molestias!</P>
-                    <!-- <a href="#">view detail</a> -->
+                    <a href="#">view detail</a>
                 </div>
-            </div> 
+            </div>
         </div>
         <div class="adventure">
             <div class="card">
                 <div class="imgBx">
-                    <img src="image projek PKL/Pantai Lovina.jpg">
+                    <img src="/adventure/image projek PKL/Pantai Lovina.jpg">
                 </div>
                 <div class="content">
                     <h2>Atv Or Quad Bike Ride</h2>
                     <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, voluptatibus quo consequatur vel numquam consectetur nemo cum eveniet possimus! Eaque iste explicabo quasi rem ipsum magni sequi id est molestias!</P>
-                    <!-- <a href="#">view detail</a> -->
+                    <a href="#">view detail</a>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
-    
 
-    <script src="adventure.js"></script>
+
+    <script src="adventure/js/adventure.js"></script>
 </body>
+
 </html>
+<?= $this->endSection('isi'); ?>

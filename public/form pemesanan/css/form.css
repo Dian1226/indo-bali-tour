@@ -188,7 +188,7 @@ nav .navbar .nav-links .links li a{
     /* background: url(background.jpg); */
     max-width: 100%;
     height: 100vh;
-    margin-top: 10%;
+    margin: 10% 0 5%;
     display: flex;
     justify-content: center;
     align-items: center;

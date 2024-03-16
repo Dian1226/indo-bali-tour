@@ -1,5 +1,10 @@
+<?= $this->extend('layout/footer'); ?>
+
+<?= $this->section('content'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +13,9 @@
     <!-- =======box ion====== -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link rel="stylesheet" href="airport.css">
+    <link rel="stylesheet" href="/airport/css/airport.css">
 </head>
+
 <body>
     <nav>
         <div class="navbar">
@@ -25,29 +31,29 @@
                         <a href="#">RECOMENDATION</a>
                         <i class='bx bxs-chevron-down arrow html-arrow'></i>
                         <ul class="html-submenu sub-menu">
-                            <li><a href="#">Adventures</a></li>
-                            <li><a href="#">Fun Activities</a></li>
-                            <li><a href="#">Transport Service</a></li>
-                            <li><a href="#">Airport Service</a></li>
-                        </ul>
+                        <li><a href="/index.php/adventures">Adventures</a></li>
+                        <li><a href="/index.php/fun-activities">Fun Activities</a></li>
+                        <li><a href="/index.php/transport">Transport Service</a></li>
+                        <li><a href="/index.php/airport">Airport Service</a></li>
+                    </ul>
                     </li>
                     <li>
                         <a href="#">TRENDING</a>
                         <i class='bx bxs-chevron-down arrow js-arrow'></i>
                         <ul class="js-submenu sub-menu">
-                            <li><a href="#">Destinasion</a></li>
-                            <li><a href="#">Package</a></li>
-                        </ul>
+                        <li><a href="/index.php/destination">Destination</a></li>
+                        <li><a href="/index.php/package">Package</a></li>
+                    </ul>
                     </li>
                     <li><a href="#">PROMO</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-<!-- ======================================================================================================= -->
+    <!-- ======================================================================================================= -->
 
     <div class="container-airp">
-        <img src="image projek PKL/UBUD.jpeg">
+        <img src="/airport/image projek PKL/UBUD.jpeg">
         <h1 class="desk-ap">Airport Services</h1>
         <ul class="ap-links">
             <li class="link-ap"><a href="#">home ></a></li>
@@ -55,7 +61,7 @@
         </ul>
     </div>
 
-<!-- ======================================================================================================= -->
+    <!-- ======================================================================================================= -->
     <div class="con-ap">
         <div class="container-ap">
             <ul class="ap-ul">
@@ -74,7 +80,7 @@
                     <span class="name">Pick up From <span class="clr">Airport</span> to <span class="clr">Seminyak</span></span>
                     <span class="price">USD $ 25</span>
                 </li>
-                <li  class="ap-li">
+                <li class="ap-li">
                     <span class="number">4</span>
                     <span class="name">Pick up From <span class="clr">Airport</span> to <span class="clr">canggu</span></span>
                     <span class="price">USD $ 35</span>
@@ -125,14 +131,13 @@
                     <span class="price">USD $ 35</span>
                 </li>
             </ul>
-    
+
             <div>
-                <h1 class="desk1">for other area please <a class="contact" href="#">contact us</a></h1>
+                <h1 class="desk1">for other area please <a class="contact" href="/index.php/contact">contact us</a></h1>
             </div>
         </div>
     </div>
-    
 
-    <script src="airport.js"></script>
-</body>
-</html>
+
+    <script src="/airport/js/airport.js"></script>
+    <?= $this->endSection('content'); ?>

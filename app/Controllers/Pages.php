@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\ToursModel;
+use App\Modules\manage_activity\Models\ActivityModel;
 use App\Modules\manage_blogsevents\Models\BlogModel;
 use App\Modules\manage_faq\Models\FaqModel;
 use App\Modules\manage_gallery\Models\GalleryModel;
@@ -17,6 +18,7 @@ class Pages extends BaseController
     protected $toursModel;
     protected $galleryModel;
     protected $blogsModel;
+    protected $activityModel;
     public function __construct()
     {
         $this->faqModel = new FaqModel();
@@ -25,18 +27,7 @@ class Pages extends BaseController
         $this->toursModel = new ToursModel();
         $this->galleryModel = new GalleryModel();
         $this->blogsModel = new BlogModel();
-    }
-    public function index(): string
-    {
-        $data = [
-            'faqs' => $this->faqModel->getFaq(),
-            'transport' => $this->transportModel->getTransport(),
-            'packages' => $this->packageModel->getPackage(),
-            'tours' => $this->toursModel->getTours(),
-            'gallery' => $this->galleryModel->getGallery(),
-            'blogs' => $this->blogsModel->getBlog()
-        ];
-        return view('home/index', $data);
+        $this->activityModel = new ActivityModel();
     }
 
     public function tours(): string
@@ -47,6 +38,7 @@ class Pages extends BaseController
 
         return view('tours/tours', $data);
     }
+
     public function toursDetail($slug): string
     {
         $data = [
@@ -57,28 +49,49 @@ class Pages extends BaseController
         return view('tours/tourDetail', $data);
     }
 
-    public function about(): string
+    public function funactivities(): string
     {
-        return view('About/About');
+        return view('Activities/activities');
     }
 
-    public function blogEvents(): string
+    public function adventures(): string
     {
-        return view('blog-events/index');
+        $data = [
+            'adventure' => $this->activityModel->getAdventure()
+        ];
+        return view('adventures/adventures', $data);
     }
 
-    public function article() : string
+    public function transport(): string
     {
-        return view('blog-events/article');
+        return view('\App\Modules\home\Views\transport');
     }
 
-    public function contactus(): string
+    public function airport(): string
     {
-        return view('contactus/contactus');
+        return view('airport/airport');
     }
 
-    public function footer(): string
+    public function destination(): string
     {
-        return view('footer/footer');
+        return view('destination/destinasi');
+    }
+
+    public function package(): string
+    {
+        return view('package/package');
+    }
+
+    public function promo(): string
+    {
+        return view('\App\Modules\home\Views\promo');
+    }
+
+    public function bookingForm(): string
+    {
+        $data = [
+            'packages' => $this->packageModel->getPackage()
+        ];
+        return view('form pemesanan/form', $data);
     }
 }

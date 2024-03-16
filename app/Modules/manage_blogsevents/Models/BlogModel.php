@@ -17,4 +17,13 @@ class BlogModel extends Model
 
         return $this->where(['slug' => $slug])->first();
     }
+
+    public function getBlogC($category = false)
+    {
+        if ($category == false) {
+            return $this->findAll();
+        }
+
+        return $this->where(['category' => $category])->findAll();
+    }
 }

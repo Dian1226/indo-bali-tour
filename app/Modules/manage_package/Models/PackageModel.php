@@ -17,4 +17,13 @@ class PackageModel extends Model
 
         return $this->where(['id' => $id])->first();
     }
+
+    public function getPackageS($slug = false)
+    {
+        if ($slug == false) {
+            return $this->findAll();
+        }
+
+        return $this->where(['slug' => $slug])->first();
+    }
 }
