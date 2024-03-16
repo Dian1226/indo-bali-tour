@@ -14,7 +14,7 @@
                     }
                     echo '';
                 } ?>" id="title" value="<?= old('title'); ?>" aria-describedby="titlecheck">
-                <div class="invalid-discountdback" for="titlecheck">
+                <div class="invalid-feedback" for="titlecheck">
                     <?php if (session('validation')) {
                         echo session('validation')->getError('title');
                     }; ?>
@@ -42,7 +42,6 @@
         <div class="col-2">
             <label for="discount" class="form-label">Discount</label>
             <div class="input-group mb-3">
-                <span class="input-group-text" id="discountcheck">USD $</span>
                 <input type="number" name="discount" class="form-control 
                 <?php if (session('validation')) {
                     if (session('validation')->getError('discount')) {
@@ -50,6 +49,7 @@
                     }
                     echo '';
                 } ?>" value="<?= old('discount'); ?>" id="discount" aria-describedby="discountcheck">
+                <span class="input-group-text" id="discountcheck">%</span>
                 <div class="invalid-discountdback" for="discountcheck">
                     <?php if (session('validation')) {
                         echo session('validation')->getError('discount');
@@ -68,7 +68,7 @@
                     echo '';
                 } ?>" value="<?= old('stars'); ?>" name="stars" value="<?= old('stars'); ?>" aria-describedby="starscheck">
                 <span class="input-group-text">/5</span>
-                <div class="invalid-discountdback" for="starscheck">
+                <div class="invalid-feedback" for="starscheck">
                     <?php if (session('validation')) {
                         echo session('validation')->getError('stars');
                     }; ?>

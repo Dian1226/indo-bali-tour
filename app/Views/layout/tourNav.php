@@ -1,3 +1,6 @@
+<?= $this->extend('layout/footer'); ?>
+
+<?= $this->section('content'); ?>
 <nav>
     <link rel="stylesheet" href="/footer/css/tourNav.css">
     <div class="navbar">
@@ -32,5 +35,7 @@
         </div>
     </div>
 </nav>
+<script src="/footer/js/script.js"></script>
+<?= $this->renderSection('content'); ?>
 
-<?= $this->renderSection('isi'); ?>
+<?= $this->endSection('content'); ?>

@@ -32,8 +32,8 @@
             <br>
             <h4>About IBT</h4>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/index.php/about">About</a></li>
                 <li><a href="#">Tours</a></li>
                 <li><a href="#">Blog & Events</a></li>
                 <li><a href="#">Member</a></li>

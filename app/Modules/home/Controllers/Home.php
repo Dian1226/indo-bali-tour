@@ -4,6 +4,7 @@ namespace App\Modules\home\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\ToursModel;
+use App\Modules\manage_activity\Models\ActivityModel;
 use App\Modules\manage_blogsevents\Models\BlogModel;
 use App\Modules\manage_faq\Models\FaqModel;
 use App\Modules\manage_gallery\Models\GalleryModel;
@@ -18,6 +19,7 @@ class Home extends BaseController
     protected $toursModel;
     protected $galleryModel;
     protected $blogsModel;
+    protected $activityModel;
     public function __construct()
     {
         $this->faqModel = new FaqModel();
@@ -26,20 +28,24 @@ class Home extends BaseController
         $this->toursModel = new ToursModel();
         $this->galleryModel = new GalleryModel();
         $this->blogsModel = new BlogModel();
+        $this->activityModel = new ActivityModel();
     }
 
     public function index(): string
     {
         $data = [
             'faqs' => $this->faqModel->getFaq(),
-            'transport' => $this->transportModel->getTransport(),
+            'transport' => $this->transportModel->getPrev(),
             'packages' => $this->packageModel->getPackage(),
             'tours' => $this->toursModel->getTours(),
             'gallery' => $this->galleryModel->getGallery(),
             'blogs' => $this->blogsModel->getBlog(),
+            'adventures' => $this->activityModel->getAdvPrev(),
+            'fun' =>$this->activityModel->getFunPrev()
         ];
         return view('\App\Modules\home\Views\index', $data);
     }
+
 
     public function bookingForm($slug = false)
     {

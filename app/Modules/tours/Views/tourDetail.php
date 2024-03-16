@@ -23,40 +23,39 @@
 
 <body>
     <nav>
+        <link rel="stylesheet" href="/footer/css/tourNav.css">
         <div class="navbar">
             <i class='bx bx-menu'></i>
-            <div class="logo"><a href="tour.html">Tours</a></div>
+            <div class="logo"><a href="#">TOURS</a></div>
             <div class="nav-links">
                 <div class="sidebar-logo">
-                    <span class="logo_name">Tours</span>
-                    <i class='bx bx-x'></i>
+                    <span class="logo-name">TOURS</span>
+                    <i class='bx bx-x '></i>
                 </div>
                 <ul class="links">
                     <li>
-                        <a href="#">RECOMENDATIONS</a>
-                        <i class='bx bxs-chevron-down arrow htmlcss-arrow'></i>
-                        <ul class="htmlCss-sub-menu sub-menu">
-                            <li><a href="#">Tour</a></li>
-                            <li><a href="#">Adventures</a></li>
-                            <li><a href="#">Fun Activities</a></li>
-                            <li><a href="#">Transport Service</a></li>
-                            <li><a href="#">Airport Transfer</a></li>
+                        <a href="#">RECOMENDATION</a>
+                        <i class='bx bxs-chevron-down arrow html-arrow'></i>
+                        <ul class="html-submenu sub-menu">
+                            <li><a href="/index.php/adventures">Adventures</a></li>
+                            <li><a href="/index.php/fun-activities">Fun Activities</a></li>
+                            <li><a href="/index.php/transport">Transport Service</a></li>
+                            <li><a href="/index.php/airport">Airport Service</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">TRENDING</a>
                         <i class='bx bxs-chevron-down arrow js-arrow'></i>
-                        <ul class="js-sub-menu sub-menu">
-                            <li><a href="#">Destinations</a></li>
-                            <li><a href="#">Package</a></li>
+                        <ul class="js-submenu sub-menu">
+                            <li><a href="/index.php/destination">Destination</a></li>
+                            <li><a href="/index.php/package">Package</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">PROMO</a></li>
+                    <li><a href="/index.php/promo">PROMO</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
     <div>
         <h1 class="desk4" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300"><?= $tour['title']; ?></h1>
         <hr class="garis1" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="200">
@@ -169,4 +168,4 @@
         AOS.init();
     </script>
     <script src="/tours/css/tour.js"></script>
-<?= $this->endSection('content'); ?>
+    <?= $this->endSection('content'); ?>

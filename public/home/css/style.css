@@ -45,7 +45,8 @@
     color: #ff0505;
     /* border-radius: .5rem; */
     padding: .2rem 1rem;
-    
+    text-transform: uppercase;
+    /* letter-spacing: 5rem; */
  }
 
 
@@ -710,9 +711,9 @@ header .search-bar-container label:hover {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    max-height: 100vh;
     gap: 2rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 }
 
  .card-a {
@@ -815,8 +816,8 @@ header .search-bar-container label:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 0px;
-    padding-top: 50px;
+    /* padding: 50px 0px;
+    padding-top: 50px; */
 }
 
 
@@ -827,7 +828,7 @@ header .search-bar-container label:hover {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 1050px;
     width: 90%;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     gap: 4rem;
    
 }

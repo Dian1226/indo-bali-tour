@@ -14,7 +14,7 @@
                     }
                     echo '';
                 } ?>" id="title" value="<?= old('title', $package['title']); ?>" aria-describedby="titlecheck">
-                <div class="invalid-discountdback" for="titlecheck">
+                <div class="invalid-feedback" for="titlecheck">
                     <?php if (session('validation')) {
                         echo session('validation')->getError('title');
                     }; ?>
@@ -50,7 +50,7 @@
                     echo '';
                 } ?>" value="<?= old('discount', $package['discount']); ?>" id="discount" aria-describedby="discountcheck">
                 <span class="input-group-text" id="discountcheck">%</span>
-                <div class="invalid-discountdback" for="discountcheck">
+                <div class="invalid-feedback" for="discountcheck">
                     <?php if (session('validation')) {
                         echo session('validation')->getError('discount');
                     }; ?>
@@ -68,7 +68,7 @@
                     echo '';
                 } ?>" value="<?= old('stars', $package['stars']); ?>" name="stars" aria-describedby="starscheck">
                 <span class="input-group-text">/5</span>
-                <div class="invalid-discountdback" for="starscheck">
+                <div class="invalid-feedback" for="starscheck">
                     <?php if (session('validation')) {
                         echo session('validation')->getError('stars');
                     }; ?>

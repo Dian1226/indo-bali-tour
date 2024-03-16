@@ -17,7 +17,7 @@ class Tours extends BaseController
     {
         $data = [
             'title' => 'Tours',
-            'tours' => $this->toursModel->getTours()
+            'tours' => $this->toursModel->getToursID()
         ];
         return view('\App\Modules\manage_tours\Views\index', $data);
     }
@@ -97,7 +97,7 @@ class Tours extends BaseController
     {
         $data = [
             'title' => 'Edit Data',
-            'tours' => $this->toursModel->getTours($id),
+            'tours' => $this->toursModel->getToursID($id),
         ];
 
         return view('\App\Modules\manage_tours\Views\edit', $data);

@@ -68,89 +68,21 @@
     </div>
 
     <div class="container-destinasi">
-        <div class="card">
-            <div class="face front">
-                <img src="/destination/image projek PKL/nusadua.jpg" alt="">
-                <h3>contoh</h3>
-            </div>
-            <div class="face back">
-                <h3>contoh</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iure natus quam minima! Maxime aliquam</p>
-                <div class="detail">
-                    <a href="#">Details</a>
+        <?php foreach ($tours as $tour) : ?>
+            <div class="card">
+                <div class="face front">
+                    <img src="/backoffice/tours/<?= $tour['image']; ?>" alt="">
+                    <h3><?= $tour['title']; ?></h3>
+                </div>
+                <div class="face back">
+                    <h3><?= $tour['title']; ?></h3>
+                    <p><?= $tour['description']; ?></p>
+                    <div class="detail">
+                        <a href="/tours/<?= $tour['slug']; ?>">Details</a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="face front">
-                <img src="/destination/image projek PKL/nusadua.jpg" alt="">
-                <h3>contoh</h3>
-            </div>
-            <div class="face back">
-                <h3>contoh</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iure natus quam minima! Maxime aliquam</p>
-                <div class="detail">
-                    <a href="#">Details</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="face front">
-                <img src="/destination/image projek PKL/nusadua.jpg" alt="">
-                <h3>contoh</h3>
-            </div>
-            <div class="face back">
-                <h3>contoh</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iure natus quam minima! Maxime aliquam</p>
-                <div class="detail">
-                    <a href="#">Details</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="face front">
-                <img src="/destination/image projek PKL/nusadua.jpg" alt="">
-                <h3>contoh</h3>
-            </div>
-            <div class="face back">
-                <h3>contoh</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iure natus quam minima! Maxime aliquam</p>
-                <div class="detail">
-                    <a href="#">Details</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="face front">
-                <img src="/destination/image projek PKL/nusadua.jpg" alt="">
-                <h3>contoh</h3>
-            </div>
-            <div class="face back">
-                <h3>contoh</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iure natus quam minima! Maxime aliquam</p>
-                <div class="detail">
-                    <a href="#">Details</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="face front">
-                <img src="/destination/image projek PKL/nusadua.jpg" alt="">
-                <h3>contoh</h3>
-            </div>
-            <div class="face back">
-                <h3>contoh</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum iure natus quam minima! Maxime aliquam</p>
-                <div class="detail">
-                    <a href="#">Details</a>
-                </div>
-            </div>
-        </div>
+        <?php endforeach; ?>
     </div>
 
     <?= $this->endSection('content'); ?>

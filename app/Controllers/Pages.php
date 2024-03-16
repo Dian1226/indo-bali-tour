@@ -57,7 +57,7 @@ class Pages extends BaseController
     public function adventures(): string
     {
         $data = [
-            'adventure' => $this->activityModel->getAdventure()
+            'adventure' => $this->activityModel->getAdvPrev()
         ];
         return view('adventures/adventures', $data);
     }
@@ -74,7 +74,10 @@ class Pages extends BaseController
 
     public function destination(): string
     {
-        return view('destination/destinasi');
+        $data = [
+            'tours' => $this->toursModel->getTours()
+        ];
+        return view('destination/destinasi', $data);
     }
 
     public function package(): string
