@@ -74,7 +74,7 @@
     <div class="body-1">
         <section class="container">
             <div class="header1">Form Member Indo Bali Tour</div>
-            <form action="#" class="form" method="post">
+            <form action="/member/register" class="form" method="post">
                 <div class="input-box">
                     <label for="name">Full name</label>
                     <input type="text" name="name" id="name" placeholder="Enter full name">
