@@ -78,7 +78,7 @@
         </div>
 
         <div class="vid-container">
-            <video src="/home/img/vidd-1 - rmv.mp4" id="vid-slider" autoplay loop></video>
+            <video src="/home/img/vidd-1 - rmv.mp4" id="vid-slider" autoplay loop muted></video>
         </div>
     </section>
     <!-- home section ends -->
@@ -86,13 +86,11 @@
     <!-- book section  -->
     <section class="book" id="book">
         <h1 class="heading" data-aos="fade-down-left" data-aos-duration="1000">
-            <span>b</span>
-            <span>o</span>
-            <span>o</span>
-            <span>k</span>
-            <span>n</span>
-            <span>o</span>
-            <span>w</span>
+            <?php $sec = "booknow";
+            $chars = str_split($sec);
+            foreach ($chars as $char) : ?>
+                <span><?= $char; ?></span>
+            <?php endforeach; ?>
         </h1>
         <div class="row">
             <div class="img" data-aos="fade-down-left" data-aos-duration="1000">
@@ -124,14 +122,11 @@
     <!-- packages -->
     <section class="packages" id="packages">
         <h1 class="heading" data-aos="fade-up" data-aos-duration="1000">
-            <span>p</span>
-            <span>a</span>
-            <span>c</span>
-            <span>k</span>
-            <span>a</span>
-            <span>g</span>
-            <span>e</span>
-            <span>s</span>
+            <?php $sec = "packages";
+            $chars = str_split($sec);
+            foreach ($chars as $char) : ?>
+                <span><?= $char; ?></span>
+            <?php endforeach; ?>
         </h1>
         <div class="box-container">
             <?php foreach ($packages as $package) : ?>
@@ -167,22 +162,14 @@
     <!-- DESTINATION PAGE -->
     <section class="ibt-fun-destinations">
         <h1 class="heading" data-aos="fade-out" data-aos-duration="1000">
-            <span>d</span>
-            <span>e</span>
-            <span>s</span>
-            <span>t</span>
-            <span>i</span>
-            <span>n</span>
-            <span>a</span>
-            <span>t</span>
-            <span>i</span>
-            <span>o</span>
-            <span>n</span>
-            <span>s</span>
+            <?php $sec = "destinations";
+            $chars = str_split($sec);
+            foreach ($chars as $char) : ?>
+                <span><?= $char; ?></span>
+            <?php endforeach; ?>
         </h1>
         <div class="btn-m" data-aos="fade-out" data-aos-duration="1000">
             <a href="/index.php/tours"><button type="button" class="btn btn-primary btn-lg">More</button></a>
-
         </div>
         <div class="swiper mySwiper4">
             <div class="swiper-wrapper" data-aos="fade-out" data-aos-duration="1000">
@@ -196,11 +183,11 @@
 
     <section class="promo" id="promo">
         <h1 class="heading" data-aos="fade-up" data-aos-duration="1000">
-            <span>P</span>
-            <span>R</span>
-            <span>O</span>
-            <span>M</span>
-            <span>O</span>
+            <?php $sec = "promo";
+            $chars = str_split($sec);
+            foreach ($chars as $char) : ?>
+                <span><?= $char; ?></span>
+            <?php endforeach; ?>
         </h1>
 
         <div class="promo">
@@ -241,16 +228,11 @@
     <section class="ibt-fun-activities">
         <h1 class="heading" data-aos="fade-down" data-aos-duration="1000">
             <br><br>
-            <span>a</span>
-            <span>c</span>
-            <span>t</span>
-            <span>i</span>
-            <span>v</span>
-            <span>i</span>
-            <span>t</span>
-            <span>i</span>
-            <span>e</span>
-            <span>s</span>
+            <?php $sec = "activities";
+            $chars = str_split($sec);
+            foreach ($chars as $char) : ?>
+                <span><?= $char; ?></span>
+            <?php endforeach; ?>
         </h1>
         <div class="btn-m">
             <a href="/fun-activities"><button type="button" class="btn btn-primary btn-lg">More</button></a>
@@ -259,62 +241,15 @@
         <div id="card-area">
             <div class="wrapper">
                 <div class="box-area">
-                    <div class="box-f" data-aos="fade-down" data-aos-duration="1000">
-                        <img src="home/img/fun-1.jpg" alt="">
-                        <div class="overlay">
-                            <h3>BICYCLES</h3>
-                            <a href="#">More</a>
+                    <?php foreach ($fun as $fun) : ?>
+                        <div class="box-f" data-aos="fade-down" data-aos-duration="1000">
+                            <img src="/backoffice/activity/<?= $fun['image']; ?>" alt="">
+                            <div class="overlay">
+                                <h3><?= $fun['title']; ?></h3>
+                                <a href="/activity/<?= $fun['slug']; ?>">More</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="box-f" data-aos="fade-down" data-aos-duration="1000">
-                        <img src="home/img/fun-2.jpg" alt="">
-                        <div class="overlay">
-                            <h3>Camel Riding</h3>
-                            <a href="#">More</a>
-                        </div>
-                    </div>
-                    <div class="box-f" data-aos="fade-down" data-aos-duration="1000">
-                        <img src="home/img/fun-3.jpg" alt="">
-                        <div class="overlay">
-                            <h3>ATV</h3>
-                            <a href="#">More</a>
-                        </div>
-                    </div>
-                    <div class="box-f" data-aos="fade-down" data-aos-duration="1000">
-                        <img src="home/img/fun-4.jpg" alt="">
-                        <div class="overlay">
-                            <h3>Romantic Dinner</h3>
-                            <a href="#">More</a>
-                        </div>
-                    </div>
-                    <div class="box-f" data-aos="fade-down" data-aos-duration="1000">
-                        <img src="home/img/fun-5.jpg" alt="">
-                        <div class="overlay">
-                            <h3>Elephant Ride</h3>
-                            <a href="#">More</a>
-                        </div>
-                    </div>
-                    <div class="box-f" data-aos="fade-down" data-aos-duration="1000">
-                        <img src="home/img/fun-6.jpg" alt="">
-                        <div class="overlay">
-                            <h3>Tubing Adventures</h3>
-                            <a href="#">More</a>
-                        </div>
-                    </div>
-                    <div class="box-f" data-aos="fade-down" data-aos-duration="1000">
-                        <img src="home/img/fun-7.jpg" alt="">
-                        <div class="overlay">
-                            <h3>Bali Safari & Marine Park</h3>
-                            <a href="#">More</a>
-                        </div>
-                    </div>
-                    <div class="box-f" data-aos="fade-down" data-aos-duration="1000">
-                        <img src="home/img/fun-8.jpg" alt="">
-                        <div class="overlay">
-                            <h3>Tracking Sunrise At Batur Mount</h3>
-                            <a href="#">More</a>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -326,59 +261,28 @@
 
     <section class="ibt-fun-adventures" id="ibt-fun-adventures">
         <h1 class="heading" data-aos="fade-up-right" data-aos-duration="1000">
-            <span>a</span>
-            <span>d</span>
-            <span>v</span>
-            <span>e</span>
-            <span>n</span>
-            <span>t</span>
-            <span>u</span>
-            <span>r</span>
-            <span>e</span>
-            <span>s</span>
+            <?php $sec = "adventures";
+            $chars = str_split($sec);
+            foreach ($chars as $char) : ?>
+                <span><?= $char; ?></span>
+            <?php endforeach; ?>
         </h1>
         <div class="container-v">
-            <div class="card-a" data-aos="fade-up-right" data-aos-duration="1000">
-                <div class="face front">
-                    <img src="home/img/atv.jpg" alt="">
-                    <h3>ATV</h3>
-                </div>
-                <div class="face back">
-                    <h3>ATV</h3>
-                    <p>Bali's ATV tours offer something for everyone. Professional guides ensure your safety while providing insightful commentary about the surroundings, enhancing your adventure with fascinating insights into Bali's rich heritage and biodiversity.</p>
-                    <div class="link-a">
-                        <a href="#">Detail</a>
+            <?php foreach ($adventures as $adventure) : ?>
+                <div class="card-a" data-aos="fade-up-right" data-aos-duration="1000">
+                    <div class="face front">
+                        <img src="/backoffice/activity/<?= $adventure['image']; ?>" alt="">
+                        <h3><?= $adventure['title']; ?></h3>
+                    </div>
+                    <div class="face back">
+                        <h3><?= $adventure['title']; ?></h3>
+                        <p><?= $adventure['description']; ?></p>
+                        <div class="link-a">
+                            <a href="/adventure/<?= $adventure['slug']; ?>">Detail</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-a" data-aos="fade-up-right" data-aos-duration="1000">
-                <div class="face front">
-                    <img src="home/img/ayung.jpg" alt="">
-                    <h3>Ayung River</h3>
-                </div>
-                <div class="face back">
-                    <h3>Ayung River</h3>
-                    <p>This iconic river offers an unforgettable adventure for thrill-seekers and nature enthusiasts alike. Embarking on a journey along its gentle rapids, visitors are treated to a unique perspective of Bali's breathtaking scenery.</p>
-                    <div class="link-a">
-                        <a href="#">Detail</a>
-                    </div>
-                </div>
-            </div>
-            <div class="card-a" data-aos="fade-up-right" data-aos-duration="1000">
-                <div class="face front">
-                    <img src="home/img/hiking.avif" alt="">
-                    <h3>Hiking</h3>
-                </div>
-                <div class="face back">
-                    <h3>Hiking</h3>
-                    <p>As the sun rises over the horizon, casting its golden glow upon the island, adventurers eagerly lace up their boots, ready to traverse Bali's diverse terrain.
-
-                        Hiking in Bali offers a multifaceted experience, from serene rice terraces to majestic volcanic peaks. One of the most iconic trails leads adventurers to the summit of Mount Batur</p>
-                    <div class="link-a">
-                        <a href="#">Detail</a>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </section>
     <!-- IBT FUN ADVENTURES ENDS -->
@@ -402,15 +306,11 @@
     <!-- TRANSPORT START -->
     <section class="transportations" id="transportations">
         <h1 class="heading" data-aos="fade-up" data-aos-duration="1000">
-            <span>T</span>
-            <span>r</span>
-            <span>a</span>
-            <span>n</span>
-            <span>s</span>
-            <span>p</span>
-            <span>o</span>
-            <span>r</span>
-            <span>t</span>
+            <?php $sec = "transport";
+            $chars = str_split($sec);
+            foreach ($chars as $char) : ?>
+                <span><?= $char; ?></span>
+            <?php endforeach; ?>
         </h1>
         <div class="btn-m" data-aos="fade-up" data-aos-duration="1000">
             <a href="/transport"><button type="button" class="btn btn-primary btn-lg">More</button></a>
@@ -438,14 +338,11 @@
     <!-- service section -->
     <section class="services" id="services">
         <h1 class="heading" data-aos="zoom-in" data-aos-duration="1000">
-            <span>s</span>
-            <span>e</span>
-            <span>r</span>
-            <span>v</span>
-            <span>i</span>
-            <span>c</span>
-            <span>e</span>
-            <span>s</span>
+            <?php $sec = "services";
+            $chars = str_split($sec);
+            foreach ($chars as $char) : ?>
+                <span><?= $char; ?></span>
+            <?php endforeach; ?>
         </h1>
         <div class="box-container">
             <div class="box" data-aos="zoom-in" data-aos-duration="1000">
@@ -486,13 +383,11 @@
     <!-- gallery starts -->
     <section class="gallery" id="gallery">
         <h1 class="heading" data-aos="fade-left" data-aos-duration="1000">
-            <span>g</span>
-            <span>a</span>
-            <span>l</span>
-            <span>l</span>
-            <span>e</span>
-            <span>r</span>
-            <span>y</span>
+            <?php $sec = "gallery";
+            $chars = str_split($sec);
+            foreach ($chars as $char) : ?>
+                <span><?= $char; ?></span>
+            <?php endforeach; ?>
         </h1>
         <div class="btn-m" data-aos="fade-left" data-aos-duration="1000">
             <a href="/index.php/tour-experience"><button type="button" class="btn btn-primary btn-lg">More</button></a>
@@ -514,17 +409,11 @@
     <!-- BLOG STARTS -->
     <section class="blog-events-1" id="blog-events-1" data-aos="fade-right" data-aos-duration="1000">
         <h1 class="heading">
-            <span>B</span>
-            <span>L</span>
-            <span>O</span>
-            <span>G</span>
-            <span>&</span>
-            <span>e</span>
-            <span>v</span>
-            <span>e</span>
-            <span>n</span>
-            <span>t</span>
-            <span>s</span>
+            <?php $sec = "blogs & events";
+            $chars = str_split($sec);
+            foreach ($chars as $char) : ?>
+                <span><?= $char; ?></span>
+            <?php endforeach; ?>
         </h1>
         <div class="btn-m" data-aos="fade-right" data-aos-duration="1000">
             <a href="/index.php/blogsevents"><button type="button" class="btn btn-primary btn-lg">More</button></a>
@@ -562,9 +451,11 @@
     <!-- FAQ STARTS -->
     <section class="faq" id="faq">
         <h1 class="heading">
-            <span>F</span>
-            <span>A</span>
-            <span>Q</span>
+            <?php $sec = "faq";
+            $chars = str_split($sec);
+            foreach ($chars as $char) : ?>
+                <span><?= $char; ?></span>
+            <?php endforeach; ?>
         </h1>
         <div class="questions-container">
             <?php foreach ($faqs as $faq) : ?>
@@ -603,12 +494,11 @@
     <!-- review starts -->
     <section class="review" id="review">
         <h1 class="heading" data-aos="fade-up-right" data-aos-duration="1000">
-            <span>r</span>
-            <span>e</span>
-            <span>v</span>
-            <span>i</span>
-            <span>e</span>
-            <span>w</span>
+            <?php $sec = "review";
+            $chars = str_split($sec);
+            foreach ($chars as $char) : ?>
+                <span><?= $char; ?></span>
+            <?php endforeach; ?>
         </h1>
         <div class="swiper review-slider">
 

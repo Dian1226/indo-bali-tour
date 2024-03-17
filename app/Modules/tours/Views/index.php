@@ -1,6 +1,3 @@
-<?= $this->extend('layout/footer'); ?>
-
-<?= $this->section('content'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,23 +15,23 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" href="/tours/css/tour.css">
-    <link rel="stylesheet" href="/activities/css/activities.css">
 </head>
 
 <body>
     <nav>
+        <link rel="stylesheet" href="/footer/css/tourNav.css">
         <div class="navbar">
             <i class='bx bx-menu'></i>
-            <div class="logo"><a href="tour.html">Tours</a></div>
+            <div class="logo"><a href="#">TOURS</a></div>
             <div class="nav-links">
                 <div class="sidebar-logo">
-                    <span class="logo_name">Tours</span>
-                    <i class='bx bx-x'></i>
+                    <span class="logo-name">TOURS</span>
+                    <i class='bx bx-x '></i>
                 </div>
                 <ul class="links">
                     <li>
-                        <a href="#">RECOMENDATIONS</a>
-                        <i class='bx bxs-chevron-down arrow htmlcss-arrow'></i>
+                        <a href="#">RECOMENDATION</a>
+                        <i class='bx bxs-chevron-down arrow html-arrow'></i>
                         <ul class="html-submenu sub-menu">
                             <li><a href="/index.php/adventures">Adventures</a></li>
                             <li><a href="/index.php/fun-activities">Fun Activities</a></li>
@@ -45,12 +42,12 @@
                     <li>
                         <a href="#">TRENDING</a>
                         <i class='bx bxs-chevron-down arrow js-arrow'></i>
-                        <ul class="js-sub-menu sub-menu">
-                            <li><a href="#">Destinations</a></li>
-                            <li><a href="#">Package</a></li>
+                        <ul class="js-submenu sub-menu">
+                            <li><a href="/index.php/destination">Destination</a></li>
+                            <li><a href="/index.php/package">Package</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">PROMO</a></li>
+                    <li><a href="/index.php/promo">PROMO</a></li>
                 </ul>
             </div>
         </div>
@@ -62,7 +59,6 @@
         </h1>
         <hr class="h" data-aos="zoom-in" data-aos-duration="2000" data-aos-offset="200">
     </div>
-
     <div class="carousel" data-aos="fade-up" data-aos-duration="1000">
         <?php foreach ($tours as $tour) : ?>
             <a class="carousel-item" href="/tours/<?= $tour['slug']; ?>">
@@ -85,12 +81,6 @@
     <div data-aos="zoom-in-down" data-aos-duration="1000">
         <h1 class="desk2">promo minggu ini !</h1>
     </div>
-
-    <!-- <div data-aos="zoom-in-down" data-aos-duration="1500">
-        <a href="#">
-            <button class="button-LS">Lihat semua</button>
-        </a>
-    </div> -->
 
     <div class="promo">
         <a href="#">
@@ -141,5 +131,3 @@
     </script>
 
     <script src="/tours/js/tour.js"></script>
-
-    <?= $this->endSection('content'); ?>

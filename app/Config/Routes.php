@@ -10,8 +10,8 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', '\App\Modules\home\Controllers\Home');
 $routes->get('/about', '\App\Modules\about\Controllers\About');
 $routes->get('/contact', '\App\Modules\contact\Controllers\Contact');
-$routes->get('/tours', 'Pages::tours');
-$routes->get('/tours/(:any)', 'Pages::toursDetail/$1');
+$routes->get('/tours', '\App\Modules\tours\Controllers\Tours');
+$routes->get('/tours/(:any)', '\App\Modules\tours\Controllers\Tours::detail/$1');
 $routes->get('/blogsevents', '\App\Modules\blogsevents\Controllers\Blog');
 $routes->get('/blogsevents/(:any)', '\App\Modules\blogsevents\Controllers\Blog::article/$1');
 $routes->get('/category/(:any)', '\App\Modules\blogsevents\Controllers\Blog::category/$1');
@@ -38,7 +38,6 @@ $routes->post('/booking-form', 'Pages::bookingForm');
 $routes->post('/booking-form/(:any)', 'Pages::bookingForm/$1');
 
 // menu
-$routes->get('/backoffice', '\App\Modules\manage_menu\Controllers\Menu');
 $routes->get('/backoffice/menu-manager', '\App\Modules\manage_menu\Controllers\Menu');
 $routes->get('/backoffice/menu-manager/add', '\App\Modules\manage_menu\Controllers\Menu::add');
 $routes->post('/backoffice/menu-manager/save', '\App\Modules\manage_menu\Controllers\Menu::save');
@@ -87,6 +86,7 @@ $routes->get('/backoffice/transportation/edit/(:num)', '\App\Modules\manage_tran
 $routes->post('/backoffice/transportation/update/(:num)', '\App\Modules\manage_transportation\Controllers\Transport::update/$1');
 
 // package
+$routes->get('/backoffice', '\App\Modules\manage_package\Controllers\Package');
 $routes->get('/backoffice/package', '\App\Modules\manage_package\Controllers\Package');
 $routes->delete('/backoffice/package/(:num)', '\App\Modules\manage_package\Controllers\Package::delete/$1');
 $routes->get('/backoffice/package/add', '\App\Modules\manage_package\Controllers\Package::add');

@@ -1,6 +1,6 @@
 <?= $this->extend('layout/tourNav'); ?>
 
-<?= $this->section('isi'); ?>
+<?= $this->section('content'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -106,4 +106,4 @@
 
 </html>
 <!-- TRANSPORT ENDS -->
-<?= $this->endSection('isi'); ?>
+<?= $this->endSection('content'); ?>

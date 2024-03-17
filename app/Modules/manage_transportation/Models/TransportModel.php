@@ -18,4 +18,9 @@ class TransportModel extends Model
         return $this->where(['id' => $id])->first();
     }
 
+    public function getPrev()
+    {
+        return $this->paginate(3);
+    }
+
 }

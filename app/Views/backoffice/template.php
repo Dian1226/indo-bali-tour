@@ -17,7 +17,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Settings
                         </a>
@@ -25,7 +25,17 @@
                             <li><a class="dropdown-item" href="#">General Settings</a></li>
                             <li><a class="dropdown-item" href="/backoffice/menu-manager">Menu Manager</a></li>
                         </ul>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Tour Package
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/index.php/backoffice/transportation">Transportation</a></li>
+                            <li><a class="dropdown-item" href="/index.php/backoffice/package">Tour Package</a></li>
+                        </ul>
                     </li>
+                    <li><a class="nav-link" href="/index.php/backoffice/activity">Activity</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Blogs & Events
@@ -36,7 +46,8 @@
                         </ul>
                     </li>
                     <li><a class="nav-link" href="/index.php/backoffice/gallery">Gallery</a></li>
-                    <li class="nav-item dropdown">
+                    <li><a class="nav-link" href="/backoffice/faq">FAQ</a></li>
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             FAQ
                         </a>
@@ -44,18 +55,8 @@
                             <li><a class="dropdown-item" href="/backoffice/faq">FAQ General</a></li>
                             <li><a class="dropdown-item" href="/backoffice/faq-contact">FAQ Contact</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li><a class="nav-link" href="/index.php/backoffice/tours">Tours</a></li>
-                    <li><a class="nav-link" href="/index.php/backoffice/activity">Activity</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tour Package
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/index.php/backoffice/transportation">Transportation</a></li>
-                            <li><a class="dropdown-item" href="/index.php/backoffice/package">Tour Package</a></li>
-                        </ul>
-                    </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

@@ -1,6 +1,6 @@
 <?= $this->extend('layout/tourNav'); ?>
 
-<?= $this->section('isi'); ?>
+<?= $this->section('content'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,18 +70,18 @@
 
     <div class="adv-line">
         <?php foreach ($adventure as $a) : ?>
-        <div class="adventure">
-            <div class="card">
-                <div class="imgBx">
-                    <img src="/backoffice/activity/<?= $a['image']; ?>">
-                </div>
-                <div class="content">
-                    <h2><?= $a['title']; ?></h2>
-                    <P><?= $a['description']; ?></P>
-                    <!-- <a href="#">view detail</a> -->
+            <div class="adventure">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="/backoffice/activity/<?= $a['image']; ?>">
+                    </div>
+                    <div class="content">
+                        <h2><?= $a['title']; ?></h2>
+                        <P><?= $a['description']; ?></P>
+                        <!-- <a href="#">view detail</a> -->
+                    </div>
                 </div>
             </div>
-        </div>
         <?php endforeach; ?>
         <!-- <div class="adventure">
             <div class="card">
@@ -114,4 +114,4 @@
 </body>
 
 </html>
-<?= $this->endSection('isi'); ?>
+<?= $this->endSection('content'); ?>
