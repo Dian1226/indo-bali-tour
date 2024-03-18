@@ -29,11 +29,16 @@ class Member extends BaseController
             'name' => 'required',
             'email' => 'required|valid_email',
             'username' => 'required',
-            'password' => 'required|matches[password2]',
-            'password2' => 'matches[password]'
+            'password' => 'required|matches[]',
+            'password2' => [
+                'rules' => 'matches[password]',
+                'errors' => [
+                    'matches' => 'Password tidak sesuai!'
+                ]
+            ]
         ])) {
             $validation = \Config\Services::validation();
-            return redirect()->back()->withInput()->with('validation', $validation);
+            return redirect()->to('/member#form')->withInput()->with('validation', $validation);
         }
 
         $image = $this->request->getFile('img');
