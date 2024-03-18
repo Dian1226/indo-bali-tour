@@ -74,7 +74,7 @@
     <div class="body-1">
         <section class="container">
             <div class="header1">Form Member Indo Bali Tour</div>
-            <form action="/member/register" class="form" method="post">
+            <form action="/member/register" class="form" method="post" enctype="multipart/form-data">
                 <div class="input-box">
                     <label for="name">Full name</label>
                     <input type="text" name="name" id="name" placeholder="Enter full name">
@@ -100,29 +100,35 @@
                 </div>
 
                 <div class="input-box">
-                    <label>Tour Period with IBT</label>
-                    <input type="date" placeholder="">
+                    <label>Date of Birth</label>
+                    <input type="date" name="date_birth" id="date_birth">
                 </div>
 
                 <div class="input-box">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="Enter email">
                 </div>
-                
+
                 <div class="input-box">
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" placeholder="Enter username">
                 </div>
-                
-                <div class="input-box">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password" placeholder="Enter password">
-                    <p class="note">Must contain 8-12 character</p>
+
+                <div class="passwordfield">
+                    <div class="input-box">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Enter password">
+                        <p class="note">Must contain 8-12 character</p>
+                    </div>
+                    <div class="input-box">
+                        <label for="password2">Repeat Password</label>
+                        <input type="password" name="password2" id="password2" placeholder="Enter password">
+                    </div>
                 </div>
 
                 <div class="input-file">
                     <label>Upload Profile Photo</label>
-                    <input type="file" required="" class="form-control" name="img" accept=".jpg, .jpeg, .png" id="img">
+                    <input type="file" class="form-control" name="img" accept=".jpg, .jpeg, .png" id="img">
                     <p class="note">note: max. 2MB</p>
                 </div>
                 <button>Send</button>

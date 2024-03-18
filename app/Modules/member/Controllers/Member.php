@@ -25,11 +25,34 @@ class Member extends BaseController
 
     public function register()
     {
-        $pass = $this->request->getVar('password');
-        $name = $this->request->getVar('name');
-        $nationality = $this->request->getVar('nationality');
-        $receiver = $this->request->getVar('email');
-        $username = $this->request->getVar('username');
+        if (!$this->validate([
+            'name' => 'required',
+            'email' => 'required|valid_email',
+            'username' => 'required',
+            'password' => 'required|matches[password2]',
+            'password2' => 'matches[password]'
+        ])) {
+            $validation = \Config\Services::validation();
+            return redirect()->back()->withInput()->with('validation', $validation);
+        }
+
+        $image = $this->request->getFile('img');
+        if ($image->getError(4)) {
+            $fileImage = '';
+        } else {
+            $image->move('backoffice/member');
+            $fileImage = $image->getName();
+        }
+
+        $this->memberModel->save([
+            'name' => $this->request->getVar('name'),
+            'nationality' => $this->request->getVar('nationality'),
+            'date_birth' => $this->request->getVar('date_birth'),
+            'email' => $this->request->getVar('email'),
+            'username' => $this->request->getVar('username'),
+            'password' => $this->request->getVar('password'),
+            'img' => $fileImage,
+        ]);
     }
 
     public function add(): string
