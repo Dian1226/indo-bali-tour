@@ -3,7 +3,6 @@
 <?= $this->section('content'); ?>
 
 <!DOCTYPE html>
-<html>
 <html lang="en">
 
 <head>
@@ -23,6 +22,18 @@
 
 <!-- HEADER -->
 <header>
+    <nav>
+        <div class="navbar">
+            <div class="logo"><a href="#">ABOUT US</a></div>
+        </div>
+    </nav>
+
+    <script src="/About/JS/about.js"></script>
+</header>
+
+<!--========================ABOUT=============================-->
+
+<body>
     <div class="background">
         <img src="/About/image/pura_ulun_danu_danau_1rGrw-transformed (1).jpeg" alt="">
         <div class="heading">
@@ -30,28 +41,6 @@
             <p>Baca Blog Harian Kami!</p>
         </div>
     </div>
-</header>
-
-<body>
-    <nav>
-        <div class="navbar">
-            <div class="logo"><a href="#">ABOUT US</a></div>
-        </div>
-    </nav>
-    <div>
-        <h1 class="desk1">
-            ABOUT US
-        </h1>
-        <hr class="h">
-    </div>
-
-    <script src="/About/JS/about.js"></script>
-</body>
-</head>
-
-<!--========================ABOUT=============================-->
-
-<body>
     <div class="row">
         <div class="left">
             <img src="/About/image/GWK Culture Park_Kiri.jpg">
@@ -79,9 +68,7 @@
         <div class="right right3">
             <div class="content">
                 <h3>OUR VISION</h3>
-                <p>We envision Indo Bali Tour as the ultimate gateway to Indonesia and Bali,
-                    making these destinations accessible and enjoyable for travelers from around the world. Our vision is to be recognized as a leader in sustainable tourism,
-                    contributing positively to the local communities and environments we serve.</p>
+                <p>We envision Indo Bali Tour as the ultimate gateway to Indonesia and Bali, making these destinations accessible and enjoyable for travelers from around the world. Our vision is to be recognized as a leader in sustainable tourism, contributing positively to the local communities and environments we serve.</p>
             </div>
         </div>
     </div>
@@ -93,9 +80,7 @@
         <div class="left left2">
             <div class="content">
                 <h3>OUR MISIION</h3>
-                <p>Our mission at Indo Bali Tour is to craft immersive and authentic travel experiences that connect our clients with the rich cultural heritage,
-                    stunning natural beauty, and vibrant traditions of Indonesia and Bali.
-                    We aim to exceed expectations by providing personalized, safe, and memorable journeys.</p>
+                <p>Our mission at Indo Bali Tour is to craft immersive and authentic travel experiences that connect our clients with the rich cultural heritage, stunning natural beauty, and vibrant traditions of Indonesia and Bali. We aim to exceed expectations by providing personalized, safe, and memorable journeys.</p>
             </div>
         </div>
     </div>
@@ -121,4 +106,4 @@
         </div>
     </div>
 
-<?= $this->endSection('content'); ?>
+    <?= $this->endSection('content'); ?>

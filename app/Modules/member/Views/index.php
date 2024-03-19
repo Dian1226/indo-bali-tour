@@ -73,45 +73,61 @@
 
     <div class="body-1">
         <section class="container">
-            <header1>Form Member Indo Bali Tour</header1>
-            <form action="#" class="form">
+            <div class="header1">Form Member Indo Bali Tour</div>
+            <form action="/member/register" class="form" method="post">
                 <div class="input-box">
-                    <label>Full name</label>
-                    <input type="text" placeholder="Enter full name" />
+                    <label for="name">Full name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter full name">
                 </div>
 
-                <div class="select-box">
-                    <select>
-                        <option>Country</option>
-                        <option>English</option>
-                        <option>Indonesia</option>
-                        <option>India</option>
-                        <option>Italia</option>
-                        <option>Japan</option>
-                        <option>Germany</option>
-                        <option>south Korea</option>
-                        <option>Prancis</option>
-                        <option>Kamboja</option>
-                        <option>Malaysia</option>
-                    </select>
+                <div class="select-wrap">
+                    <label for="nationality">Nationality</label>
+                    <div class="select-box">
+                        <select id="nationality">
+                            <option>Select Country</option>
+                            <option>United States</option>
+                            <option>Indonesia</option>
+                            <option>India</option>
+                            <option>Italia</option>
+                            <option>Japan</option>
+                            <option>Germany</option>
+                            <option>south Korea</option>
+                            <option>Prancis</option>
+                            <option>Kamboja</option>
+                            <option>Malaysia</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="input-box">
                     <label>Tour Period with IBT</label>
-                    <input type="date" placeholder="" /></label>
+                    <input type="date" placeholder="">
                 </div>
 
                 <div class="input-box">
-                    <label>Upload Free Style Photo</label>
-                    <input type="file" required="" class="form-control" name="img" accept=".jpg, .jpeg, .png" id="img">
-                    <p>note: max. 2MB</p>
-
-                    <button>Send</button>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter email">
                 </div>
-    </div>
-    </div>
-    </form>
-    </section>
+                
+                <div class="input-box">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter username">
+                </div>
+                
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter password">
+                    <p class="note">Must contain 8-12 character</p>
+                </div>
+
+                <div class="input-file">
+                    <label>Upload Profile Photo</label>
+                    <input type="file" required="" class="form-control" name="img" accept=".jpg, .jpeg, .png" id="img">
+                    <p class="note">note: max. 2MB</p>
+                </div>
+                <button>Send</button>
+            </form>
+        </section>
     </div>
 
 

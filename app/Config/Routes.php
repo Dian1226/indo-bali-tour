@@ -18,8 +18,11 @@ $routes->get('/category/(:any)', '\App\Modules\blogsevents\Controllers\Blog::cat
 $routes->get('/tour-experience', '\App\Modules\gallery\Controllers\Gallery');
 $routes->get('/tour-experience/photo', '\App\Modules\gallery\Controllers\Gallery::photo');
 $routes->get('/tour-experience/video', '\App\Modules\gallery\Controllers\Gallery::video');
+
+// member
 $routes->get('/member', '\App\Modules\member\Controllers\Member');
 $routes->get('/team', '\App\Modules\member\Controllers\Member::team');
+$routes->post('/member/register', '\App\Modules\member\Controllers\Member::register');
 
 // tours
 $routes->get('/fun-activities', 'Pages::funactivities');
