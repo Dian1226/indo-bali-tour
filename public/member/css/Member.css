@@ -367,6 +367,17 @@ header .background .heading p {
     margin-top: 20px;
 }
 
+.passwordfield {
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.passwordfield .input-box {
+    width: 280px;
+}
+
 .input-box label{
     color: #333;
 }

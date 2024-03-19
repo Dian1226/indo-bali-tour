@@ -7,9 +7,9 @@ use CodeIgniter\Model;
 class MemberModel extends Model
 {
     protected $table = 'member';
-    protected $allowedFields = ['gmail', 'username', 'password', 'name', 'nationality'];
+    protected $allowedFields = ['email', 'username', 'password', 'name', 'nationality', 'date_birth', 'img', 'created_at'];
     
-    public function getmember($id = false)
+    public function getMember($id = false)
     {
         if ($id == false) {
             return $this->findAll();
