@@ -28,14 +28,18 @@ class Member extends BaseController
         if (!$this->validate([
             'name' => 'required',
             'email' => 'required|valid_email',
-            'username' => 'required',
-            'password' => 'required|matches[]',
-            'password2' => [
-                'rules' => 'matches[password]',
+            'username' => [
+                'rules' => 'required|is_unique[member.username]',
                 'errors' => [
-                    'matches' => 'Password tidak sesuai!'
+                    'is_unique' => 'Username tersebut telah terdaftar.',
                 ]
-            ]
+            ],
+            'password1' => [
+                'rules' => 'required|matches[password2]',
+                'errors' => [
+                    'matches' => 'Password tidak sesuai.',
+                ]
+            ],
         ])) {
             $validation = \Config\Services::validation();
             return redirect()->to('/member#form')->withInput()->with('validation', $validation);
@@ -49,15 +53,24 @@ class Member extends BaseController
             $fileImage = $image->getName();
         }
 
+        $pw = $this->request->getVar('password1');
+        $password = password_hash($pw, PASSWORD_DEFAULT);
+        $date = date('l, d M Y');
+
         $this->memberModel->save([
             'name' => $this->request->getVar('name'),
             'nationality' => $this->request->getVar('nationality'),
             'date_birth' => $this->request->getVar('date_birth'),
             'email' => $this->request->getVar('email'),
             'username' => $this->request->getVar('username'),
-            'password' => $this->request->getVar('password'),
+            'password' => $password,
             'img' => $fileImage,
+            'created_at' => $date
         ]);
+
+        session()->setFlashdata('pesan', 'Akun Anda berhasil didaftarkan');
+
+        return redirect()->to('/member');
     }
 
     public function add(): string

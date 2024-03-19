@@ -49,6 +49,11 @@
 
 
     <!--==================MEMBER=======================-->
+    <?php if (session('pesan')) : ?>
+        <script>
+            alert('<?= session('pesan'); ?>')
+        </script>
+    <?php endif; ?>
     <div class="container-m">
         <div class="row">
             <div class="left">
@@ -77,7 +82,7 @@
             <form action="/member/register" class="form" method="post" enctype="multipart/form-data">
                 <div class="input-box">
                     <label for="name">Full name</label>
-                    <input type="text" name="name" id="name" placeholder="Enter full name">
+                    <input type="text" name="name" id="name" value="<?= old('name'); ?>" placeholder="Enter full name">
                     <?php if (session('validation')) :
                         if (session('validation')->getError('name')) : ?>
                             <p class="invalid"><?= session('validation')->getError('name'); ?></p>
@@ -88,7 +93,7 @@
                 <div class="select-wrap">
                     <label for="nationality">Nationality</label>
                     <div class="select-box">
-                        <select id="nationality">
+                        <select id="nationality" name="nationality">
                             <option>Select Country</option>
                             <option>United States</option>
                             <option>Indonesia</option>
@@ -111,7 +116,7 @@
 
                 <div class="input-box">
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="email" placeholder="Enter email">
+                    <input type="text" name="email" id="email" placeholder="Enter email" value="<?= old('email'); ?>">
                     <?php if (session('validation')) : ?>
                         <?php if (session('validation')->getError('email')) : ?>
                             <p class="invalid"><?= session('validation')->getError('email'); ?></p>
@@ -121,7 +126,7 @@
 
                 <div class="input-box">
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="username" placeholder="Enter username">
+                    <input type="text" name="username" id="username" value="<?= old('username'); ?>" placeholder="Enter username">
                     <?php if (session('validation')) : ?>
                         <?php if (session('validation')->getError('username')) : ?>
                             <p class="invalid"><?= session('validation')->getError('username'); ?></p>
@@ -132,22 +137,22 @@
                 <div class="passwordfield">
                     <div class="input-box">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Enter password">
+                        <input type="password" name="password1" id="password" placeholder="Enter password">
                         <p class="note">Must contain 8-12 character</p>
                         <?php if (session('validation')) : ?>
-                            <?php if (session('validation')->getError('password')) : ?>
-                                <p class="invalid"><?= session('validation')->getError('password'); ?></p>
-                            <?php endif; ?>
-                        <?php endif; ?>
-                        <?php if (session('validation')) : ?>
-                            <?php if (session('validation')->getError('password2')) : ?>
-                                <p class="invalid"><?= session('validation')->getError('password2'); ?></p>
+                            <?php if (session('validation')->getError('password1')) : ?>
+                                <p class="invalid"><?= session('validation')->getError('password1'); ?></p>
                             <?php endif; ?>
                         <?php endif; ?>
                     </div>
                     <div class="input-box">
                         <label for="password2">Repeat Password</label>
                         <input type="password" name="password2" id="password2" placeholder="Enter password">
+                        <?php if (session('validation')) : ?>
+                            <?php if (session('validation')->getError('password2')) : ?>
+                                <p class="invalid"><?= session('validation')->getError('password2'); ?></p>
+                            <?php endif; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
 

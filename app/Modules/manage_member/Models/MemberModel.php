@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class MemberModel extends Model
 {
     protected $table = 'member';
-    protected $allowedFields = ['email', 'username', 'password', 'name', 'nationality', 'date_birth', 'img'];
+    protected $allowedFields = ['email', 'username', 'password', 'name', 'nationality', 'date_birth', 'img', 'created_at'];
     
     public function getMember($id = false)
     {
